@@ -1,0 +1,46 @@
+%font-families {
+  --aria-font-family-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+  --aria-font-family-serif: Georgia, 'Times New Roman', serif;
+  --aria-font-family-mono: Menlo, Monaco, 'Courier New', monospace;
+}
+
+%font-sizes {
+  --aria-font-size-xx-small: 0.625rem;
+  --aria-font-size-x-small: 0.75rem;
+  --aria-font-size-small: 0.875rem;
+  --aria-font-size-medium: 1rem;
+  --aria-font-size-large: 1.25rem;
+  --aria-font-size-x-large: 1.5rem;
+  --aria-font-size-xx-large: 2.25rem;
+  --aria-font-size-xxx-large: 3rem;
+  --aria-font-size-xxxx-large: 4.5rem;
+}
+
+%font-weight {
+  --aria-font-weight-light: 300;
+  --aria-font-weight-normal: 400;
+  --aria-font-weight-semibold: 500;
+  --aria-font-weight-bold: 700;
+}
+
+%letter-spacing {
+  --aria-letter-spacing-dense: -0.015em;
+  --aria-letter-spacing-normal: normal;
+  --aria-letter-spacing-loose: 0.075em;
+}
+
+%line-height {
+  --aria-line-height-dense: 1.4;
+  --aria-line-height-normal: 1.8;
+  --aria-line-height-loose: 2.2;
+}
+
+:root {
+  @extend %font-families;
+  @extend %font-sizes;
+  @extend %font-weight;
+  @extend %letter-spacing;
+  @extend %line-height;
+}

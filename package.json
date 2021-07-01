@@ -1,0 +1,13 @@
+{
+	"name": "@divriots/starter-lit-lion",
+	"version": "0.0.0",
+	"description": "",
+	"license": "ISC",
+	"type": "module",
+	"scripts": {
+		"serve": "dsd-cli serve 5vtJtbY04aoD1dGKcsu1 --open"
+	},
+	"devDependencies": {
+		"dsd-cli": "latest"
+	}
+}

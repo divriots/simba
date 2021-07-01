@@ -1,0 +1,33 @@
+import { mdx } from '@mdx-js/react';
+import { Switch } from '../index';
+import { Props, Description } from '@divriots/dockit-react/props';
+import { Playground } from '@divriots/dockit-react/playground';
+import { Layout } from '~/layout';
+export default Layout;
+
+# Switch
+
+<Description of={Switch} />
+
+## Usage
+
+```tsx
+import { Switch } from '~/switch';
+
+<Switch>Test</Switch>;
+```
+
+## Example
+
+<Playground
+  scope={{ Switch }}
+  code={`
+<Switch size="small">Test</Switch>
+<Switch size="medium">Test</Switch>
+<Switch size="large">Test</Switch>
+`}
+/>
+
+## Props
+
+<Props of={Switch} />

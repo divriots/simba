@@ -1,0 +1,10 @@
+@import '../../colors/src/colors';
+
+:root {
+  --aria-shadow-x-small: 0 1px 0 #0d131e0d;
+  --aria-shadow-small: 0 1px 2px #0d131e1a;
+  --aria-shadow-medium: 0 2px 4px #0d131e1a;
+  --aria-shadow-large: 0 2px 8px #0d131e1a;
+  --aria-shadow-x-large: 0 4px 16px #0d131e1a;
+  --aria-shadow-outline: 0 0 0 3px var(--aria-color-focus-outline);
+}
