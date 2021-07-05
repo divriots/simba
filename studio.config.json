@@ -3,21 +3,9 @@
     "dir": "",
     "menu": [
       "introduction",
-      [
-        "tokens",
-        [
-          "typography",
-          "colors",
-          "spacing",
-          "elevation",
-          "border-radius",
-          "transition",
-          "z-index",
-          "all"
-        ]
-      ],
+      ["tokens", []],
       ["components", ["button"]],
-      ["infrastructure", ["layout"]]
+      ["infrastructure", []]
     ]
   }
 }
