@@ -16,20 +16,8 @@
           "all"
         ]
       ],
-      [
-        "components",
-        [
-          "button",
-          "switch",
-          "select"
-        ]
-      ],
-      [
-        "infrastructure",
-        [
-          "layout"
-        ]
-      ]
+      ["components", ["button"]],
+      ["infrastructure", ["layout"]]
     ]
   }
 }
