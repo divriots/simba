@@ -3,9 +3,9 @@
     "dir": "",
     "menu": [
       "introduction",
-      ["tokens", []],
+      ["tokens", ["colors", "themes", "borders"]],
       ["components", ["button"]],
-      ["infrastructure", []]
+      ["infrastructure", ["token-display", "doc-styles"]]
     ]
   }
 }
