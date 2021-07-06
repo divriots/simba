@@ -1,4 +1,4 @@
-import { css } from 'lit';
+import { css } from '@lion/core';
 
 export const roundedNone = css`0`;
 export const roundedSm = css`0.125rem`;

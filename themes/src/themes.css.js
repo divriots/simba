@@ -1,4 +1,4 @@
-import { css } from 'lit';
+import { css } from '@lion/core';
 import { indigo, coolGray } from '~/colors';
 
 // Easily adjust to a different color in Tailwind's palettes
