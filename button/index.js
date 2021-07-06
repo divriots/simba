@@ -1,1 +1,1 @@
-export * from './src/PolarisButton.js';
+export * from './src/TailwindButton.js';
