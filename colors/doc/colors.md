@@ -1,7 +1,7 @@
 # Colors
 
 ```js script
-import { html } from '@lion/core'
+import { html } from 'lit'
 import '~/token-display';
 import '~/doc-styles';
 import {

@@ -3,7 +3,7 @@
 Tailwind-style button web component.
 
 ```js script
-import { html } from '@lion/core';
+import { html } from 'lit'
 import '~/doc-styles';
 import '../tailwind-button.js';
 ```
