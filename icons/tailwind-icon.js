@@ -1,6 +1,6 @@
 import { TailwindIcon } from './src/TailwindIcon';
 
-// Load alerts resolver
-import './src/resolvers/alerts.js';
+// Load tailwind icon resolver as a side effect
+import './src/resolver.js';
 
 customElements.define('tailwind-icon', TailwindIcon);
