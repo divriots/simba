@@ -3,9 +3,9 @@ import { LionValidationFeedback } from '@lion/form-core';
 import { defaultTheme } from '~/themes';
 import styles from './styles.css.js';
 
-import '~/icons/tailwind-icon.js';
+import '~/icons/simba-icon.js';
 
-export class TailwindValidationFeedback extends LionValidationFeedback {
+export class SimbaValidationFeedback extends LionValidationFeedback {
   static get properties() {
     return {};
   }
@@ -16,10 +16,7 @@ export class TailwindValidationFeedback extends LionValidationFeedback {
 
   _messageTemplate({ message, type }) {
     return html`
-      <tailwind-icon
-        class="${type}"
-        icon-id="tailwind:alerts:${type}"
-      ></tailwind-icon>
+      <simba-icon class="${type}" icon-id="simba:alerts:${type}"></simba-icon>
       <span class="${type}">${message}</span>
     `;
   }

@@ -1,1 +1,1 @@
-export * from './src/TailwindValidationFeedback.js';
+export * from './src/SimbaValidationFeedback.js';

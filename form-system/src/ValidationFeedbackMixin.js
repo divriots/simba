@@ -1,6 +1,6 @@
 import { DefaultSuccess } from '@lion/form-core';
 import { dedupeMixin } from '@open-wc/dedupe-mixin';
-import '~/validation-feedback/tailwind-validation-feedback.js';
+import '~/validation-feedback/simba-validation-feedback.js';
 
 export const ValidationFeedbackMixinImplementation = (superclass) =>
   class extends superclass {
@@ -18,7 +18,7 @@ export const ValidationFeedbackMixinImplementation = (superclass) =>
         ...super.slots,
         feedback: () => {
           const feedbackEl = document.createElement(
-            'tailwind-validation-feedback'
+            'simba-validation-feedback'
           );
           return feedbackEl;
         },

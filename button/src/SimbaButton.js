@@ -3,7 +3,7 @@ import { LionButton } from '@lion/button';
 import { defaultTheme } from '~/themes';
 import styles from './styles.css.js';
 
-export class TailwindButton extends LionButton {
+export class SimbaButton extends LionButton {
   static get properties() {
     return {
       type: {

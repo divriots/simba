@@ -1,6 +1,6 @@
 # Input
 
-Tailwind-style input web component.
+Form text input field web component.
 
 ```js script
 import { html } from 'lit'
@@ -8,7 +8,7 @@ import { Required, Validator } from '@lion/form-core';
 import { localize } from '@lion/localize';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
 import '~/doc-styles';
-import '../tailwind-input.js';
+import '../simba-input.js';
 
 loadDefaultFeedbackMessages();
 ```
@@ -24,11 +24,11 @@ export const input = () => html`
       localize.locale = 'en-GB';
     }
   }}>flip locale</button>
-  <tailwind-input 
+  <simba-input 
     .validators=${[new Required()]}
     name="firstname" 
     help-text="Your first name" 
     placeholder="Joe"
-  ></tailwind-input>
+  ></simba-input>
 `;
 ```

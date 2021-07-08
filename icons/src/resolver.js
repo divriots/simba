@@ -1,6 +1,6 @@
 import { icons } from '@lion/icon';
 
-function resolveTailwindIcons(iconset, name) {
+function resolveSimbaIcons(iconset, name) {
   switch (iconset) {
     case 'alerts':
       return import('./alerts/index.js').then((module) => module[name]);
@@ -9,4 +9,4 @@ function resolveTailwindIcons(iconset, name) {
   }
 }
 
-icons.addIconResolver('tailwind', resolveTailwindIcons);
+icons.addIconResolver('simba', resolveSimbaIcons);
