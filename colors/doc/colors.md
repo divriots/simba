@@ -19,7 +19,7 @@ import {
 
 ## Usage
 
-The color palette of Tailwind is tokenized as CSS tagged literals (CSSResult) which can be used directly inside `static get styles`.
+The color palettes are tokenized as CSS tagged literals (CSSResult) which can be used directly inside `static get styles`.
 
 ```js preview-story
 import { css, LitElement } from '@lion/core';

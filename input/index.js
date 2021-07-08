@@ -1,1 +1,1 @@
-export * from './src/TailwindInput.js';
+export * from './src/SimbaInput.js';

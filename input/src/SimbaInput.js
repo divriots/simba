@@ -4,13 +4,13 @@ import { ValidationFeedbackMixin } from '~/form-system';
 import { defaultTheme } from '~/themes';
 import styles from './styles.css.js';
 
-export class TailwindInput extends LocalizeMixin(
+export class SimbaInput extends LocalizeMixin(
   ValidationFeedbackMixin(LionInput)
 ) {
   static get localizeNamespaces() {
     return [
       {
-        'tailwind-input': /** @param {string} locale */ (locale) => {
+        'simba-input': /** @param {string} locale */ (locale) => {
           switch (locale) {
             case 'nl-BE':
             case 'nl-NL':
@@ -35,7 +35,7 @@ export class TailwindInput extends LocalizeMixin(
 
   setDefaultLabel() {
     function update() {
-      this.label = localize.msg('tailwind-input:defaultLabel');
+      this.label = localize.msg('simba-input:defaultLabel');
     }
     const boundUpdate = update.bind(this);
 
