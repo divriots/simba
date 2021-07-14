@@ -1,15 +1,16 @@
 import { css } from '@lion/core';
-import { roundedMd } from '~/borders';
+import { borderRadiusMixin } from '~/borders';
 import { coolGray } from '~/colors';
+import { typographyMixin, weight } from '~/typography';
+import { spacing } from '~/spacing';
 
 export default css`
   .input-group__container > .input-group__input ::slotted(.form-control) {
     border: 1px solid ${coolGray[300]};
-    border-radius: ${roundedMd};
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    padding: 0.5rem 0.75rem;
-    margin-top: 0.25rem;
+    ${borderRadiusMixin('md')}
+    ${typographyMixin('sans', 'sm')}
+    padding: ${spacing['2']} ${spacing['3']};
+    margin-top: ${spacing['1']};
   }
 
   .input-group__container > .input-group__input ::slotted(.form-control:focus) {
@@ -20,13 +21,11 @@ export default css`
 
   ::slotted([slot='label']) {
     color: ${coolGray[700]};
-    font-weight: 500;
+    font-weight: ${weight['medium']};
   }
 
   ::slotted([slot='help-text']) {
     color: ${coolGray[500]};
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    font-weight: 400;
+    ${typographyMixin('sans', 'sm', 'normal')}
   }
 `;

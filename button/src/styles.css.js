@@ -1,15 +1,16 @@
 import { css } from '@lion/core';
-import { rounded, roundedFull } from '~/borders';
+import { borderRadiusMixin } from '~/borders';
 import { coolGray } from '~/colors';
+import { typographyMixin } from '~/typography';
+import { spacing } from '~/spacing';
 
 export default css`
   :host {
     background-color: var(--color-primary);
     color: var(--text-color-light);
-    border-radius: ${rounded};
-    /* TODO: tokenize */
-    font-weight: 500;
-    padding: 0.625rem 1rem;
+    ${borderRadiusMixin()}
+    ${typographyMixin('sans', 'base', 'medium')}
+    padding: ${spacing['2.5']} ${spacing['4']};
   }
 
   :host(:hover) {
@@ -57,21 +58,17 @@ export default css`
   }
 
   :host([size='small']) {
-    /* TODO: tokenize */
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    padding: 0.375rem 0.75rem;
+    ${typographyMixin('sans', 'sm', 'medium')}
+    padding: ${spacing['1.5']} ${spacing['3']};
   }
 
   :host([size='large']) {
-    /* TODO: tokenize */
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    padding: 0.75rem 1.25rem;
+    ${typographyMixin('sans', 'xl', 'medium')}
+    padding: ${spacing['3']} ${spacing['5']};
   }
 
   :host([rounded]) {
-    border-radius: ${roundedFull};
+    ${borderRadiusMixin('full')}
   }
 
   :host([disabled]) {
