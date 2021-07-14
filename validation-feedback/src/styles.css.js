@@ -1,5 +1,6 @@
 import { css } from '@lion/core';
 import { red, amber, emerald, blue } from '~/colors';
+import { typographyMixin } from '~/typography';
 
 export default css`
   :host {
@@ -7,8 +8,8 @@ export default css`
     display: flex;
     align-items: center;
     gap: 0.25em;
-    font-size: 0.875rem;
     margin-top: 2px;
+    ${typographyMixin('sans', 'sm')}
   }
 
   .error {

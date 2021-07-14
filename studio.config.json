@@ -3,7 +3,7 @@
     "dir": "",
     "menu": [
       "introduction",
-      ["tokens", ["colors", "themes", "borders"]],
+      ["tokens", ["colors", "themes", "borders", "typography", "spacing"]],
       ["components", ["button", "icons", "input", "validation-feedback"]],
       ["infrastructure", ["form-system"]],
       ["docs", ["token-display", "doc-styles"]]

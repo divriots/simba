@@ -1,17 +1,14 @@
 import { css } from '@lion/core';
 import { indigo, coolGray } from '~/colors';
+import { family } from '~/typography';
 
 // Easily adjust to a different color in Simba's palettes
 const mainColor = indigo;
 
 export const _defaultTheme = css`
-  --font-sans: 'Inter var', ui-sans-serif, system-ui, -apple-system,
-    BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-    'Noto Color Emoji';
-  --font-serif: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    'Liberation Mono', 'Courier New', monospace;
+  --font-sans: ${family['sans']};
+  --font-serif: ${family['serif']};
+  --font-mono: ${family['mono']};
 
   --color-primary: ${mainColor[500]};
   --color-primary-lightest: ${mainColor[50]};
