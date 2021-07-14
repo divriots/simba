@@ -14,9 +14,9 @@ export class SimbaInput extends LocalizeMixin(
           switch (locale) {
             case 'nl-BE':
             case 'nl-NL':
-              return import('./translations/nl.js');
+              return import('./nl.js');
             default:
-              return import('./translations/en.js');
+              return import('./en.js');
           }
         },
       },
