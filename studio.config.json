@@ -3,10 +3,10 @@
     "dir": "",
     "menu": [
       "introduction",
-      ["tokens", ["colors", "themes", "borders", "typography", "spacing"]],
+      ["tokens", ["colors", "borders", "typography", "spacing"]],
       ["components", ["button", "icons", "input", "validation-feedback"]],
       ["infrastructure", ["form-system"]],
-      ["docs", ["token-display", "doc-styles"]]
+      ["docs", ["token-display", "doc-styles", "themes"]]
     ]
   }
 }
