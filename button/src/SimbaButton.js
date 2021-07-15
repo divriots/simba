@@ -7,7 +7,7 @@ export class SimbaButton extends LionButton {
   static get properties() {
     return {
       type: {
-        // primary, secondary, tertiary
+        // primary, secondary, tertiary, text
         type: String,
         reflect: true,
       },

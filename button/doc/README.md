@@ -29,6 +29,12 @@ export const secondaryButton = () => html`<simba-button type="secondary">Submit<
 export const tertiaryButton = () => html`<simba-button type="tertiary">Submit</simba-button>`;
 ```
 
+### Text
+
+```js preview-story
+export const textButton = () => html`<simba-button type="text">Submit</simba-button>`;
+```
+
 ## Sizes
 
 Apart from the default size, there is also a small and large variation.
