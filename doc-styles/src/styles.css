@@ -19,3 +19,12 @@ h6 {
 .preview-story {
   margin: 20px 0;
 }
+
+blockquote {
+  border-left: 4px solid var(--color-primary);
+  background-color: var(--color-primary-lightest);
+  padding: 3px 15px;
+  margin-inline-start: 15px;
+  margin-inline-end: 30px;
+  font-style: italic;
+}
