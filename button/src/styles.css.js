@@ -6,6 +6,8 @@ import { spacing } from '~/spacing';
 
 export default css`
   :host {
+    display: inline-block;
+    cursor: pointer;
     background-color: var(--color-primary);
     color: var(--text-color-light);
     ${borderRadiusMixin()}
@@ -39,21 +41,29 @@ export default css`
     background-color: var(--color-primary-lightest);
   }
 
-  :host([type='tertiary']) {
-    background-color: white;
+  :host([type='tertiary']),
+  :host([type='text']) {
+    background-color: transparent;
     box-shadow: 0 0 1px 1px ${coolGray[300]};
     color: var(--text-color);
   }
 
-  :host([type='tertiary']:hover) {
+  :host([type='text']) {
+    box-shadow: none;
+  }
+
+  :host([type='tertiary']:hover),
+  :host([type='text']:hover) {
     background-color: ${coolGray[50]};
   }
 
-  :host([type='tertiary']:active) {
+  :host([type='tertiary']:active),
+  :host([type='text']:active) {
     background-color: ${coolGray[100]};
   }
 
-  :host([type='tertiary']:focus) {
+  :host([type='tertiary']:focus),
+  :host([type='text']:focus) {
     box-shadow: 0 0 1px 1px ${coolGray[300]}, 0 0 0 3px var(--focus-ring-color);
   }
 
@@ -75,7 +85,7 @@ export default css`
     filter: brightness(75%);
   }
 
-  :host(:not([type='secondary']):not([type='tertiary'])) {
+  :host(:not([type='secondary']):not([type='tertiary']):not([type='text'])) {
     background-color: var(--color-primary);
   }
 
