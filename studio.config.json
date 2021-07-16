@@ -6,7 +6,7 @@
       ["tokens", ["colors", "borders", "typography", "spacing"]],
       [
         "components",
-        ["button", "dialog", "icons", "input", "validation-feedback"]
+        ["button", "dialog", "icons", "input", "tooltip", "validation-feedback"]
       ],
       ["infrastructure", ["form-system"]],
       ["docs", ["token-display", "doc-styles", "themes"]]

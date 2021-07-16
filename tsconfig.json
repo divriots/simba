@@ -9,9 +9,7 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "paths": {
-      "~/*": [
-        "/*"
-      ]
+      "~/*": ["/*"]
     }
   }
 }
