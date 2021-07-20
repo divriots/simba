@@ -4,7 +4,7 @@ import { coolGray } from '~/colors';
 import { typographyMixin, weight } from '~/typography';
 import { spacing } from '~/spacing';
 
-export default css`
+export const inputStyles = css`
   .input-group__container > .input-group__input ::slotted(.form-control) {
     border: 1px solid ${coolGray[300]};
     ${borderRadiusMixin('md')}

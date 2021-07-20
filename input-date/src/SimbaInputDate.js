@@ -1,11 +1,12 @@
-import { LionInput } from '@lion/input';
+import { LionInputDate } from '@lion/input-date';
 import { InputMixin } from '~/form-system';
+import styles from './styles.css.js';
 
-export class SimbaInput extends InputMixin(LionInput) {
+export class SimbaInputDate extends InputMixin(LionInputDate) {
   static get localizeNamespaces() {
     return [
       {
-        'simba-input': /** @param {string} locale */ (locale) => {
+        'simba-input-date': /** @param {string} locale */ (locale) => {
           switch (locale) {
             case 'nl-BE':
             case 'nl-NL':
@@ -17,5 +18,9 @@ export class SimbaInput extends InputMixin(LionInput) {
       },
       ...super.localizeNamespaces,
     ];
+  }
+
+  static get styles() {
+    return [...super.styles, styles];
   }
 }
