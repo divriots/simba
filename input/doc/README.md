@@ -1,6 +1,6 @@
 # Input
 
-Form text input field web component.
+Text input field Webcomponent.
 
 ```js script
 import { html } from 'lit';
@@ -29,6 +29,21 @@ export const input = () => html`
     name="firstname" 
     help-text="Your first name" 
     placeholder="Joe"
+  ></simba-input>
+`;
+```
+
+## Disabled
+
+You can also prefill and disable the input in case you don't want your user to change it.
+
+```js preview-story
+export const inputDisabled = () => html`
+  <simba-input 
+    name="firstname" 
+    help-text="Your first name"
+    .modelValue=${"Joe"}
+    disabled
   ></simba-input>
 `;
 ```

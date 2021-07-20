@@ -1,11 +1,12 @@
-import { LionInput } from '@lion/input';
+import { LionInputIban } from '@lion/input-iban';
 import { InputMixin } from '~/form-system';
+import { defaultTheme } from '~/themes';
 
-export class SimbaInput extends InputMixin(LionInput) {
+export class SimbaInputIban extends InputMixin(LionInputIban) {
   static get localizeNamespaces() {
     return [
       {
-        'simba-input': /** @param {string} locale */ (locale) => {
+        'simba-input-iban': /** @param {string} locale */ (locale) => {
           switch (locale) {
             case 'nl-BE':
             case 'nl-NL':
