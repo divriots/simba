@@ -28,4 +28,8 @@ export const inputStyles = css`
     color: ${coolGray[500]};
     ${typographyMixin('sans', 'sm', 'normal')}
   }
+
+  ::slotted(.form-control) {
+    color: ${coolGray[900]};
+  }
 `;

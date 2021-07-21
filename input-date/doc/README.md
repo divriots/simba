@@ -33,7 +33,7 @@ export const input = () => html`
 `;
 ```
 
-## Amount Restrictions
+## Date Restrictions
 
 You can import and apply specific `NumberValidator`s, like `MinNumber`, `MaxNumber` or `MinMaxNumber` to constrain the allowed amounts.
 
