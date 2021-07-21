@@ -25,7 +25,6 @@ export default css`
   }
 
   ::slotted(simba-button) {
-    ${borderRadiusMixin('none')};
     padding: ${spacing['1.5']} ${spacing['2.5']};
   }
 
