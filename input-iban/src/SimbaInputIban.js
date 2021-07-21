@@ -1,6 +1,5 @@
 import { LionInputIban } from '@lion/input-iban';
 import { InputMixin } from '~/form-system';
-import { defaultTheme } from '~/themes';
 
 export class SimbaInputIban extends InputMixin(LionInputIban) {
   static get localizeNamespaces() {

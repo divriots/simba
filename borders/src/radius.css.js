@@ -37,13 +37,28 @@ export const borderRadiusMixin = (size, corner) => {
     r: [...cornerMap['tr'], ...cornerMap['br']],
   };
 
+  let cornersToApplyZero = [];
+  if (corner) {
+    // If corner is specified, get a list of the corners
+    // that were not specified by "corner" arg, so we can
+    // apply a border-radius of 0 to those corners
+    cornersToApplyZero = [
+      css`border-top-left-radius`,
+      css`border-top-right-radius`,
+      css`border-bottom-left-radius`,
+      css`border-bottom-right-radius`,
+    ].filter((cssDecl) => !cornerMap[corner].includes(cssDecl));
+  }
+
   // prettier-ignore
-  const output = cornerMap[corner]
-      .map(
-        (corn) =>
-          css`${corn}: ${sizeMap[size]};`
-      )
-      .reduce((acc, curr) => css`${acc}
+  const output = [
+    ...cornerMap[corner].map((corn) =>
+      css`${corn}: ${sizeMap[size]};`
+    ),
+    ...cornersToApplyZero.map((corn) =>
+      css`${corn}: ${sizeMap['none']};`
+    ),
+  ].reduce((acc, curr) => css`${acc}
 ${curr}`);
 
   return output;
