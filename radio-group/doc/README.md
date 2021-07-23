@@ -1,4 +1,4 @@
-# Input Radio Group
+# Radio Group
 
 Radio group Webcomponent.
 
@@ -13,8 +13,6 @@ import '../simba-radio-group.js';
 
 loadDefaultFeedbackMessages();
 ```
-
-Click the flip locale button to see localized default label in action as well as the validator messages, switching between Dutch and English.
 
 ```js preview-story
 export const input = () => html`
