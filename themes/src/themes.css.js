@@ -14,6 +14,7 @@ export const _defaultTheme = css`
   --color-primary-lightest: ${mainColor[50]};
   --color-primary-lighter: ${mainColor[100]};
   --color-primary-light: ${mainColor[200]};
+  --color-primary-disabled: ${mainColor[300]};
   --focus-ring-color: ${mainColor[300]};
   --color-primary-dark: ${mainColor[700]};
   --color-primary-darker: ${mainColor[800]};
