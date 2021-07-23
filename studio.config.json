@@ -15,6 +15,7 @@
           "input-date",
           "input-email",
           "input-iban",
+          "input-range",
           "input-stepper",
           "tooltip",
           "validation-feedback"
