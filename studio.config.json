@@ -17,6 +17,7 @@
           "input-iban",
           "input-range",
           "input-stepper",
+          "radio-group",
           "tooltip",
           "validation-feedback"
         ]
