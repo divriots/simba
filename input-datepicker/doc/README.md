@@ -1,4 +1,4 @@
-# Input Date
+# Input Datepicker
 
 Date input field Webcomponent.
 
@@ -8,7 +8,7 @@ import { Required, Validator } from '@lion/form-core';
 import { localize } from '@lion/localize';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
 import '~/doc-styles';
-import '../simba-input-date.js';
+import '../simba-input-datepicker.js';
 
 loadDefaultFeedbackMessages();
 ```
@@ -24,12 +24,12 @@ export const input = () => html`
       localize.locale = 'en-GB';
     }
   }}>flip locale</button>
-  <simba-input-date 
+  <simba-input-datepicker 
     .validators=${[new Required()]}
     name="date" 
     help-text="DD/MM/YYYY"
     placeholder="01/01/2021"
-  ></simba-input-date>
+  ></simba-input-datepicker>
 `;
 ```
 
@@ -44,12 +44,12 @@ import { MinDate } from '@lion/form-core';
 const today = formatDate(new Date());
 
 export const inputMinimum = () => html`
-  <simba-input-date
+  <simba-input-datepicker
     .validators=${[new Required(), new MinDate(new Date())]}
     name="date" 
     placeholder="${today}"
     help-text="Must be later than today"
-  ></simba-input-date>
+  ></simba-input-datepicker>
 `;
 ```
 
@@ -63,12 +63,12 @@ const firstDay = new Date(year, month, 1);
 const lastDay = new Date(year, month + 1, 0);
 
 export const inputRange = () => html`
-  <simba-input-date
+  <simba-input-datepicker
     .validators=${[new Required(), new MinMaxDate({ min: firstDay, max: lastDay })]}
     name="date"
     placeholder="01/${(`0${month + 1}`).slice(-2)}/${year}"
     help-text="Must be in this month"
-  ></simba-input-date>
+  ></simba-input-datepicker>
 `;
 ```
 
@@ -78,11 +78,11 @@ You can also prefill and disable the date in case you don't want your user to ch
 
 ```js preview-story
 export const inputDisabled = () => html`
-  <simba-input-date 
+  <simba-input-datepicker 
     name="date" 
     help-text="Preconfigured date"
     .modelValue=${new Date()}
     disabled
-  ></simba-input-date>
+  ></simba-input-datepicker>
 `;
 ```
