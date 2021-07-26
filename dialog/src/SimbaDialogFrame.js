@@ -57,7 +57,7 @@ export class SimbaDialogFrame extends LitElement {
       ${this.hasCloseButton
         ? html`
             <simba-button
-              type="text"
+              variation="text"
               class="close-btn"
               @click=${() => {
                 this.dispatchEvent(

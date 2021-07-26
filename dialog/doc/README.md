@@ -103,7 +103,7 @@ export const noHeader = () => html`
         <p style="margin-bottom: 35px; color: ${coolGray[500]}; ${typographyMixin('sans', 'base')}">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius aliquam laudantium explicabo pariatur iste doorem animi vitae error totam. At sapiente aliquam accusamus facere veritatis.</p>
       </div>
       <div slot="footer" style="display: flex; gap: 3rem; justify-content: space-between">
-        <simba-button style="width: 100%" type="tertiary" @click=${(ev) => {
+        <simba-button style="width: 100%" variation="outline" @click=${(ev) => {
           ev.target.dispatchEvent(new Event('close-overlay', { bubbles: true }));
         }}>Cancel</simba-button>
         <simba-button style="width: 100%" @click=${(ev) => {

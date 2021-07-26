@@ -38,7 +38,7 @@ export class SimbaInputStepper extends InputMixin(LionInputStepper) {
         @click=${this.__decrement}
         @blur=${this.__boundOnBlurButton}
         tabindex="-1"
-        type="tertiary"
+        variation="outline"
         aria-label="decrement"
       >
         ${this._decrementorSignTemplate()}
@@ -53,7 +53,7 @@ export class SimbaInputStepper extends InputMixin(LionInputStepper) {
         @click=${this.__increment}
         @blur=${this.__boundOnBlurButton}
         tabindex="-1"
-        type="tertiary"
+        variation="outline"
         aria-label="increment"
       >
         ${this._incrementorSignTemplate()}
