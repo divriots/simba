@@ -28,42 +28,42 @@ export default css`
     outline: none;
   }
 
-  :host([type='secondary']) {
+  :host([variation='secondary']) {
     background-color: var(--color-primary-light);
     color: var(--color-primary-darker);
   }
 
-  :host([type='secondary']:hover) {
+  :host([variation='secondary']:hover) {
     background-color: var(--color-primary-lighter);
   }
 
-  :host([type='secondary']:active) {
+  :host([variation='secondary']:active) {
     background-color: var(--color-primary-lightest);
   }
 
-  :host([type='tertiary']),
-  :host([type='text']) {
+  :host([variation='outline']),
+  :host([variation='text']) {
     background-color: transparent;
     box-shadow: 0 0 1px 1px ${coolGray[300]};
     color: var(--text-color);
   }
 
-  :host([type='text']) {
+  :host([variation='text']) {
     box-shadow: none;
   }
 
-  :host([type='tertiary']:hover),
-  :host([type='text']:hover) {
+  :host([variation='outline']:hover),
+  :host([variation='text']:hover) {
     background-color: ${coolGray[50]};
   }
 
-  :host([type='tertiary']:active),
-  :host([type='text']:active) {
+  :host([variation='outline']:active),
+  :host([variation='text']:active) {
     background-color: ${coolGray[100]};
   }
 
-  :host([type='tertiary']:focus),
-  :host([type='text']:focus) {
+  :host([variation='outline']:focus),
+  :host([variation='text']:focus) {
     box-shadow: 0 0 1px 1px ${coolGray[300]}, 0 0 0 3px var(--focus-ring-color);
   }
 
@@ -85,7 +85,7 @@ export default css`
     filter: brightness(75%);
   }
 
-  :host(:not([type='secondary']):not([type='tertiary']):not([type='text'])) {
+  :host(:not([variation='secondary']):not([variation='outline']):not([variation='text'])) {
     background-color: var(--color-primary);
   }
 

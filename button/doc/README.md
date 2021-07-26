@@ -14,25 +14,26 @@ export const submitButton = () => html`<simba-button>Submit</simba-button>`;
 
 ## Types
 
-Visual hierarchy is important, therefore multiple variations are possible. 
-Secondary and tertiary type buttons should be used for less important call to actions.
+Visual hierarchy is important, therefore multiple variations are possible.
+Secondary and outline variation buttons should be used for less important call to actions.
+Text buttons don't have outlines and are the least priority buttons.
 
 ### Secondary
 
 ```js preview-story
-export const secondaryButton = () => html`<simba-button type="secondary">Submit</simba-button>`;
+export const secondaryButton = () => html`<simba-button variation="secondary">Submit</simba-button>`;
 ```
 
 ### Tertiary
 
 ```js preview-story
-export const tertiaryButton = () => html`<simba-button type="tertiary">Submit</simba-button>`;
+export const tertiaryButton = () => html`<simba-button variation="tertiary">Submit</simba-button>`;
 ```
 
 ### Text
 
 ```js preview-story
-export const textButton = () => html`<simba-button type="text">Submit</simba-button>`;
+export const textButton = () => html`<simba-button variation="text">Submit</simba-button>`;
 ```
 
 ## Sizes
@@ -92,7 +93,7 @@ export const suffixButton = () => html`
 ```js preview-story
 export const disabledButton = () =>html`
   <simba-button disabled>Submit</simba-button>
-  <simba-button type="secondary" disabled>Submit</simba-button>
-  <simba-button type="tertiary" disabled>Submit</simba-button>
+  <simba-button variation="secondary" disabled>Submit</simba-button>
+  <simba-button variation="tertiary" disabled>Submit</simba-button>
 `;
 ```

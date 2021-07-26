@@ -6,8 +6,8 @@ import styles from './styles.css.js';
 export class SimbaButton extends LionButton {
   static get properties() {
     return {
-      type: {
-        // primary, secondary, tertiary, text
+      variation: {
+        // primary, secondary, outline, text
         type: String,
         reflect: true,
       },
