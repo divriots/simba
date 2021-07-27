@@ -36,10 +36,11 @@ export const pickerStyles = css`
 
 export const frameStyles = css`
   :host {
-    display: inline-block;
+    display: block;
+    box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.4);
     background: ${coolGray[50]};
     position: relative;
-    ${borderRadiusMixin('lg')};
+    ${borderRadiusMixin('md')};
     overflow: hidden;
   }
 
