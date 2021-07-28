@@ -102,6 +102,10 @@ A rich version of the regular select.
 - Allows rich HTML content inside options
 - As it does not use native select, the select and its dropdown looks the same on all browsers / devices
 
+> Currently there seems to be a bug with Popper's placement logic that doesn't
+> incorporate inner margins on the `html` element.
+> Therefore it might happen that the placement of the dropdown is way off.
+
 ```js preview-story
 export const selectRich = () => html`
   <simba-select-rich name="favoriteColor" label="Favorite color">
