@@ -13,7 +13,10 @@ export const inputStyles = css`
     margin-top: ${spacing['1']};
   }
 
-  .input-group__container > .input-group__input ::slotted(.form-control:focus) {
+  .input-group__container > .input-group__input ::slotted(.form-control:focus),
+  .input-group__container
+    > .input-group__input
+    ::slotted(.form-control:focus-visible) {
     outline: none;
     border: 1px solid transparent;
     box-shadow: 0 0 0 2px var(--color-primary);

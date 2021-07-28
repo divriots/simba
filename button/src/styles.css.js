@@ -23,7 +23,8 @@ export default css`
     background-color: var(--color-primary-darker);
   }
 
-  :host(:focus) {
+  :host(:focus:not([disabled])),
+  :host(:focus-visible) {
     box-shadow: 0 0 0 3px var(--focus-ring-color);
     outline: none;
   }
@@ -43,9 +44,16 @@ export default css`
 
   :host([variation='outline']),
   :host([variation='text']) {
-    background-color: transparent;
     box-shadow: 0 0 1px 1px ${coolGray[300]};
     color: var(--text-color);
+  }
+
+  :host([variation='outline']) {
+    background-color: ${coolGray[50]};
+  }
+
+  :host([variation='text']) {
+    background-color: transparent;
   }
 
   :host([variation='text']) {

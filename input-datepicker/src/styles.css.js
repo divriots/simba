@@ -22,7 +22,8 @@ export const pickerStyles = css`
     border: 0;
   }
 
-  ::slotted([slot='suffix']:focus) {
+  ::slotted([slot='suffix']:focus),
+  ::slotted([slot='suffix']:focus-visible) {
     box-shadow: 0 0 0 2px var(--color-primary);
     overflow: hidden;
     outline: 0;
@@ -36,10 +37,11 @@ export const pickerStyles = css`
 
 export const frameStyles = css`
   :host {
-    display: inline-block;
+    display: block;
+    box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.4);
     background: ${coolGray[50]};
     position: relative;
-    ${borderRadiusMixin('lg')};
+    ${borderRadiusMixin('md')};
     overflow: hidden;
   }
 
@@ -131,7 +133,8 @@ export const calendarStyles = css`
     border: 1px solid var(--color-primary);
   }
 
-  .calendar__day-button:focus {
+  .calendar__day-button:focus,
+  .calendar__day-button:focus-visible {
     border: 2px solid var(--color-primary-light);
     outline: none;
   }
