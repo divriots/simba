@@ -28,3 +28,7 @@ blockquote {
   margin-inline-end: 30px;
   font-style: italic;
 }
+
+details > pre[class*='language-'] > code[class*='language-'] {
+  z-index: 0;
+}

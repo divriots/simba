@@ -1,7 +1,58 @@
 import { css } from '@lion/core';
 import { coolGray } from '~/colors';
+import { spacing } from '~/spacing';
+import { borderRadiusMixin } from '~/borders';
 
-export default css`
+export const invokerStyles = css`
+  :host(:focus:not([disabled])),
+  :host(:focus-visible) {
+    outline: none;
+  }
+
+  :host {
+    ${borderRadiusMixin()};
+    background-color: white;
+    border: 1px solid ${coolGray[300]};
+    margin-top: ${spacing['1']};
+  }
+
+  :host(:hover) {
+    background-color: white;
+  }
+
+  :host(:focus),
+  :host(:focus-visible) {
+    outline: none;
+    border: 1px solid transparent;
+    box-shadow: 0 0 0 2px var(--color-primary);
+  }
+
+  :host(:active) {
+    background-color: ${coolGray[100]};
+  }
+
+  ::slotted([slot='after']) {
+    width: ${spacing['3']};
+    height: ${spacing['3']};
+  }
+`;
+
+export const optionStyles = css`
+  :host([checked]) {
+    background-color: var(--color-primary-lighter);
+  }
+`;
+
+export const optionsStyles = css`
+  .input-group__container > .input-group__input ::slotted(.form-control) {
+    display: block;
+    background-color: ${coolGray[50]};
+    padding: 0;
+    overflow: hidden;
+  }
+`;
+
+export const selectStyles = css`
   ::slotted([slot='input']) {
     -webkit-appearance: none;
     appearance: none;

@@ -2,7 +2,7 @@ import { html, ScopedElementsMixin } from '@lion/core';
 import { LionSelect } from '@lion/select';
 import { InputMixin } from '~/form-system';
 import { SimbaIcon } from '~/icons';
-import styles from './styles.css.js';
+import { selectStyles } from './styles.css.js';
 
 export class SimbaSelect extends ScopedElementsMixin(InputMixin(LionSelect)) {
   static get scopedElements() {
@@ -29,7 +29,7 @@ export class SimbaSelect extends ScopedElementsMixin(InputMixin(LionSelect)) {
   }
 
   static get styles() {
-    return [...super.styles, styles];
+    return [...super.styles, selectStyles];
   }
 
   _inputGroupInputTemplate() {

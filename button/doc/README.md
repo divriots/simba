@@ -24,10 +24,10 @@ Text buttons don't have outlines and are the least priority buttons.
 export const secondaryButton = () => html`<simba-button variation="secondary">Submit</simba-button>`;
 ```
 
-### Tertiary
+### Outline
 
 ```js preview-story
-export const tertiaryButton = () => html`<simba-button variation="tertiary">Submit</simba-button>`;
+export const outlineButton = () => html`<simba-button variation="outline">Submit</simba-button>`;
 ```
 
 ### Text
@@ -94,6 +94,6 @@ export const suffixButton = () => html`
 export const disabledButton = () =>html`
   <simba-button disabled>Submit</simba-button>
   <simba-button variation="secondary" disabled>Submit</simba-button>
-  <simba-button variation="tertiary" disabled>Submit</simba-button>
+  <simba-button variation="outline" disabled>Submit</simba-button>
 `;
 ```
