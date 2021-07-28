@@ -21,6 +21,7 @@
           "input-stepper",
           "radio-group",
           "select",
+          "textarea",
           "tooltip",
           "validation-feedback"
         ]
