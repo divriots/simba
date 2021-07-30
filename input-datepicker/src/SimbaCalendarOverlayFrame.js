@@ -1,9 +1,12 @@
 import { LitElement, html } from '@lion/core';
 import { LocalizeMixin } from '@lion/localize';
+import { ThemeMixin } from '~/themes';
 import { frameStyles } from './styles.css.js';
 import '~/button/simba-button.js';
 
-export class SimbaCalendarOverlayFrame extends LocalizeMixin(LitElement) {
+export class SimbaCalendarOverlayFrame extends ThemeMixin(
+  LocalizeMixin(LitElement)
+) {
   static get properties() {
     return {
       current: { attribute: false },

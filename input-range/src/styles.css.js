@@ -16,7 +16,7 @@ const thumb = css`
   height: ${thumbSize};
   width: ${thumbSize};
   ${borderRadiusMixin('full')};
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-500);
   cursor: pointer;
 `;
 
@@ -58,15 +58,22 @@ export const inputRangeStyles = (scope) => css`
   }
 
   .${scope} .form-control:focus::-webkit-slider-thumb {
-    background: var(--color-primary-dark);
+    background: var(--color-primary-700);
   }
 
   .${scope}[disabled] .form-control::-webkit-slider-thumb {
-    background: var(--color-primary-disabled);
+    background: var(--color-primary-300);
   }
 `;
 
+/**
+ * Transition unset to prevent multiple stacked inherited transitions for span elements
+ */
 export default css`
+  :host {
+    transition: unset;
+  }
+
   .input-group__container > .input-group__input ::slotted(.form-control) {
     padding: ${spacing['0']};
     border: none;

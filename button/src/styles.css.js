@@ -8,19 +8,19 @@ export default css`
   :host {
     display: inline-block;
     cursor: pointer;
-    background-color: var(--color-primary);
-    color: var(--text-color-light);
+    background-color: var(--color-primary-500);
+    color: ${coolGray[50]};
     ${borderRadiusMixin()}
     ${typographyMixin('sans', 'base', 'medium')}
     padding: ${spacing['2.5']} ${spacing['4']};
   }
 
   :host(:hover) {
-    background-color: var(--color-primary-dark);
+    background-color: var(--color-primary-700);
   }
 
   :host(:active) {
-    background-color: var(--color-primary-darker);
+    background-color: var(--color-primary-800);
   }
 
   :host(:focus:not([disabled])),
@@ -30,16 +30,16 @@ export default css`
   }
 
   :host([variation='secondary']) {
-    background-color: var(--color-primary-light);
-    color: var(--color-primary-darker);
+    background-color: var(--color-primary-200);
+    color: var(--color-primary-800);
   }
 
   :host([variation='secondary']:hover) {
-    background-color: var(--color-primary-lighter);
+    background-color: var(--color-primary-100);
   }
 
   :host([variation='secondary']:active) {
-    background-color: var(--color-primary-lightest);
+    background-color: var(--color-primary-50);
   }
 
   :host([variation='outline']),
@@ -62,12 +62,12 @@ export default css`
 
   :host([variation='outline']:hover),
   :host([variation='text']:hover) {
-    background-color: ${coolGray[50]};
+    background-color: ${coolGray[100]};
   }
 
   :host([variation='outline']:active),
   :host([variation='text']:active) {
-    background-color: ${coolGray[100]};
+    background-color: ${coolGray[200]};
   }
 
   :host([variation='outline']:focus),
@@ -91,10 +91,12 @@ export default css`
 
   :host([disabled]) {
     filter: brightness(75%);
+    pointer-events: none;
   }
 
-  :host(:not([variation='secondary']):not([variation='outline']):not([variation='text'])) {
-    background-color: var(--color-primary);
+  :host([disabled][variation='primary']),
+  :host([disabled]:not([variation])) {
+    background-color: var(--color-primary-500);
   }
 
   ::slotted([slot='suffix']) {
@@ -103,5 +105,17 @@ export default css`
 
   ::slotted([slot='prefix']) {
     padding-right: 0.5rem;
+  }
+
+  :host([theme='dark'][variation='text']) {
+    color: ${coolGray[50]};
+  }
+
+  :host([theme='dark'][variation='text']:hover) {
+    background-color: ${coolGray[700]};
+  }
+
+  :host([theme='dark'][variation='text']:active) {
+    background-color: ${coolGray[600]};
   }
 `;

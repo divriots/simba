@@ -14,16 +14,21 @@ The spacings are tokenized as CSS tagged literals (CSSResult) which can be used 
 ```js preview-story
 import { css, LitElement } from '@lion/core';
 import { indigo } from '~/colors';
+import { ThemeMixin } from '~/themes';
 import { spacing } from '../src/spacing.css.js';
 
-class DemoSpacing extends LitElement { 
+class DemoSpacing extends ThemeMixin(LitElement) { 
   static get styles() {
     return css`
       :host {
         display: block;
         width: ${spacing[48]};
         height: 10px;
-        background-color: ${indigo[800]};
+        background-color: var(--color-primary-700);
+      }
+
+      :host([theme="dark"]) {
+        background-color: var(--color-primary-200);
       }
     `;
   }

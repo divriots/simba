@@ -1,10 +1,13 @@
 import { ScopedElementsMixin } from '@lion/core';
 import { LionSelectInvoker } from '@lion/select-rich';
 import { SimbaIcon } from '~/icons';
+import { ThemeMixin } from '~/themes';
 import { invokerStyles } from './styles.css.js';
 import '~/icons/simba-icon.js';
 
-export class SimbaSelectInvoker extends ScopedElementsMixin(LionSelectInvoker) {
+export class SimbaSelectInvoker extends ScopedElementsMixin(
+  ThemeMixin(LionSelectInvoker)
+) {
   static get scopedElements() {
     return {
       'simba-icon': SimbaIcon,

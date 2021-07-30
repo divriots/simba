@@ -49,6 +49,19 @@ export class SimbaInputDatepicker extends InputMixin(LionInputDatepicker) {
     this._calendarNode.addEventListener('central-date-changed', () => {
       this.centralDate = this._calendarNode.centralDate;
     });
+
+    /**
+     * Override the backdrop background-color for dark-mode.
+     * TODO: File issue on lion, as this way of doing it is not
+     * very developer-friendly.
+     */
+    const globalStyleNode = document.querySelector(
+      'style[data-global-overlays]'
+    );
+    globalStyleNode.sheet.insertRule(
+      'html[theme="dark"] .global-overlays .global-overlays__backdrop { background-color: #000 }',
+      globalStyleNode.sheet.cssRules.length
+    );
   }
 
   _defineOverlayConfig() {

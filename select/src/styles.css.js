@@ -11,20 +11,20 @@ export const invokerStyles = css`
 
   :host {
     ${borderRadiusMixin()};
-    background-color: white;
+    background-color: ${coolGray[50]};
     border: 1px solid ${coolGray[300]};
     margin-top: ${spacing['1']};
   }
 
   :host(:hover) {
-    background-color: white;
+    background-color: ${coolGray[50]};
   }
 
   :host(:focus),
   :host(:focus-visible) {
     outline: none;
     border: 1px solid transparent;
-    box-shadow: 0 0 0 2px var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-primary-500);
   }
 
   :host(:active) {
@@ -35,11 +35,27 @@ export const invokerStyles = css`
     width: ${spacing['3']};
     height: ${spacing['3']};
   }
+
+  :host([theme='dark']) {
+    background-color: var(--bg-color-dark);
+  }
 `;
 
 export const optionStyles = css`
   :host([checked]) {
-    background-color: var(--color-primary-lighter);
+    background-color: var(--color-primary-100);
+  }
+
+  :host([theme='dark']) {
+    background-color: var(--bg-color-dark);
+  }
+
+  :host([theme='dark']:hover) {
+    background-color: ${coolGray[600]};
+  }
+
+  :host([theme='dark'][checked]) {
+    background-color: var(--color-primary-900);
   }
 `;
 
@@ -68,9 +84,14 @@ export const selectStyles = css`
     right: 10px;
     top: 15px;
     fill: ${coolGray[800]};
+    transition: var(--simba-darkmode-transition);
   }
 
   :host([disabled]) .input-group__arrow {
     fill: ${coolGray[400]};
+  }
+
+  :host([theme='dark']) .input-group__arrow {
+    fill: ${coolGray[200]};
   }
 `;

@@ -4,7 +4,6 @@
 import { html } from 'lit'
 import '~/token-display';
 import '~/doc-styles';
-import { blue } from '~/colors';
 import {
   borderRadiusMixin as _borderRadiusMixin,
 } from '../src/radius.css.js';
@@ -16,17 +15,22 @@ The color palettes are tokenized as CSS tagged literals (CSSResult) which can be
 
 ```js preview-story
 import { css, LitElement } from '@lion/core';
+import { ThemeMixin } from '~/themes';
 import { borderRadiusMixin } from '../src/radius.css.js';
 
-class DemoRounded extends LitElement { 
+class DemoRounded extends ThemeMixin(LitElement) { 
   static get styles() {
     return css`
       :host {
         display: block;
         width: 50px;
         height: 50px;
-        background-color: ${blue[400]};
+        background-color: var(--color-primary-700);
         ${borderRadiusMixin()}
+      }
+
+      :host([theme="dark"]) {
+        background-color: var(--color-primary-200);
       }
     `;
   }
