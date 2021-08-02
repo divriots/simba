@@ -1,8 +1,9 @@
 import { LitElement, html, css } from '@lion/core';
 import { coolGray, indigo, blue } from '~/colors';
 import { borderRadiusMixin } from '~/borders';
+import { ThemeMixin } from '~/themes';
 
-class TokenDisplay extends LitElement {
+class TokenDisplay extends ThemeMixin(LitElement) {
   static get styles() {
     return css`
       :host {
@@ -42,23 +43,35 @@ class TokenDisplay extends LitElement {
       .cell--border {
         width: 100px;
         height: 50px;
-        background-color: ${blue[400]};
+        background-color: var(--color-primary-700);
         box-shadow: none;
         ${borderRadiusMixin('none')}
+      }
+
+      :host([theme='dark']) .cell--border {
+        background-color: var(--color-primary-200);
       }
 
       .cell--typography {
         width: auto;
         height: auto;
         box-shadow: none;
-        color: ${indigo[800]};
+        color: var(--color-primary-700);
+      }
+
+      :host([theme='dark']) .cell--typography {
+        color: var(--color-primary-200);
       }
 
       .cell--spacing {
         height: 10px;
-        background-color: ${indigo[800]};
+        background-color: var(--color-primary-700);
         box-shadow: none;
-        ${borderRadiusMixin('none')}
+        ${borderRadiusMixin('none')};
+      }
+
+      :host([theme='dark']) .cell--spacing {
+        background-color: var(--color-primary-200);
       }
 
       .horizontal-layout {

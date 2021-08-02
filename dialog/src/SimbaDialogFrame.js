@@ -3,8 +3,9 @@ import { coolGray } from '~/colors';
 import { spacing } from '~/spacing';
 import { borderRadiusMixin } from '~/borders';
 import { typographyMixin } from '~/typography';
+import { ThemeMixin } from '~/themes';
 
-export class SimbaDialogFrame extends LitElement {
+export class SimbaDialogFrame extends ThemeMixin(LitElement) {
   static get styles() {
     return css`
       :host {
@@ -33,6 +34,10 @@ export class SimbaDialogFrame extends LitElement {
         padding: ${spacing['3']};
         border-bottom: 1px solid ${coolGray[300]};
         ${typographyMixin('sans', 'lg', 'semibold')}
+      }
+
+      :host([theme='dark']) {
+        background-color: var(--bg-color-dark);
       }
     `;
   }

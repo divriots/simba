@@ -15,11 +15,11 @@ export class SimbaTooltip extends LionTooltip {
         }
 
         .arrow {
-          fill: var(--color-primary-darkest);
+          fill: var(--color-primary-900);
         }
 
         ::slotted([slot='content']) {
-          background-color: var(--color-primary-darkest);
+          background-color: var(--color-primary-900);
           color: ${coolGray[50]};
           padding: ${spacing['1.5']} ${spacing['2']};
           ${borderRadiusMixin()};

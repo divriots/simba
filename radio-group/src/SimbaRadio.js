@@ -1,9 +1,10 @@
 import { html } from '@lion/core';
 import { LionRadio } from '@lion/radio-group';
 import { inputStyles, choiceBoxStyles } from '~/form-system';
+import { ThemeMixin } from '~/themes';
 import styles from './styles.css.js';
 
-export class SimbaRadio extends LionRadio {
+export class SimbaRadio extends ThemeMixin(LionRadio) {
   static get styles() {
     return [...super.styles, inputStyles, choiceBoxStyles, styles];
   }

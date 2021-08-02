@@ -1,23 +1,28 @@
 import { html } from '@lion/core';
 import { LionValidationFeedback } from '@lion/form-core';
-import { defaultTheme } from '~/themes';
+import { ThemeMixin } from '~/themes';
 import styles from './styles.css.js';
 
 import '~/icons/simba-icon.js';
 
-export class SimbaValidationFeedback extends LionValidationFeedback {
+export class SimbaValidationFeedback extends ThemeMixin(
+  LionValidationFeedback
+) {
   static get properties() {
     return {};
   }
 
   static get styles() {
-    return [defaultTheme(), styles];
+    return [...super.styles, styles];
   }
 
   _messageTemplate({ message, type }) {
     return html`
-      <simba-icon class="${type}" icon-id="simba:alerts:${type}"></simba-icon>
-      <span class="${type}">${message}</span>
+      <simba-icon
+        class="icon ${type}"
+        icon-id="simba:alerts:${type}"
+      ></simba-icon>
+      <span class="text ${type}">${message}</span>
     `;
   }
 }

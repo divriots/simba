@@ -14,14 +14,19 @@ The color palettes are tokenized as CSS tagged literals (CSSResult) which can be
 ```js preview-story
 import { css, LitElement } from '@lion/core';
 import { indigo } from '~/colors';
+import { ThemeMixin } from '~/themes';
 import { typographyMixin } from '../src/typography.css.js';
 
-class DemoTypography extends LitElement { 
+class DemoTypography extends ThemeMixin(LitElement) { 
   static get styles() {
     return css`
       :host {
-        color: ${indigo[800]};
+        color: var(--color-primary-700);
         ${typographyMixin('sans', 'xl', 'semibold')}
+      }
+
+      :host([theme="dark"]) {
+        color: var(--color-primary-200);
       }
     `;
   }

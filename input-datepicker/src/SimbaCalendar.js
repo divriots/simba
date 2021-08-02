@@ -2,9 +2,12 @@ import { html, ScopedElementsMixin, render } from '@lion/core';
 import { LionCalendar } from '@lion/calendar';
 import { getMonthNames } from '@lion/localize';
 import { SimbaButton } from '~/button';
+import { ThemeMixin } from '~/themes';
 import { calendarStyles } from './styles.css.js';
 
-export class SimbaCalendar extends ScopedElementsMixin(LionCalendar) {
+export class SimbaCalendar extends ScopedElementsMixin(
+  ThemeMixin(LionCalendar)
+) {
   static get scopedElements() {
     return {
       'simba-button': SimbaButton,

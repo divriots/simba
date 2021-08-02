@@ -10,9 +10,13 @@ export default css`
   }
 
   :host(:focus-within) .input-group__container {
-    box-shadow: 0 0 0 2px var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-primary-500);
     ${borderRadiusMixin()};
     overflow: hidden;
+  }
+
+  :host(:focus-within) ::slotted(.form-control) {
+    border-color: transparent !important;
   }
 
   .input-group__container > .input-group__input ::slotted(.form-control:focus) {
@@ -29,7 +33,7 @@ export default css`
   }
 
   ::slotted(simba-button:focus) {
-    box-shadow: 0 0 1px 1px ${coolGray[300]}, 0 0 0 3px var(--color-primary);
+    box-shadow: 0 0 1px 1px ${coolGray[300]}, 0 0 0 3px var(--color-primary-500);
   }
 
   ::slotted(simba-button[slot='prefix']) {
@@ -38,5 +42,22 @@ export default css`
 
   ::slotted(simba-button[slot='suffix']) {
     ${borderRadiusMixin('', 'r')};
+  }
+
+  :host(:focus-within) ::slotted(simba-button[slot='prefix']) {
+    box-shadow: 1px 0 0 0 ${coolGray[300]};
+  }
+
+  :host(:focus-within) ::slotted(simba-button[slot='suffix']) {
+    box-shadow: -1px 0 0 0 ${coolGray[300]};
+  }
+
+  :host([theme='dark']) ::slotted(simba-button) {
+    background-color: var(--bg-color-dark);
+    color: ${coolGray[100]};
+  }
+
+  :host([theme='dark'][disabled]) ::slotted(simba-button) {
+    background-color: ${coolGray[600]};
   }
 `;

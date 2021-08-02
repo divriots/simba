@@ -1,10 +1,13 @@
 import { html } from '@lion/core';
 import { LionCheckboxIndeterminate } from '@lion/checkbox-group';
 import { inputStyles, choiceBoxStyles } from '~/form-system';
+import { ThemeMixin } from '~/themes';
 import styles from './styles.css.js';
 import indeterminateStyles from './indeterminate-styles.css.js';
 
-export class SimbaCheckboxIndeterminate extends LionCheckboxIndeterminate {
+export class SimbaCheckboxIndeterminate extends ThemeMixin(
+  LionCheckboxIndeterminate
+) {
   static get styles() {
     return [
       ...super.styles,

@@ -2,9 +2,27 @@ html,
 body {
   font-family: var(--font-sans);
   max-width: 1200px;
-  margin: 30px auto;
+  margin: 50px auto;
   padding: 0 30px;
   color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+html[theme='dark'],
+html[theme='dark'] body {
+  color: var(--text-color-dark);
+  background-color: var(--bg-color-dark);
+}
+
+.docs-menu {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  padding: 10px;
 }
 
 h1,
@@ -14,6 +32,16 @@ h4,
 h5,
 h6 {
   color: var(--heading-color);
+  transition: var(--simba-darkmode-transition);
+}
+
+html[theme='dark'] h1,
+html[theme='dark'] h2,
+html[theme='dark'] h3,
+html[theme='dark'] h4,
+html[theme='dark'] h5,
+html[theme='dark'] h6 {
+  color: var(--heading-color-dark);
 }
 
 .preview-story {
@@ -21,14 +49,26 @@ h6 {
 }
 
 blockquote {
-  border-left: 4px solid var(--color-primary);
-  background-color: var(--color-primary-lightest);
+  border-left: 4px solid var(--color-primary-500);
+  background-color: var(--blockquote-bg-color);
   padding: 3px 15px;
   margin-inline-start: 15px;
   margin-inline-end: 30px;
   font-style: italic;
 }
 
+html[theme='dark'] blockquote {
+  background-color: var(--blockquote-bg-color-dark);
+}
+
 details > pre[class*='language-'] > code[class*='language-'] {
   z-index: 0;
+}
+
+a {
+  color: var(--color-primary-800);
+}
+
+html[theme='dark'] a {
+  color: var(--color-primary-200);
 }

@@ -1,9 +1,10 @@
 import { html } from '@lion/core';
 import { LionCheckbox } from '@lion/checkbox-group';
 import { inputStyles, choiceBoxStyles } from '~/form-system';
+import { ThemeMixin } from '~/themes';
 import styles from './styles.css.js';
 
-export class SimbaCheckbox extends LionCheckbox {
+export class SimbaCheckbox extends ThemeMixin(LionCheckbox) {
   static get styles() {
     return [...super.styles, inputStyles, choiceBoxStyles, styles];
   }

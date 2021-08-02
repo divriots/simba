@@ -11,12 +11,32 @@ export const pickerStyles = css`
     margin-top: 4px;
   }
 
+  :host(:focus-within) .input-group__container {
+    box-shadow: 0 0 0 2px var(--color-primary-500);
+    ${borderRadiusMixin()};
+    overflow: hidden;
+  }
+
+  :host(:focus-within) ::slotted([slot='suffix']) {
+    box-shadow: -1px 0 0 0 ${coolGray[300]};
+  }
+
+  :host(:focus-within)
+    ::slotted(.form-control:not([type='checkbox']):not([type='radio']):not(:focus)) {
+    border-color: transparent;
+  }
+
+  .input-group__container > .input-group__input ::slotted(.form-control:focus) {
+    box-shadow: none;
+  }
+
   .input-group__container > .input-group__input ::slotted(.form-control) {
     ${borderRadiusMixin('', 'l')};
     margin-top: 0;
   }
 
   ::slotted([slot='suffix']) {
+    transition: unset;
     ${borderRadiusMixin('', 'r')};
     padding: ${spacing['1.5']} ${spacing['2.5']};
     border: 0;
@@ -24,7 +44,7 @@ export const pickerStyles = css`
 
   ::slotted([slot='suffix']:focus),
   ::slotted([slot='suffix']:focus-visible) {
-    box-shadow: 0 0 0 2px var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-primary-500);
     overflow: hidden;
     outline: 0;
   }
@@ -32,6 +52,18 @@ export const pickerStyles = css`
   :host([disabled]) ::slotted([slot='suffix']) {
     background-color: ${coolGray[50]};
     filter: none;
+  }
+
+  :host([theme='dark']) ::slotted([slot='suffix']) {
+    background-color: var(--bg-color-dark);
+  }
+
+  :host([theme='dark']) ::slotted([slot='suffix']:focus) {
+    background-color: var(--color-primary-900);
+  }
+
+  :host([theme='dark'][disabled]) ::slotted([slot='suffix']) {
+    background-color: ${coolGray[600]};
   }
 `;
 
@@ -55,7 +87,7 @@ export const frameStyles = css`
 
   .calendar-overlay__header {
     position: relative;
-    background-color: var(--color-primary);
+    background-color: var(--color-primary-500);
     color: ${coolGray[50]};
   }
 
@@ -76,7 +108,7 @@ export const frameStyles = css`
   }
 
   .calendar-overlay__close-button:hover {
-    background-color: var(--color-primary-dark);
+    background-color: var(--color-primary-700);
   }
 
   .calendar-overlay__current {
@@ -91,7 +123,7 @@ export const calendarStyles = css`
   .calendar__navigation {
     display: flex;
     justify-content: space-between;
-    margin-top: 8px;
+    padding-top: 8px;
   }
 
   .calendar__navigation simba-button {
@@ -122,7 +154,7 @@ export const calendarStyles = css`
 
   .calendar__day-button[selected] {
     color: ${coolGray[50]};
-    background-color: var(--color-primary);
+    background-color: var(--color-primary-500);
   }
 
   .calendar__day-button:active {
@@ -130,17 +162,53 @@ export const calendarStyles = css`
   }
 
   .calendar__day-button:hover {
-    border: 1px solid var(--color-primary);
+    border: 1px solid var(--color-primary-500);
   }
 
   .calendar__day-button:focus,
   .calendar__day-button:focus-visible {
-    border: 2px solid var(--color-primary-light);
+    border: 2px solid var(--color-primary-200);
     outline: none;
   }
 
   .calendar__day-button[today] {
-    background-color: var(--color-primary-lighter);
+    color: var(--color-primary-800);
     text-decoration: none;
+  }
+
+  .calendar__day-button[today] .calendar__day-button__text {
+    border-bottom: 2px solid var(--color-primary-800);
+    padding: 1 2px;
+  }
+
+  :host([theme='dark']) {
+    background-color: var(--bg-color-dark);
+  }
+
+  :host([theme='dark']) .calendar__day-button {
+    background-color: var(--bg-color-dark);
+    color: ${coolGray[50]};
+  }
+
+  :host([theme='dark']) .calendar__day-button[today] {
+    color: var(--color-primary-200);
+  }
+
+  :host([theme='dark'])
+    .calendar__day-button[today]
+    .calendar__day-button__text {
+    border-color: var(--color-primary-200);
+  }
+
+  :host([theme='dark']) .calendar__day-button[selected] {
+    background-color: var(--color-primary-500);
+  }
+
+  :host([theme='dark']) .calendar__day-button:active {
+    background-color: var(--color-primary-700);
+  }
+
+  :host([theme='dark']) .calendar__day-button[disabled] {
+    color: ${coolGray[600]};
   }
 `;

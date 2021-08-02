@@ -59,6 +59,22 @@ export const placements = () => html`
     [icon-id$="info"] {
       fill: ${blue[700]};
     }
+
+    html[theme="dark"] [icon-id$="error"] {
+      fill: ${red[400]};
+    }
+
+    html[theme="dark"] [icon-id$="warning"] {
+      fill: ${amber[400]};
+    }
+
+    html[theme="dark"] [icon-id$="success"] {
+      fill: ${emerald[400]};
+    }
+
+    html[theme="dark"] [icon-id$="info"] {
+      fill: ${blue[400]};
+    }
   </style>
   <simba-tooltip .config=${{ popperConfig: { placement: 'top' } }}>
     <simba-icon class="demo-tooltip-invoker" icon-id="simba:alerts:error" slot="invoker"></simba-icon>

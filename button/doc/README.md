@@ -95,5 +95,6 @@ export const disabledButton = () =>html`
   <simba-button disabled>Submit</simba-button>
   <simba-button variation="secondary" disabled>Submit</simba-button>
   <simba-button variation="outline" disabled>Submit</simba-button>
+  <simba-button variation="text" disabled>Submit</simba-button>
 `;
 ```

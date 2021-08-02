@@ -1,9 +1,9 @@
 import { html } from '@lion/core';
 import { LionButton } from '@lion/button';
-import { defaultTheme } from '~/themes';
+import { ThemeMixin } from '~/themes';
 import styles from './styles.css.js';
 
-export class SimbaButton extends LionButton {
+export class SimbaButton extends ThemeMixin(LionButton) {
   static get properties() {
     return {
       variation: {
@@ -23,7 +23,7 @@ export class SimbaButton extends LionButton {
   }
 
   static get styles() {
-    return [...super.styles, defaultTheme(), styles];
+    return [...super.styles, styles];
   }
 
   render() {

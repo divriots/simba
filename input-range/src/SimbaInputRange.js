@@ -98,14 +98,14 @@ export class SimbaInputRange extends InputMixin(LionInputRange) {
     const sliderPercentage =
       ((this.modelValue - this.min) / (this.max - this.min)) * 100;
     let mainColor;
-    let secondaryColor = 'primary-light';
+    let secondaryColor = 'primary-200';
     if (document.activeElement === this._inputNode) {
-      mainColor = 'primary-dark';
+      mainColor = 'primary-700';
     } else if (this.disabled) {
-      mainColor = 'primary-disabled';
-      secondaryColor = 'primary-lightest';
+      mainColor = 'primary-300';
+      secondaryColor = 'primary-100';
     } else {
-      mainColor = 'primary';
+      mainColor = 'primary-500';
     }
 
     this._inputNode.style.background = `
