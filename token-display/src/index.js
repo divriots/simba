@@ -46,7 +46,7 @@ class TokenDisplay extends ThemeMixin(LitElement) {
         height: 50px;
         background-color: var(--color-primary-700);
         box-shadow: none;
-        ${borderRadiusMixin('none')}
+        ${borderRadiusMixin('none')};
       }
 
       :host([theme='dark']) .cell--border {
