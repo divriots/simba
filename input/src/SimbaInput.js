@@ -1,5 +1,5 @@
 import { LionInput } from '@lion/input';
-import { InputMixin } from '~/form-system';
+import { InputMixin } from '~/form-core';
 
 export class SimbaInput extends InputMixin(LionInput) {
   static get localizeNamespaces() {

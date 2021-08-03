@@ -1,5 +1,5 @@
 import { LionTextarea } from '@lion/textarea';
-import { InputMixin } from '~/form-system';
+import { InputMixin } from '~/form-core';
 
 export class SimbaTextarea extends InputMixin(LionTextarea) {
   static get properties() {

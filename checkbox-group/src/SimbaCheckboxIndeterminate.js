@@ -1,6 +1,6 @@
 import { html } from '@lion/core';
 import { LionCheckboxIndeterminate } from '@lion/checkbox-group';
-import { inputStyles, choiceBoxStyles } from '~/form-system';
+import { inputStyles, choiceBoxStyles } from '~/form-core';
 import { ThemeMixin } from '~/themes';
 import styles from './styles.css.js';
 import indeterminateStyles from './indeterminate-styles.css.js';

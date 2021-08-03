@@ -1,5 +1,5 @@
 import { LionInputEmail } from '@lion/input-email';
-import { InputMixin } from '~/form-system';
+import { InputMixin } from '~/form-core';
 
 export class SimbaInputEmail extends InputMixin(LionInputEmail) {
   static get localizeNamespaces() {

@@ -1,6 +1,6 @@
 import { html } from '@lion/core';
 import { LionInputStepper } from '@lion/input-stepper';
-import { InputMixin } from '~/form-system';
+import { InputMixin } from '~/form-core';
 import styles from './styles.css.js';
 import '~/button/simba-button.js';
 
@@ -59,10 +59,5 @@ export class SimbaInputStepper extends InputMixin(LionInputStepper) {
         ${this._incrementorSignTemplate()}
       </simba-button>
     `;
-  }
-
-  // TODO: remove this hotfix when https://github.com/ing-bank/lion/pull/1467/ gets released
-  _onBlurButton() {
-    this.dispatchEvent(new Event(this._leaveEvent));
   }
 }

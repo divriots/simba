@@ -1,6 +1,6 @@
 import { LionInputAmount } from '@lion/input-amount';
 import { formatNumber } from '@lion/localize';
-import { InputMixin } from '~/form-system';
+import { InputMixin } from '~/form-core';
 import styles from './styles.css.js';
 
 export class SimbaInputAmount extends InputMixin(LionInputAmount) {
@@ -33,7 +33,5 @@ export class SimbaInputAmount extends InputMixin(LionInputAmount) {
   onLocaleUpdated() {
     super.onLocaleUpdated();
     this.placeholder = formatNumber(0, { minimumFractionDigits: 2 });
-    // TODO: Remove when https://github.com/ing-bank/lion/pull/1459 is released
-    this.formattedValue = this._callFormatter();
   }
 }

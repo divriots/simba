@@ -1,7 +1,7 @@
 import { html } from '@lion/core';
 import { LionInputRange } from '@lion/input-range';
 import { formatNumber } from '@lion/localize';
-import { InputMixin } from '~/form-system';
+import { InputMixin } from '~/form-core';
 import styles, { inputRangeStyles } from './styles.css.js';
 
 export class SimbaInputRange extends InputMixin(LionInputRange) {
