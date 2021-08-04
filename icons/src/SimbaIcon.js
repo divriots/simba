@@ -7,13 +7,12 @@ export class SimbaIcon extends ThemeMixin(LionIcon) {
     return [
       ...super.styles,
       css`
-        :host([theme='dark']) {
-          fill: var(--text-color-dark);
+        :host {
+          transition: var(--simba-theme-transition);
         }
 
-        /** svg already inherits from global, unset to prevent stacking */
-        ::slotted(*) {
-          transition: unset;
+        :host([theme='dark']) {
+          fill: var(--text-color-dark);
         }
       `,
     ];

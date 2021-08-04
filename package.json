@@ -5,9 +5,9 @@
   "license": "ISC",
   "type": "module",
   "scripts": {
-    "serve": "dsd-cli serve 5vtJtbY04aoD1dGKcsu1 --open"
+    "serve": "bkl serve 5vtJtbY04aoD1dGKcsu1 --open"
   },
   "devDependencies": {
-    "dsd-cli": "latest"
+    "bkl": "latest"
   }
 }

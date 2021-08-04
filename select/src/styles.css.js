@@ -14,6 +14,7 @@ export const invokerStyles = css`
     background-color: ${coolGray[50]};
     border: 1px solid ${coolGray[300]};
     margin-top: ${spacing['1']};
+    transition: background-color 0.3s ease-in-out;
   }
 
   :host(:hover) {
@@ -84,7 +85,7 @@ export const selectStyles = css`
     right: 10px;
     top: 15px;
     fill: ${coolGray[800]};
-    transition: var(--simba-darkmode-transition);
+    transition: var(--simba-theme-transition);
   }
 
   :host([disabled]) .input-group__arrow {

@@ -14,7 +14,7 @@ export default css`
 
   .icon,
   .text {
-    transition: var(--simba-darkmode-transition);
+    transition: var(--simba-theme-transition);
   }
 
   .error {

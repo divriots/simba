@@ -1,5 +1,4 @@
 import { dedupeMixin } from '@open-wc/dedupe-mixin';
-import { defaultTheme } from './themes.css.js';
 
 const themeObserver = new MutationObserver((list) => {
   registeredComponents.forEach((comp) => {
@@ -27,10 +26,6 @@ export const ThemeMixinImplementation = (superclass) =>
       return {
         theme: { type: String, reflect: true },
       };
-    }
-
-    static get styles() {
-      return [...(super.styles || []), defaultTheme()];
     }
 
     constructor() {

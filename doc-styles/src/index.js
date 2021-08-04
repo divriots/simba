@@ -1,7 +1,6 @@
-import './styles.css';
 import 'https://gitcdn.link/repo/PrismJS/prism-themes/master/themes/prism-vsc-dark-plus.css';
-import { defaultTheme } from '~/themes';
-import '~/themes/simba-theme-toggler.js';
+import './styles.css';
+import '../docs-menu.js';
 
 /**
  * Initial theme setting
@@ -15,18 +14,9 @@ import '~/themes/simba-theme-toggler.js';
 const userPrefersDark = window.matchMedia(
   '(prefers-color-scheme: dark)'
 ).matches;
-const theme =
+const darkTheme =
   localStorage.getItem('simba-theme') || (userPrefersDark ? 'dark' : 'light');
+document.documentElement.setAttribute('theme', darkTheme);
 
-document.documentElement.setAttribute('theme', theme);
-
-const cssText = defaultTheme(true);
-const styleSheet = document.createElement('style');
-styleSheet.innerText = cssText;
-document.head.appendChild(styleSheet);
-
-const docsMenu = document.createElement('div');
-docsMenu.classList.add('docs-menu');
-const themeToggler = document.createElement('simba-theme-toggler');
-docsMenu.appendChild(themeToggler);
+const docsMenu = document.createElement('docs-menu');
 document.body.prepend(docsMenu);

@@ -48,7 +48,6 @@ export class SimbaThemeToggler extends LitElement {
       .thumb {
         width: 18px;
         height: 18px;
-        border-radius: 50%;
         overflow: hidden;
       }
 
@@ -60,14 +59,14 @@ export class SimbaThemeToggler extends LitElement {
       .sun,
       .moon {
         font-size: 16px;
-        line-height: 19px;
+        line-height: 17px;
         width: 20px;
         transition: all 0.2s ease-in-out;
         transform: rotate(0deg);
       }
 
       .sun {
-        margin-right: 5px;
+        margin-right: 4px;
         margin-left: -3px;
       }
 
@@ -93,6 +92,7 @@ export class SimbaThemeToggler extends LitElement {
         background-color: ${coolGray[700]};
         box-shadow: 0 0 0 2px ${coolGray[900]};
         position: absolute;
+        border-radius: 50%;
       }
 
       .thumb {
@@ -171,7 +171,7 @@ export class SimbaThemeToggler extends LitElement {
     // Delay this by animation frame so it is not transitioning things on initial render
     requestAnimationFrame(() => {
       document.documentElement.style.setProperty(
-        '--simba-darkmode-transition',
+        '--simba-theme-transition',
         'background 0.3s ease-in-out, color 0.6s ease-in-out, fill 0.6s ease-in-out'
       );
     });
