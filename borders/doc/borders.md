@@ -26,7 +26,8 @@ class DemoRounded extends ThemeMixin(LitElement) {
         width: 50px;
         height: 50px;
         background-color: var(--color-primary-700);
-        ${borderRadiusMixin()}
+        ${borderRadiusMixin()};
+        transition: var(--simba-theme-transition);
       }
 
       :host([theme="dark"]) {

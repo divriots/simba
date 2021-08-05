@@ -8,12 +8,8 @@ import '~/icons/simba-icon.js';
 export class SimbaValidationFeedback extends ThemeMixin(
   LionValidationFeedback
 ) {
-  static get properties() {
-    return {};
-  }
-
   static get styles() {
-    return [...super.styles, styles];
+    return [...[super.styles ?? []], styles];
   }
 
   _messageTemplate({ message, type }) {

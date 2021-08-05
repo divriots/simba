@@ -37,7 +37,8 @@ class TokenDisplay extends ThemeMixin(LitElement) {
         width: 50px;
         height: 25px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-        ${borderRadiusMixin('sm')}
+        ${borderRadiusMixin('sm')};
+        transition: var(--simba-theme-transition);
       }
 
       .cell--border {

@@ -25,6 +25,7 @@ class DemoSpacing extends ThemeMixin(LitElement) {
         width: ${spacing[48]};
         height: 10px;
         background-color: var(--color-primary-700);
+        transition: var(--simba-theme-transition);
       }
 
       :host([theme="dark"]) {

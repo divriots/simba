@@ -5,6 +5,10 @@ import { typographyMixin, weight } from '~/typography';
 import { spacing } from '~/spacing';
 
 export const inputStyles = css`
+  ::slotted(*:not(simba-select-invoker)) {
+    transition: var(--simba-theme-transition);
+  }
+
   .input-group__container > .input-group__input ::slotted(.form-control) {
     border: 1px solid ${coolGray[300]};
     ${borderRadiusMixin('md')};

@@ -18,6 +18,7 @@ html[theme='dark'] body {
   position: fixed;
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   top: 0;
@@ -32,7 +33,11 @@ h4,
 h5,
 h6 {
   color: var(--heading-color);
-  transition: var(--simba-darkmode-transition);
+  transition: var(--simba-theme-transition);
+}
+
+a {
+  transition: var(--simba-theme-transition);
 }
 
 html[theme='dark'] h1,
@@ -55,6 +60,7 @@ blockquote {
   margin-inline-start: 15px;
   margin-inline-end: 30px;
   font-style: italic;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 html[theme='dark'] blockquote {
