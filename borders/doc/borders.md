@@ -14,7 +14,7 @@ import {
 The color palettes are tokenized as CSS tagged literals (CSSResult) which can be used directly inside `static get styles`.
 
 ```js preview-story
-import { css, LitElement } from '@lion/core';
+import { css, LitElement } from '~/core';
 import { ThemeMixin } from '~/themes';
 import { borderRadiusMixin } from '../src/radius.css.js';
 

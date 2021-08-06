@@ -1,4 +1,4 @@
-import { css } from '@lion/core';
+import { css } from '~/core';
 
 export default css`
   .input-group__container {

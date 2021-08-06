@@ -1,4 +1,4 @@
-import { LitElement, html, css, unsafeCSS } from '@lion/core';
+import { LitElement, html, css, unsafeCSS } from '~/core';
 import { spacing } from '~/spacing';
 import { theme, setTheme } from '~/themes';
 import * as colors from '~/colors';

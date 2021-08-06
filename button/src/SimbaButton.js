@@ -1,4 +1,4 @@
-import { html } from '@lion/core';
+import { html } from '~/core';
 import { LionButton } from '@lion/button';
 import { ThemeMixin } from '~/themes';
 import styles from './styles.css.js';

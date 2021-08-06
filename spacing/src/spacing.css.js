@@ -1,4 +1,4 @@
-import { css } from '@lion/core';
+import { css } from '~/core';
 
 export const spacing = {
   0: css`0px`,

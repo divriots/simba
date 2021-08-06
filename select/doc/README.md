@@ -122,7 +122,7 @@ In case you're curious, below is the code for the color-option element, which is
   <summary>Code</summary>
 
 ```js copy
-import { html, LitElement, render } from '@lion/core';
+import { html, LitElement, render } from '~/core';
 import { SimbaOption } from '../src/SimbaOption.js';
 
 /** 

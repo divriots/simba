@@ -1,4 +1,4 @@
-import { html } from '@lion/core';
+import { html } from '~/core';
 
 /**
  * @license

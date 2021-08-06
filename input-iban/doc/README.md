@@ -36,21 +36,19 @@ export const input = () => html`
 
 By default, we validate the input to ensure the IBAN is valid.
 
-In the example below, we restrict IBANs to only Dutch IBANs.
+In the example below, we restrict IBANs to only BeNeLux IBANs.
 
-> TODO: when [Lion PR](https://github.com/ing-bank/lion/pull/1462) is done,
-> showcase enforcing IBAN to multiple possible countries, e.g. BeNeLux (Belgium, Netherlands, Luxembourg).
-> Another use case is a whitelist of only EU IBANs, which is easier than a blacklist of non EU countries.
+This validator also accepts a single string, for single country restriction.
 
 ```js preview-story
 import { IsCountryIBAN } from '@lion/input-iban';
 
 export const inputCountryRestrictions = () => html`
   <simba-input-iban 
-    .validators=${[new Required(), new IsCountryIBAN('NL')]}
+    .validators=${[new Required(), new IsCountryIBAN(['NL', 'BE', 'LU'])]}
     .modelValue=${'DE89370400440532013000'}
     name="iban" 
-    help-text="Your Dutch bank account number"
+    help-text="Your BeNeLux bank account number"
   ></simba-input-iban>
   <br />
   <small>Demo instructions: you can use NL20 INGB 0001 2345 67</small>

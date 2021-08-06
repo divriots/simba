@@ -1,4 +1,4 @@
-import { html, ScopedElementsMixin, render } from '@lion/core';
+import { html, ScopedElementsMixin, render } from '~/core';
 import { LionCalendar } from '@lion/calendar';
 import { getMonthNames } from '@lion/localize';
 import { SimbaButton } from '~/button';

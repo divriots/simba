@@ -1,6 +1,6 @@
-import { html } from '@lion/core';
+import { html } from '~/core';
 import { LionRadio } from '@lion/radio-group';
-import { inputStyles, choiceBoxStyles } from '~/form-system';
+import { inputStyles, choiceBoxStyles } from '~/form-core';
 import { ThemeMixin } from '~/themes';
 import styles from './styles.css.js';
 

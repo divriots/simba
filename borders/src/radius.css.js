@@ -1,4 +1,4 @@
-import { css } from '@lion/core';
+import { css } from '~/core';
 
 export const borderRadiusMixin = (size, corner) => {
   if (!size) {

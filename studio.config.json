@@ -26,8 +26,9 @@
           "validation-feedback"
         ]
       ],
-      ["infrastructure", ["form-system", "themes"]],
-      ["docs", ["token-display", "doc-styles"]]
+      ["infrastructure", ["form-core", "themes"]],
+      ["docs", ["token-display", "doc-styles"]],
+      ["re-exports-only", ["core"]]
     ]
   }
 }

@@ -1,4 +1,4 @@
-import { css } from '@lion/core';
+import { css } from '~/core';
 import { weight } from '~/typography';
 import { spacing } from '~/spacing';
 import { coolGray } from '~/colors';

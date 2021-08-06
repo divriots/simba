@@ -1,5 +1,5 @@
 import { LionInputDate } from '@lion/input-date';
-import { InputMixin } from '~/form-system';
+import { InputMixin } from '~/form-core';
 import styles from './styles.css.js';
 
 export class SimbaInputDate extends InputMixin(LionInputDate) {

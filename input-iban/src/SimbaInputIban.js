@@ -1,5 +1,5 @@
 import { LionInputIban } from '@lion/input-iban';
-import { InputMixin } from '~/form-system';
+import { InputMixin } from '~/form-core';
 
 export class SimbaInputIban extends InputMixin(LionInputIban) {
   static get localizeNamespaces() {

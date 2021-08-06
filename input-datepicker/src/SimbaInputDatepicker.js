@@ -1,8 +1,8 @@
-import { html, ifDefined } from '@lion/core';
+import { html, ifDefined } from '~/core';
 import { LionInputDatepicker } from '@lion/input-datepicker';
 import { withModalDialogConfig, withBottomSheetConfig } from '@lion/overlays';
 import { formatDate } from '@lion/localize';
-import { InputMixin } from '~/form-system';
+import { InputMixin } from '~/form-core';
 import '~/button/simba-button.js';
 import { pickerStyles } from './styles.css.js';
 import { SimbaCalendarOverlayFrame } from './SimbaCalendarOverlayFrame.js';

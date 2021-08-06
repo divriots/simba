@@ -12,7 +12,7 @@ import { spacing as spacingTokens } from '../src/spacing.css.js';
 The spacings are tokenized as CSS tagged literals (CSSResult) which can be used directly inside `static get styles`.
 
 ```js preview-story
-import { css, LitElement } from '@lion/core';
+import { css, LitElement } from '~/core';
 import { indigo } from '~/colors';
 import { ThemeMixin } from '~/themes';
 import { spacing } from '../src/spacing.css.js';

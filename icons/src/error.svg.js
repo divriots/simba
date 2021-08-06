@@ -1,4 +1,4 @@
-import { html } from '@lion/core';
+import { html } from '~/core';
 
 export const error = html`<svg
   xmlns="http://www.w3.org/2000/svg"

@@ -1,4 +1,4 @@
-import { css } from '@lion/core';
+import { css } from '~/core';
 import { red, amber, emerald, blue } from '~/colors';
 import { typographyMixin } from '~/typography';
 

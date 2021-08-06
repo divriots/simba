@@ -5,9 +5,9 @@ import '~/validation-feedback/simba-validation-feedback.js';
 export const LocalizeLabelMixinImplementation = (superclass) =>
   class extends LocalizeMixin(superclass) {
     async onLocaleUpdated() {
-      await localize.loadingComplete.then(() => {
-        this.label = localize.msg(`${this.tagName.toLowerCase()}:defaultLabel`);
-      });
+      super.onLocaleUpdated();
+      this.label = localize.msg(`${this.tagName.toLowerCase()}:defaultLabel`);
+      this._updateFeedbackComponent(); // new label means new feedback message
     }
   };
 

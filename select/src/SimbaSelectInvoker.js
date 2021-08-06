@@ -1,4 +1,4 @@
-import { ScopedElementsMixin } from '@lion/core';
+import { ScopedElementsMixin } from '~/core';
 import { LionSelectInvoker } from '@lion/select-rich';
 import { SimbaIcon } from '~/icons';
 import { ThemeMixin } from '~/themes';

@@ -1,4 +1,4 @@
-import { LitElement, html, css } from '@lion/core';
+import { LitElement, html, css } from '~/core';
 import { coolGray } from '~/colors';
 import { spacing } from '~/spacing';
 import '~/themes/simba-theme-toggler.js';
