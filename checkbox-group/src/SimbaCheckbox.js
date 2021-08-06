@@ -1,4 +1,4 @@
-import { html } from '@lion/core';
+import { html } from '~/core';
 import { LionCheckbox } from '@lion/checkbox-group';
 import { inputStyles, choiceBoxStyles } from '~/form-core';
 import { ThemeMixin } from '~/themes';

@@ -1,4 +1,4 @@
-import { css } from '@lion/core';
+import { css } from '~/core';
 import { borderRadiusMixin } from '~/borders';
 import { spacing } from '~/spacing';
 

@@ -1,4 +1,4 @@
-import { LitElement, html } from '@lion/core';
+import { LitElement, html } from '~/core';
 import { LocalizeMixin } from '@lion/localize';
 import { ThemeMixin } from '~/themes';
 import { frameStyles } from './styles.css.js';

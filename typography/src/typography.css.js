@@ -1,4 +1,4 @@
-import { css } from '@lion/core';
+import { css } from '~/core';
 
 export const family = {
   sans: css`'Inter var', ui-sans-serif, system-ui, -apple-system,

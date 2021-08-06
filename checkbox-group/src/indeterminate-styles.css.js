@@ -1,4 +1,4 @@
-import { css } from '@lion/core';
+import { css } from '~/core';
 import { spacing } from '~/spacing';
 
 export default css`

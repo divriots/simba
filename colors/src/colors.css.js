@@ -1,4 +1,4 @@
-import { css } from '@lion/core';
+import { css } from '~/core';
 
 export const coolGray = {
   50: css`#F9FAFB`,

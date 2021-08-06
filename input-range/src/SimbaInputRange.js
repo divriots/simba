@@ -1,4 +1,4 @@
-import { html } from '@lion/core';
+import { html } from '~/core';
 import { LionInputRange } from '@lion/input-range';
 import { formatNumber } from '@lion/localize';
 import { InputMixin } from '~/form-core';

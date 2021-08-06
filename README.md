@@ -62,10 +62,11 @@ In the `studio.config.json` we define the structure of this starter-kit, which b
 - Infrastructure, utilities and mixins used across multiple components.
 - Docs, any utilities used to style the documentation in Backlight or add functionality.
 
-### Importing from @lion
+### Importing lion modules
 
 At this moment, simba does not re-export everything from `@lion` just yet.
 Everything from `@lion/core` is re-exported, meaning that you can import things like `html`, `LitElement`, etc. from `@divriots/simba-starter/core` or `~/core` locally.
+This is recommended, because it avoids deduplication issues.
 
 If you need to import from `@lion` directly, it's important that installations of lion and its dependencies are properly deduped.
 In Backlight, this is taken care of for you on the backend, and you won't have to worry about it.

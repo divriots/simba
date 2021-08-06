@@ -27,7 +27,8 @@
         ]
       ],
       ["infrastructure", ["form-core", "themes"]],
-      ["docs", ["token-display", "doc-styles"]]
+      ["docs", ["token-display", "doc-styles"]],
+      ["re-exports-only", ["core"]]
     ]
   }
 }

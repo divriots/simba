@@ -1,4 +1,4 @@
-import { LitElement, html, css } from '@lion/core';
+import { LitElement, html, css } from '~/core';
 import { coolGray, indigo, blue } from '~/colors';
 import { borderRadiusMixin } from '~/borders';
 import { ThemeMixin } from '~/themes';

@@ -1,4 +1,4 @@
-import { html } from '@lion/core';
+import { html } from '~/core';
 import { LionInputStepper } from '@lion/input-stepper';
 import { InputMixin } from '~/form-core';
 import styles from './styles.css.js';

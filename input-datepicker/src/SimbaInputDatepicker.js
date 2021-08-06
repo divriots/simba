@@ -1,4 +1,4 @@
-import { html, ifDefined } from '@lion/core';
+import { html, ifDefined } from '~/core';
 import { LionInputDatepicker } from '@lion/input-datepicker';
 import { withModalDialogConfig, withBottomSheetConfig } from '@lion/overlays';
 import { formatDate } from '@lion/localize';

@@ -1,4 +1,4 @@
-import { ScopedElementsMixin } from '@lion/core';
+import { ScopedElementsMixin } from '~/core';
 import { LionSelectRich } from '@lion/select-rich';
 import { InputMixin } from '~/form-core';
 import { SimbaOptions } from './SimbaOptions.js';

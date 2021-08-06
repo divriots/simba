@@ -1,4 +1,4 @@
-import { LitElement, html, css } from '@lion/core';
+import { LitElement, html, css } from '~/core';
 import { coolGray } from '~/colors';
 
 const themeObserver = new MutationObserver(() => {

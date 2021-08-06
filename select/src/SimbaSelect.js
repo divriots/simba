@@ -1,4 +1,4 @@
-import { html, ScopedElementsMixin } from '@lion/core';
+import { html, ScopedElementsMixin } from '~/core';
 import { LionSelect } from '@lion/select';
 import { InputMixin } from '~/form-core';
 import { SimbaIcon } from '~/icons';

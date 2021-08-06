@@ -12,7 +12,7 @@ import { typographyMixin as _typographyMixin } from '../src/typography.css.js';
 The color palettes are tokenized as CSS tagged literals (CSSResult) which can be used directly inside `static get styles`.
 
 ```js preview-story
-import { css, LitElement } from '@lion/core';
+import { css, LitElement } from '~/core';
 import { indigo } from '~/colors';
 import { ThemeMixin } from '~/themes';
 import { typographyMixin } from '../src/typography.css.js';
@@ -47,7 +47,7 @@ It is also possible to only grab `family`, `size` or `weight` e.g. to create CSS
 instead of using the mixin to grab the full set of typography declarations.
 
 ```js
-import { css } from '@lion/core';
+import { css } from '~/core';
 import { family, size, weight } from '../src/typography.css.js';
 
 css`
