@@ -4,11 +4,11 @@ We are very happy to accept contributions to improve this Backlight starter-kit,
 
 To help, we suggest the following forking workflow.
 
-## Backlight
+## Using Backlight.dev
 
 TODO: Add info on how to contribute by forking & creating PR from Backlight.dev
 
-## Local
+## Using your local environment
 
 ### Clone and run
 

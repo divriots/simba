@@ -11,41 +11,16 @@ Click the "Edit" button to also see the source code in the Backlight editor.
 ## Features
 
 - 🍴 Easy to fork and create your own variation using [Backlight](https://backlight.dev/)
-- 📦 Available on NPM to extend or use directly
+- ⚒️ Interoperable, built on top of platform-standards, [works in any framework](https://custom-elements-everywhere.com/)
 - 🌙 Darkmode out of the box
 - 🦄 Theming capabilities, choose any color from Tailwind palette out of the box, with room for more!
+- 📦 Available on NPM to extend or use directly
+
+> In case you don't use Backlight.dev but use straight from NPM, refer to our [usage from NPM guide](./UsingNPM.md).
 
 ## Usage
 
-Importing a component to extend:
-
-```js
-import { SimbaButton } from '@divriots/starter-simba/button';
-
-class NalaButton extends SimbaButton {}
-```
-
-Using a component directly in your application
-
-```html
-<head>
-  <script type="module" src="@divriots/starter-simba/button/simba-button.js"></script>
-</head> 
-<body>
-  <simba-button>Submit</simba-button>
-</body>
-```
-
-or in JS using lit template:
-
-```js
-import { html } from '@divriots/starter-simba/core';
-import '@divriots/starter-simba/button/simba-button.js';
-
-export const templ = html`<simba-button>Submit</simba-button>`;
-```
-
-### Backlight
+### Duplicate in Backlight
 
 This is the recommended way, as backlight gives you an all-in-one Design System platform.
 
@@ -53,12 +28,11 @@ In order to create your own project from this starter kit using Backlight, go to
 
 Make sure you have a Backlight Workspace, then go to [simba-starter on backlight](https://backlight.dev/edit/5vtJtbY04aoD1dGKcsu1) and click the **Duplicate** button in the top right corner, this will create a project based on this starter-kit for you.
 
-### NPM
+```js
+import { html } from '~/core';
+import '~/button/simba-button.js';
 
-If you want to use simba-starter directly in your application, or extend it without using Backlight, this is possible as simba-starter is published to NPM.
-
-```sh
-npm i @divriots/starter-simba --save
+export const templ = html`<simba-button>Submit</simba-button>`;
 ```
 
 ## Contributing
@@ -90,29 +64,9 @@ In the `studio.config.json` we define the structure of this starter-kit, which b
 
 ### Importing from @lion
 
-At this moment, simba does not re-export everything from `@lion`, meaning that you might have to import from `@lion` directly, e.g. for `LitElement` or for `localize`. It's important that installation of direct dependencies such as `@lion` or `lit` are properly deduped. In Backlight, `Packd` takes care of this for you on the backend, and you won't have to worry about it. If you use `starter-simba` outside of Backlight, you will need to ensure that deduplication is handled, otherwise you will run into breaking bugs.
+At this moment, simba does not re-export everything from `@lion` just yet.
+Everything from `@lion/core` is re-exported, meaning that you can import things like `html`, `LitElement`, etc. from `@divriots/simba-starter/core` or `~/core` locally.
 
-#### Example scenario
-
-```js
-/**
- * @lion/core is installed as a transitive dependency 
- * of @divriots/starter-simba as well as a direct dependency
- * of your application.
- * 
- * That could lead to having two versions:
- * - @lion/core -> v0.2.0 (your direct dependency)
- * - @lion/core -> v0.3.0 (transitive from simba)
- * 
- * Which will lead to potentially [object Object] rendered in the browser
- * 
- * NPM will not dedupe this because below v1, minors are 
- * potentially considered breaking, so incompatible
- * 
- * You'll have to upgrade your direct dependency to 0.3.0 manually
- * to resolve this.
- */ 
-import { html } from '@lion/core';
-```
-
-With Backlight, you shouldn't fall into this trap, as it will always ensure the latest version is installed, or the version that is already in the Packd browser cache, so the versions shouldn't diverge.
+If you need to import from `@lion` directly, it's important that installations of lion and its dependencies are properly deduped.
+In Backlight, this is taken care of for you on the backend, and you won't have to worry about it.
+If you use `starter-simba` outside of Backlight, you will need to ensure that deduplication is handled, otherwise you will run into breaking bugs.
