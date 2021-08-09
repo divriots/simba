@@ -20,10 +20,14 @@ export const choiceBoxStyles = css`
     font-weight: ${weight['normal']};
   }
 
-  :host([disabled]) ::slotted([slot='label']) {
+  :host([disabled]) {
     cursor: not-allowed;
     pointer-events: all;
     opacity: 0.6;
+  }
+
+  :host([disabled]) ::slotted([slot='label']) {
+    cursor: not-allowed;
   }
 
   ::slotted(.form-control) {
