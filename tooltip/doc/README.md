@@ -33,10 +33,6 @@ export const tooltip = () => html`
 
 We only allow four placements, `top`, `bottom`, `left` and `right`.
 
-> Currently there seems to be a bug with Popper's placement logic that doesn't
-> incorporate inner margins on the `html` element.
-> This shows itself when you drag the editor/demo divider and also for top/bottom placements in general.
-
 ```js preview-story
 export const placements = () => html`
   <style>
