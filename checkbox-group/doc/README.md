@@ -41,7 +41,7 @@ export const indeterminate = () => html`
     <simba-checkbox-indeterminate label="Favorite scientists">
       <simba-checkbox slot="checkbox" label="Isaac Newton"></simba-checkbox>
       <simba-checkbox slot="checkbox" label="Galileo Galilei"></simba-checkbox>
-      <simba-checkbox-indeterminate slot="checkbox" label="Old Greek scientists">
+      <simba-checkbox-indeterminate slot="checkbox" label="Greek scientists">
         <simba-checkbox slot="checkbox" label="Archimedes"></simba-checkbox>
         <simba-checkbox slot="checkbox" label="Plato"></simba-checkbox>
         <simba-checkbox slot="checkbox" label="Pythagoras"></simba-checkbox>
