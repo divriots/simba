@@ -1,3 +1,8 @@
+/**
+ *
+ *     GLOBALS
+ *
+ */
 body {
   font-family: var(--font-sans);
   max-width: 1200px;
@@ -11,18 +16,6 @@ html[theme='dark'],
 html[theme='dark'] body {
   color: var(--text-color-dark);
   background-color: var(--bg-color-dark);
-}
-
-.docs-menu {
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  top: 0;
-  left: 0;
-  padding: 10px;
 }
 
 h1,
@@ -48,10 +41,6 @@ html[theme='dark'] h6 {
   color: var(--heading-color-dark);
 }
 
-.preview-story {
-  margin: 20px 0;
-}
-
 blockquote {
   border-left: 4px solid var(--color-primary-500);
   background-color: var(--blockquote-bg-color);
@@ -66,8 +55,21 @@ html[theme='dark'] blockquote {
   background-color: var(--blockquote-bg-color-dark);
 }
 
-details > pre[class*='language-'] > code[class*='language-'] {
-  z-index: 0;
+/**
+ *
+ *     Fixed Docs Menu with theme toggler, color toggler, etc.
+ *
+ */
+.docs-menu {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  padding: 10px;
 }
 
 a {
@@ -76,4 +78,66 @@ a {
 
 html[theme='dark'] a {
   color: var(--color-primary-200);
+}
+
+/**
+ *
+ *     DEMOS
+ *
+ */
+.preview-story {
+  margin: 20px 0;
+  border: 1px solid;
+  border-color: #9ca3af;
+  border-radius: 4px;
+}
+
+html[theme='dark'] .preview-story {
+  border-radius: 4px;
+}
+
+.story_padded {
+  padding: 20px;
+}
+
+.preview-story summary {
+  padding: 15px;
+  cursor: pointer;
+  border-top: 1px solid #9ca3af;
+  background-color: #f3f4f6;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.preview-story summary:focus {
+  outline: none;
+  border: 2px solid var(--focus-ring-color);
+  padding: 14px 13px 13px;
+}
+
+.preview-story summary:hover {
+  background-color: var(--color-primary-50);
+}
+
+html[theme='dark'] .preview-story summary {
+  background-color: #1b1e22;
+}
+
+html[theme='dark'] .preview-story summary:hover {
+  background-color: var(--color-primary-900);
+}
+
+.preview-story pre {
+  margin: 0;
+}
+
+.preview-story details {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-color: #9ca3af;
+  transition: background-color 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.preview-story details > pre[class*='language-'] > code[class*='language-'] {
+  z-index: 0;
 }
