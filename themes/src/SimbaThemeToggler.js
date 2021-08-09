@@ -161,6 +161,9 @@ export class SimbaThemeToggler extends LitElement {
     window
       .matchMedia('(prefers-color-scheme: dark)')
       .addEventListener('change', (ev) => {
+        // follow OS preference, by removing from preference local storage
+        localStorage.removeItem('simba-theme');
+
         if (ev.matches) {
           this.setTheme('dark');
         } else {
