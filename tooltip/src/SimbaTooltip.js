@@ -18,10 +18,10 @@ export class SimbaTooltip extends LionTooltip {
           fill: var(--color-primary-900);
         }
 
-        ::slotted([slot='content']) {
+        #overlay-content-node-wrapper {
+          padding: ${spacing['1.5']} ${spacing['2']};
           background-color: var(--color-primary-900);
           color: ${coolGray[50]};
-          padding: ${spacing['1.5']} ${spacing['2']};
           ${borderRadiusMixin()};
         }
       `,
