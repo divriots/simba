@@ -92,10 +92,6 @@ html[theme='dark'] a {
   border-radius: 4px;
 }
 
-html[theme='dark'] .preview-story {
-  border-radius: 4px;
-}
-
 .story_padded {
   padding: 20px;
 }
