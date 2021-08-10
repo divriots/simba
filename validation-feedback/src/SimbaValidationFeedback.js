@@ -14,11 +14,13 @@ export class SimbaValidationFeedback extends ThemeMixin(
 
   _messageTemplate({ message, type }) {
     return html`
-      <simba-icon
-        class="icon ${type}"
-        icon-id="simba:alerts:${type}"
-      ></simba-icon>
-      <span class="text ${type}">${message}</span>
+      <div class="feedback-container">
+        <simba-icon
+          class="icon ${type}"
+          icon-id="simba:alerts:${type}"
+        ></simba-icon>
+        <span class="text ${type}">${message}</span>
+      </div>
     `;
   }
 }
