@@ -1,4 +1,4 @@
-import { dedupeMixin } from '@open-wc/dedupe-mixin';
+import { dedupeMixin } from '~/core';
 
 const themeObserver = new MutationObserver((list) => {
   registeredComponents.forEach((comp) => {

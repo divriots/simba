@@ -4,12 +4,16 @@ import { typographyMixin } from '~/typography';
 
 export default css`
   :host {
+    display: block;
     color: ${red[600]};
+    margin-top: 2px;
+    ${typographyMixin('sans', 'sm')};
+  }
+
+  .feedback-container {
     display: flex;
     align-items: center;
     gap: 0.25em;
-    margin-top: 2px;
-    ${typographyMixin('sans', 'sm')};
   }
 
   .icon,
