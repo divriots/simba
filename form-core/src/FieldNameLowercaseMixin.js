@@ -1,4 +1,4 @@
-import { dedupeMixin } from '@open-wc/dedupe-mixin';
+import { dedupeMixin } from '~/core';
 
 /**
  * Ensure that fieldName is made lowercase, which suits better inside

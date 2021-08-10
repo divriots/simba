@@ -1,4 +1,4 @@
-import { dedupeMixin } from '@open-wc/dedupe-mixin';
+import { dedupeMixin } from '~/core';
 import { localize, LocalizeMixin } from '@lion/localize';
 import '~/validation-feedback/simba-validation-feedback.js';
 

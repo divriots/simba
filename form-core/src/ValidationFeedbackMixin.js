@@ -1,5 +1,5 @@
 import { DefaultSuccess } from '@lion/form-core';
-import { dedupeMixin } from '@open-wc/dedupe-mixin';
+import { dedupeMixin } from '~/core';
 import '~/validation-feedback/simba-validation-feedback.js';
 
 export const ValidationFeedbackMixinImplementation = (superclass) =>

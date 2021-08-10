@@ -1,4 +1,4 @@
-import { dedupeMixin } from '@open-wc/dedupe-mixin';
+import { dedupeMixin } from '~/core';
 import { ThemeMixin } from '~/themes';
 import { LocalizeLabelMixin } from './LocalizeLabelMixin.js';
 import { ValidationFeedbackMixin } from './ValidationFeedbackMixin.js';
