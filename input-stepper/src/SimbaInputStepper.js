@@ -26,17 +26,11 @@ export class SimbaInputStepper extends InputMixin(LionInputStepper) {
     return [...super.styles, styles];
   }
 
-  constructor() {
-    super();
-    this.__boundOnBlurButton = this._onBlurButton.bind(this);
-  }
-
   _decrementorTemplate() {
     return html`
       <simba-button
         ?disabled=${this.disabled || this.readOnly}
         @click=${this.__decrement}
-        @blur=${this.__boundOnBlurButton}
         tabindex="-1"
         variation="outline"
         aria-label="decrement"
@@ -51,7 +45,6 @@ export class SimbaInputStepper extends InputMixin(LionInputStepper) {
       <simba-button
         ?disabled=${this.disabled || this.readOnly}
         @click=${this.__increment}
-        @blur=${this.__boundOnBlurButton}
         tabindex="-1"
         variation="outline"
         aria-label="increment"
