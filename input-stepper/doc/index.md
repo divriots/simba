@@ -60,7 +60,6 @@ export const inputRange = () => html`
 `;
 ```
 
-
 ## Disabled
 
 You can also prefill and disable the stepper in case you don't want your user to change it.
