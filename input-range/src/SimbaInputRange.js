@@ -50,6 +50,14 @@ export class SimbaInputRange extends InputMixin(LionInputRange) {
     this.__setBarBackground();
     this._inputNode.addEventListener('focus', this.__boundSetBarBackground);
     this._inputNode.addEventListener('blur', this.__boundSetBarBackground);
+    this._inputNode.addEventListener(
+      'mouseenter',
+      this.__boundSetBarBackground
+    );
+    this._inputNode.addEventListener(
+      'mouseleave',
+      this.__boundSetBarBackground
+    );
   }
 
   _groupOneTemplate() {
@@ -104,6 +112,8 @@ export class SimbaInputRange extends InputMixin(LionInputRange) {
     } else if (this.disabled) {
       mainColor = 'primary-300';
       secondaryColor = 'primary-100';
+    } else if (this._inputNode.matches('input:hover')) {
+      mainColor = 'primary-600';
     } else {
       mainColor = 'primary-500';
     }

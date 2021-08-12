@@ -57,7 +57,12 @@ export const inputRangeStyles = (scope) => css`
     ${track};
   }
 
-  .${scope} .form-control:focus::-webkit-slider-thumb {
+  .${scope} .form-control:hover::-webkit-slider-thumb {
+    background: var(--color-primary-600);
+  }
+
+  .${scope} .form-control:focus::-webkit-slider-thumb,
+  .${scope} .form-control:active::-webkit-slider-thumb {
     background: var(--color-primary-700);
   }
 
