@@ -27,6 +27,8 @@ export const setTheme = (_theme) => {
     '--text-color-dark': colors.coolGray[50],
     '--bg-color': 'white',
     '--bg-color-dark': '#24292e',
+    '--switch-color-hover': `${colors[theme][500]}30`,
+    '--switch-color-focus': `${colors[theme][500]}70`,
 
     /** Used by docs only */
     '--heading-color': colors.coolGray[900],
