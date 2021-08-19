@@ -3,7 +3,15 @@
     "dir": "",
     "menu": [
       "introduction",
-      ["tokens", ["colors", "borders", "typography", "spacing"]],
+      [
+        "tokens",
+        [
+          "colors",
+          "borders",
+          "typography",
+          "spacing"
+        ]
+      ],
       [
         "components",
         [
@@ -21,14 +29,32 @@
           "input-stepper",
           "radio-group",
           "select",
+          "switch",
           "textarea",
           "tooltip",
           "validation-feedback"
         ]
       ],
-      ["infrastructure", ["form-core", "themes"]],
-      ["docs", ["token-display", "doc-styles"]],
-      ["re-exports-only", ["core"]]
+      [
+        "infrastructure",
+        [
+          "form-core",
+          "themes"
+        ]
+      ],
+      [
+        "docs",
+        [
+          "token-display",
+          "doc-styles"
+        ]
+      ],
+      [
+        "re-exports-only",
+        [
+          "core"
+        ]
+      ]
     ]
   }
 }
