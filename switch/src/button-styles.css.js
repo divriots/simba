@@ -1,6 +1,6 @@
 import { css } from '~/core';
 import { borderRadiusMixin } from '~/borders';
-import { emerald, coolGray } from '~/colors';
+import { coolGray } from '~/colors';
 
 const trackPadding = -4;
 const thumbDiameter = 20;
@@ -40,7 +40,7 @@ export default css`
   }
 
   :host([checked]) .switch-button__track {
-    background-color: ${emerald['500']};
+    background-color: var(--color-primary-500);
   }
 
   :host(:hover:not([disabled])) .switch-button__thumb {
@@ -54,7 +54,8 @@ export default css`
   }
 
   :host([checked]:hover:not([disabled])) .switch-button__thumb {
-    --thumb-shadow: var(--thumb-elevation), 0 0 0 ${thumbShadow}px #10B98130;
+    --thumb-shadow: var(--thumb-elevation),
+      0 0 0 ${thumbShadow}px var(--switch-color-hover);
   }
 
   :host(:focus:not([disabled])) .switch-button__thumb {
@@ -69,7 +70,8 @@ export default css`
   }
 
   :host([checked]:focus:not([disabled])) .switch-button__thumb {
-    --thumb-shadow: var(--thumb-elevation), 0 0 0 ${thumbShadow}px #10B98170;
+    --thumb-shadow: var(--thumb-elevation),
+      0 0 0 ${thumbShadow}px var(--switch-color-focus);
   }
 
   :host([disabled]) .switch-button__thumb {
@@ -81,6 +83,6 @@ export default css`
   }
 
   :host([disabled][checked]) .switch-button__track {
-    background-color: ${emerald['700']};
+    background-color: var(--color-primary-700);
   }
 `;
