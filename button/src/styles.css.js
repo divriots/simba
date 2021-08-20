@@ -13,6 +13,7 @@ export default css`
     ${borderRadiusMixin()}
     ${typographyMixin('sans', 'base', 'medium')}
     padding: ${spacing['2.5']} ${spacing['4']};
+    transition: var(--simba-theme-transition);
   }
 
   :host(:hover) {
@@ -49,7 +50,7 @@ export default css`
   }
 
   :host([variation='outline']) {
-    background-color: ${coolGray[50]};
+    background-color: transparent;
   }
 
   :host([variation='text']) {
@@ -107,15 +108,18 @@ export default css`
     padding-right: 0.5rem;
   }
 
-  :host([theme='dark'][variation='text']) {
+  :host([theme='dark'][variation='text']),
+  :host([theme='dark'][variation='outline']) {
     color: ${coolGray[50]};
   }
 
-  :host([theme='dark'][variation='text']:hover) {
+  :host([theme='dark'][variation='text']:hover),
+  :host([theme='dark'][variation='outline']:hover) {
     background-color: ${coolGray[700]};
   }
 
-  :host([theme='dark'][variation='text']:active) {
+  :host([theme='dark'][variation='text']:active),
+  :host([theme='dark'][variation='outline']:active) {
     background-color: ${coolGray[600]};
   }
 `;

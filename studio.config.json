@@ -16,6 +16,7 @@
         "components",
         [
           "button",
+          "collapsible",
           "checkbox-group",
           "dialog",
           "icons",
