@@ -47,7 +47,10 @@ export const borderRadiusMixin = (size, corner) => {
       css`border-top-right-radius`,
       css`border-bottom-left-radius`,
       css`border-bottom-right-radius`,
-    ].filter((cssDecl) => !cornerMap[corner].includes(cssDecl));
+    ].filter(
+      (cssDecl) =>
+        !cornerMap[corner].find((decl) => decl.cssText === cssDecl.cssText)
+    );
   }
 
   // prettier-ignore

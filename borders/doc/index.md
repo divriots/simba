@@ -1,12 +1,10 @@
 # Borders
 
 ```js script
-import { html } from 'lit'
+import { html } from 'lit';
 import '~/token-display';
 import '~/doc-styles';
-import {
-  borderRadiusMixin as _borderRadiusMixin,
-} from '../src/radius.css.js';
+import { borderRadiusMixin as _borderRadiusMixin } from '../src/radius.css.js';
 ```
 
 ## Usage
@@ -18,7 +16,7 @@ import { css, LitElement } from '~/core';
 import { ThemeMixin } from '~/themes';
 import { borderRadiusMixin } from '../src/radius.css.js';
 
-class DemoRounded extends ThemeMixin(LitElement) { 
+class DemoRounded extends ThemeMixin(LitElement) {
   static get styles() {
     return css`
       :host {
@@ -30,7 +28,7 @@ class DemoRounded extends ThemeMixin(LitElement) {
         transition: var(--simba-theme-transition);
       }
 
-      :host([theme="dark"]) {
+      :host([theme='dark']) {
         background-color: var(--color-primary-200);
       }
     `;
@@ -48,13 +46,13 @@ You can specify the size of the border-radius as the first parameter.
 E.g. for 2xl borders:
 
 ```js
-borderRadiusMixin('2xl')
+borderRadiusMixin('2xl');
 ```
 
 ```js story
 export const sizes = () =>
   html`
-    <token-display 
+    <token-display
       css-mixin
       token-type="border"
       .mixin=${_borderRadiusMixin}
@@ -69,7 +67,7 @@ export const sizes = () =>
         'xl',
         '2xl',
         '3xl',
-        'full'
+        'full',
       ]}
     ></token-display>
   `;
@@ -82,16 +80,16 @@ You can specify the corners as the second parameter.
 E.g. for only the top corners:
 
 ```js
-borderRadiusMixin('', 't')
+borderRadiusMixin('', 't');
 ```
 
 ```js story
 export const corners = () =>
   html`
-    <token-display 
+    <token-display
       css-mixin
       token-type="border"
-      .mixin=${_borderRadiusMixin} 
+      .mixin=${_borderRadiusMixin}
       .mixinParams=${['md']}
       .mixinDynamicParamIndex=${1}
       .mixinDynamicParams=${['tl', 'tr', 'bl', 'br', 't', 'b', 'l', 'r']}
