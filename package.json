@@ -32,7 +32,7 @@
     "@lion/textarea": "^0.13.4",
     "@lion/tooltip": "^0.21.3",
     "@lion/validate-messages": "^0.7.4",
-    "@open-wc/scoped-elements": "2.0.0-next.4",
+    "@open-wc/scoped-elements": "^2.0.0-next.4",
     "dark-theme-utils": "^0.3.2"
   },
   "devDependencies": {
