@@ -1,7 +1,7 @@
 import { LitElement, html, css } from '~/core';
-import { coolGray, indigo, blue } from '~/colors';
+import { coolGray } from '~/colors';
 import { borderRadiusMixin } from '~/borders';
-import { ThemeMixin } from '~/themes';
+import { ThemeMixin } from 'dark-theme-utils';
 
 class TokenDisplay extends ThemeMixin(LitElement) {
   static get styles() {

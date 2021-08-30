@@ -1,7 +1,7 @@
 # Validation Feedback
 
 ```js script
-import { html } from 'lit'
+import { html } from '~/core';
 import '~/doc-styles';
 import '../simba-validation-feedback.js';
 ```
@@ -20,7 +20,7 @@ Below is an example of using the component as standalone.
 ```js preview-story
 export const feedback = () =>
   html`
-    <simba-validation-feedback 
+    <simba-validation-feedback
       .feedbackData=${[
         { message: 'This is an error', type: 'error' },
         { message: 'This is a warning', type: 'warning' },

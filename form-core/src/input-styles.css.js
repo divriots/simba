@@ -5,8 +5,12 @@ import { typographyMixin, weight } from '~/typography';
 import { spacing } from '~/spacing';
 
 export const inputStyles = css`
+  :host {
+    display: block;
+  }
+
   ::slotted(*:not(simba-select-invoker)) {
-    transition: var(--simba-theme-transition);
+    transition: var(--theme-transition);
   }
 
   .input-group__container > .input-group__input ::slotted(.form-control) {
@@ -15,6 +19,7 @@ export const inputStyles = css`
     ${typographyMixin('sans', 'sm')};
     padding: ${spacing['2']} ${spacing['3']};
     margin-top: ${spacing['1']};
+    width: 100%;
   }
 
   .input-group__container > .input-group__input ::slotted(.form-control:focus),

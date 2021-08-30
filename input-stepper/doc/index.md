@@ -3,7 +3,7 @@
 Input stepper Webcomponent.
 
 ```js script
-import { html } from 'lit';
+import { html } from '~/core';
 import { Required, Validator } from '@lion/form-core';
 import { localize } from '@lion/localize';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';

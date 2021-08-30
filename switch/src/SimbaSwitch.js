@@ -8,13 +8,11 @@ export class SimbaSwitch extends InputMixin(ScopedElementsMixin(LionSwitch)) {
   static get styles() {
     return [...super.styles, styles];
   }
-
   static get scopedElements() {
     return {
       'simba-switch-button': SimbaSwitchButton,
     };
   }
-
   get slots() {
     return {
       ...super.slots,

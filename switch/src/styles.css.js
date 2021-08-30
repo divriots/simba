@@ -3,6 +3,7 @@ import { borderRadiusMixin } from '~/borders';
 
 export default css`
   :host {
+    display: flex;
     justify-content: space-between;
     align-items: center;
   }

@@ -1,6 +1,6 @@
 import { html } from '~/core';
 import { LionValidationFeedback } from '@lion/form-core';
-import { ThemeMixin } from '~/themes';
+import { ThemeMixin } from 'dark-theme-utils';
 import styles from './styles.css.js';
 
 import '~/icons/simba-icon.js';

@@ -1,7 +1,7 @@
 # Typography
 
 ```js script
-import { html } from 'lit'
+import { html } from '~/core';
 import '~/token-display';
 import '~/doc-styles';
 import { typographyMixin as _typographyMixin } from '../src/typography.css.js';
@@ -14,26 +14,26 @@ The color palettes are tokenized as CSS tagged literals (CSSResult) which can be
 ```js preview-story
 import { css, LitElement } from '~/core';
 import { indigo } from '~/colors';
-import { ThemeMixin } from '~/themes';
+import { ThemeMixin } from 'dark-theme-utils';
 import { typographyMixin } from '../src/typography.css.js';
 
-class DemoTypography extends ThemeMixin(LitElement) { 
+class DemoTypography extends ThemeMixin(LitElement) {
   static get styles() {
     return css`
       :host {
         color: var(--color-primary-700);
         ${typographyMixin('sans', 'xl', 'semibold')};
-        transition: var(--simba-theme-transition);
+        transition: var(--theme-transition);
       }
 
-      :host([theme="dark"]) {
+      :host([theme='dark']) {
         color: var(--color-primary-200);
       }
     `;
   }
 
   render() {
-    return html`The quick brown fox jumped over the lazy dog.`
+    return html`The quick brown fox jumped over the lazy dog.`;
   }
 }
 customElements.define('demo-typography', DemoTypography);
@@ -59,7 +59,7 @@ css`
     --font-line-height-base: ${size['base'].lineHeight};
     --font-weight-normal: ${weight['normal']};
   }
-`
+`;
 ```
 
 ## Family
@@ -75,7 +75,7 @@ typographyMixin('mono');
 ```js story
 export const family = () =>
   html`
-    <token-display 
+    <token-display
       css-mixin
       token-type="typography"
       .mixin=${_typographyMixin}
@@ -93,13 +93,13 @@ You can specify the size of font as the second parameter.
 E.g. for large font-size:
 
 ```js
-typographyMixin('sans', 'lg')
+typographyMixin('sans', 'lg');
 ```
 
 ```js story
 export const sizes = () =>
   html`
-    <token-display 
+    <token-display
       css-mixin
       token-type="typography"
       .mixin=${_typographyMixin}
@@ -131,13 +131,13 @@ You can specify the weight of font as the third parameter.
 E.g. for large font-size:
 
 ```js
-typographyMixin('sans', 'lg', 'bold')
+typographyMixin('sans', 'lg', 'bold');
 ```
 
 ```js story
 export const weights = () =>
   html`
-    <token-display 
+    <token-display
       css-mixin
       token-type="typography"
       .mixin=${_typographyMixin}
@@ -152,7 +152,7 @@ export const weights = () =>
         'semibold',
         'bold',
         'extrabold',
-        'black', 
+        'black',
       ]}
     ></token-display>
   `;

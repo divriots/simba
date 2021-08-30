@@ -1,7 +1,7 @@
 import { LitElement, html, css } from '~/core';
 import { coolGray } from '~/colors';
 import { spacing } from '~/spacing';
-import '~/themes/simba-theme-toggler.js';
+import 'dark-theme-utils/theme-toggler';
 import '../color-toggler.js';
 
 export class DocsMenu extends LitElement {
@@ -32,7 +32,7 @@ export class DocsMenu extends LitElement {
     return html`
       <p>Themes</p>
       <color-toggler></color-toggler>
-      <simba-theme-toggler></simba-theme-toggler>
+      <theme-toggler></theme-toggler>
     `;
   }
 }

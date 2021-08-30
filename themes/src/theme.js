@@ -29,6 +29,7 @@ export const setTheme = (_theme) => {
     '--bg-color-dark': '#24292e',
     '--switch-color-hover': `${colors[theme][500]}30`,
     '--switch-color-focus': `${colors[theme][500]}70`,
+    '--theme-toggler-focus-color': colors[theme][300],
 
     /** Used by docs only */
     '--heading-color': colors.coolGray[900],
@@ -46,7 +47,7 @@ export const setTheme = (_theme) => {
     styleSheet.innerText = `
       html,
       body {
-        transition: var(--simba-theme-transition);
+        transition: var(--theme-transition);
       }
     `;
     document.head.appendChild(styleSheet);

@@ -1,6 +1,6 @@
 import { css } from '~/core';
 import { LionIcon } from '@lion/icon';
-import { ThemeMixin } from '~/themes';
+import { ThemeMixin } from 'dark-theme-utils';
 
 export class SimbaIcon extends ThemeMixin(LionIcon) {
   static get styles() {
@@ -8,7 +8,7 @@ export class SimbaIcon extends ThemeMixin(LionIcon) {
       ...super.styles,
       css`
         :host {
-          transition: var(--simba-theme-transition);
+          transition: var(--theme-transition);
         }
 
         :host([theme='dark']) {
