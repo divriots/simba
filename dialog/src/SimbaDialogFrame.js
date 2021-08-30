@@ -3,7 +3,7 @@ import { coolGray } from '~/colors';
 import { spacing } from '~/spacing';
 import { borderRadiusMixin } from '~/borders';
 import { typographyMixin } from '~/typography';
-import { ThemeMixin } from '~/themes';
+import { ThemeMixin } from 'dark-theme-utils';
 
 export class SimbaDialogFrame extends ThemeMixin(LitElement) {
   static get styles() {

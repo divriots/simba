@@ -1,7 +1,7 @@
 # Spacing
 
 ```js script
-import { html } from 'lit'
+import { html } from 'lit';
 import '~/token-display';
 import '~/doc-styles';
 import { spacing as spacingTokens } from '../src/spacing.css.js';
@@ -14,10 +14,10 @@ The spacings are tokenized as CSS tagged literals (CSSResult) which can be used 
 ```js preview-story
 import { css, LitElement } from '~/core';
 import { indigo } from '~/colors';
-import { ThemeMixin } from '~/themes';
+import { ThemeMixin } from 'dark-theme-utils';
 import { spacing } from '../src/spacing.css.js';
 
-class DemoSpacing extends ThemeMixin(LitElement) { 
+class DemoSpacing extends ThemeMixin(LitElement) {
   static get styles() {
     return css`
       :host {
@@ -25,10 +25,10 @@ class DemoSpacing extends ThemeMixin(LitElement) {
         width: ${spacing[48]};
         height: 10px;
         background-color: var(--color-primary-700);
-        transition: var(--simba-theme-transition);
+        transition: var(--theme-transition);
       }
 
-      :host([theme="dark"]) {
+      :host([theme='dark']) {
         background-color: var(--color-primary-200);
       }
     `;
@@ -43,5 +43,8 @@ export const usageInCE = () => html`<demo-spacing></demo-spacing>`;
 
 ```js story
 export const spacings = () =>
-  html`<token-display token-type="spacing" .tokens=${spacingTokens}></token-display>`;
+  html`<token-display
+    token-type="spacing"
+    .tokens=${spacingTokens}
+  ></token-display>`;
 ```

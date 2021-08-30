@@ -12,6 +12,8 @@ export const choiceBoxStyles = css`
   :host {
     margin: 6px 0;
     align-items: center;
+    display:flex;
+    flex-wrap: wrap;
   }
 
   ::slotted([slot='label']) {

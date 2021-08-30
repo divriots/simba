@@ -13,7 +13,7 @@ The color palettes are tokenized as CSS tagged literals (CSSResult) which can be
 
 ```js preview-story
 import { css, LitElement } from '~/core';
-import { ThemeMixin } from '~/themes';
+import { ThemeMixin } from 'dark-theme-utils';
 import { borderRadiusMixin } from '../src/radius.css.js';
 
 class DemoRounded extends ThemeMixin(LitElement) {
@@ -25,7 +25,7 @@ class DemoRounded extends ThemeMixin(LitElement) {
         height: 50px;
         background-color: var(--color-primary-700);
         ${borderRadiusMixin()};
-        transition: var(--simba-theme-transition);
+        transition: var(--theme-transition);
       }
 
       :host([theme='dark']) {

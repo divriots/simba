@@ -1,3 +1,2 @@
-export * from './src/SimbaThemeToggler.js';
-export * from './src/ThemeMixin.js';
+export { ThemeMixin, ThemeToggler, preventFart } from 'dark-theme-utils';
 export * from './src/theme.js';

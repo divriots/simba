@@ -2,7 +2,7 @@ import { html, ScopedElementsMixin, render } from '~/core';
 import { LionCalendar } from '@lion/calendar';
 import { getMonthNames } from '@lion/localize';
 import { SimbaButton } from '~/button';
-import { ThemeMixin } from '~/themes';
+import { ThemeMixin } from 'dark-theme-utils';
 import { calendarStyles } from './styles.css.js';
 
 export class SimbaCalendar extends ScopedElementsMixin(

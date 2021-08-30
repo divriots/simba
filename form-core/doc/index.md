@@ -1,7 +1,7 @@
 # Form Core
 
 ```js script
-import { html } from 'lit'
+import { html } from '~/core';
 import '~/doc-styles';
 ```
 

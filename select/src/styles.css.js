@@ -85,7 +85,7 @@ export const selectStyles = css`
     right: 10px;
     top: 15px;
     fill: ${coolGray[800]};
-    transition: var(--simba-theme-transition);
+    transition: var(--theme-transition);
   }
 
   :host([disabled]) .input-group__arrow {

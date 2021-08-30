@@ -1,7 +1,7 @@
 # Themes
 
 ```js script
-import { html } from 'lit'
+import { html } from '~/core';
 import '~/doc-styles';
 ```
 
@@ -35,7 +35,7 @@ make sure this code loads before anything is rendered, for example by loading th
 
 ```js
 const userPrefersDark = window.matchMedia(
-  '(prefers-color-scheme: dark)',
+  '(prefers-color-scheme: dark)'
 ).matches;
 
 const darkTheme =

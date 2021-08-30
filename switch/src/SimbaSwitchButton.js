@@ -1,5 +1,5 @@
 import { LionSwitchButton } from '@lion/switch';
-import { ThemeMixin } from '~/themes';
+import { ThemeMixin } from 'dark-theme-utils';
 import styles from './button-styles.css.js';
 
 export class SimbaSwitchButton extends ThemeMixin(LionSwitchButton) {
@@ -7,7 +7,7 @@ export class SimbaSwitchButton extends ThemeMixin(LionSwitchButton) {
     return [...super.styles, styles];
   }
 
-  // TODO: make protected in lion
+  // TODO: _handleKeyup once merged: https://github.com/ing-bank/lion/pull/1482
   __handleKeyup(ev) {
     switch (ev.key) {
       case ' ':

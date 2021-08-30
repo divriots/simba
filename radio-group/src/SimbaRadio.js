@@ -1,7 +1,7 @@
 import { html } from '~/core';
 import { LionRadio } from '@lion/radio-group';
 import { inputStyles, choiceBoxStyles } from '~/form-core';
-import { ThemeMixin } from '~/themes';
+import { ThemeMixin } from 'dark-theme-utils';
 import styles from './styles.css.js';
 
 export class SimbaRadio extends ThemeMixin(LionRadio) {

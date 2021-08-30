@@ -1,5 +1,5 @@
 import { dedupeMixin } from '~/core';
-import { ThemeMixin } from '~/themes';
+import { ThemeMixin } from 'dark-theme-utils';
 import { LocalizeLabelMixin } from './LocalizeLabelMixin.js';
 import { ValidationFeedbackMixin } from './ValidationFeedbackMixin.js';
 import { FieldNameLowercaseMixin } from './FieldNameLowercaseMixin.js';
