@@ -1,7 +1,7 @@
 # Typography
 
 ```js script
-import { html } from 'lit';
+import { html } from '~/core';
 import '~/token-display';
 import '~/doc-styles';
 import { typographyMixin as _typographyMixin } from '../src/typography.css.js';

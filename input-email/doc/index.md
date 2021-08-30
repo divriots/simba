@@ -3,7 +3,7 @@
 Email input field Webcomponent.
 
 ```js script
-import { html } from 'lit';
+import { html } from '~/core';
 import { Required } from '@lion/form-core';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
 import { localize } from '@lion/localize';

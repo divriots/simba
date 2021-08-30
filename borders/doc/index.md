@@ -1,7 +1,7 @@
 # Borders
 
 ```js script
-import { html } from 'lit';
+import { html } from '~/core';
 import '~/token-display';
 import '~/doc-styles';
 import { borderRadiusMixin as _borderRadiusMixin } from '../src/radius.css.js';

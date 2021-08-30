@@ -3,7 +3,7 @@
 Button web component.
 
 ```js script
-import { html } from 'lit'
+import { html } from '~/core'
 import '~/doc-styles';
 import '../simba-button.js';
 ```

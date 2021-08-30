@@ -14,6 +14,10 @@ export default css`
     --thumb-shadow: var(--thumb-elevation);
   }
 
+  .btn {
+    height: auto;
+  }
+
   .switch-button__track {
     ${borderRadiusMixin('full')};
     height: calc(${thumbDiameter}px + 2 * ${trackPadding}px);

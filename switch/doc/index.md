@@ -6,6 +6,7 @@ Switch button component.
 import { html } from '~/core';
 import '~/doc-styles';
 import '../simba-switch.js';
+import '../simba-switch-button.js';
 ```
 
 This component has an optional label and help-text, and when present (e.g. inside a form),
@@ -17,6 +18,15 @@ To decrease the space between label and switch, you can always decrease the widt
 export const switchDemo = () =>
   html`
     <simba-switch label="Notifications" help-text="Toggle me"></simba-switch>
+  `;
+```
+
+## Standalone outside of form
+
+```js preview-story
+export const switchStandalone = () =>
+  html`
+    <simba-switch-button></simba-switch-button>
   `;
 ```
 

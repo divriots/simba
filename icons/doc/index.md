@@ -3,7 +3,7 @@
 Icon resolution manager. Ensures icons are bundled into iconsets and asynchronously loaded for performance.
 
 ```js script
-import { html } from 'lit'
+import { html } from '~/core'
 import '~/doc-styles';
 import '../simba-icon.js';
 ```
