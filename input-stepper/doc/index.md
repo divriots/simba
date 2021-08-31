@@ -17,16 +17,20 @@ Click the flip locale button to see localized default label in action as well as
 
 ```js preview-story
 export const input = () => html`
-  <button @click=${() => {
-    if (localize.locale === 'en-GB') {
-      localize.locale = 'nl-NL';
-    } else {
-      localize.locale = 'en-GB';
-    }
-  }}>flip locale</button>
-  <simba-input-stepper 
+  <button
+    @click=${() => {
+      if (localize.locale === 'en-GB') {
+        localize.locale = 'nl-NL';
+      } else {
+        localize.locale = 'en-GB';
+      }
+    }}
+  >
+    flip locale
+  </button>
+  <simba-input-stepper
     .validators=${[new Required()]}
-    name="stepper" 
+    name="stepper"
     help-text="Your bank account number"
   ></simba-input-stepper>
 `;
@@ -42,7 +46,7 @@ import { MinNumber } from '@lion/form-core';
 export const inputMinimum = () => html`
   <simba-input-stepper
     .validators=${[new Required(), new MinNumber(100)]}
-    name="stepper" 
+    name="stepper"
     help-text="Must exceed 100"
   ></simba-input-stepper>
 `;
@@ -66,8 +70,8 @@ You can also prefill and disable the stepper in case you don't want your user to
 
 ```js preview-story
 export const inputDisabled = () => html`
-  <simba-input-stepper 
-    name="stepper" 
+  <simba-input-stepper
+    name="stepper"
     help-text="Preconfigured amount"
     .modelValue=${15}
     disabled
