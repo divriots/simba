@@ -5,7 +5,7 @@
   "license": "ISC",
   "type": "module",
   "scripts": {
-    "serve": "bkl serve 5vtJtbY04aoD1dGKcsu1 --open"
+    "serve": "npx backlight@latest serve 5vtJtbY04aoD1dGKcsu1 --open"
   },
   "dependencies": {
     "@lion/button": "^0.14.2",
@@ -37,8 +37,5 @@
     "@open-wc/scoped-elements": "^2.0.0-next.4",
     "dark-theme-utils": "^0.3.2",
     "lit": "2.0.0-rc.4"
-  },
-  "devDependencies": {
-    "bkl": "latest"
   }
 }
