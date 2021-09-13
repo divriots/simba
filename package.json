@@ -2,7 +2,7 @@
   "name": "@divriots/starter-simba",
   "version": "0.2.1",
   "description": "",
-  "license": "ISC",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "serve": "npx backlight@latest serve 5vtJtbY04aoD1dGKcsu1 --open"
