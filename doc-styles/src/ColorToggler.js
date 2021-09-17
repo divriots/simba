@@ -36,7 +36,7 @@ export class ColorToggler extends LitElement {
         }
 
         .radio:focus {
-          box-shadow: 0 0 1px 1px var(--focus-ring-color);
+          box-shadow: 0 0 1px 1px var(--simba-focus-ring-color);
         }
 
         .radio:hover {

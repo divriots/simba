@@ -12,7 +12,7 @@ export const pickerStyles = css`
   }
 
   :host(:focus-within) .input-group__container {
-    box-shadow: 0 0 0 2px var(--color-primary-500);
+    box-shadow: 0 0 0 2px var(--simba-color-primary-500);
     ${borderRadiusMixin()};
     overflow: hidden;
   }
@@ -44,7 +44,7 @@ export const pickerStyles = css`
 
   ::slotted([slot='suffix']:focus),
   ::slotted([slot='suffix']:focus-visible) {
-    box-shadow: 0 0 0 2px var(--color-primary-500);
+    box-shadow: 0 0 0 2px var(--simba-color-primary-500);
     overflow: hidden;
     outline: 0;
   }
@@ -55,11 +55,11 @@ export const pickerStyles = css`
   }
 
   :host([theme='dark']) ::slotted([slot='suffix']) {
-    background-color: var(--bg-color-dark);
+    background-color: var(--simba-bg-color-dark);
   }
 
   :host([theme='dark']) ::slotted([slot='suffix']:focus) {
-    background-color: var(--color-primary-900);
+    background-color: var(--simba-color-primary-900);
   }
 
   :host([theme='dark'][disabled]) ::slotted([slot='suffix']) {
@@ -87,7 +87,7 @@ export const frameStyles = css`
 
   .calendar-overlay__header {
     position: relative;
-    background-color: var(--color-primary-500);
+    background-color: var(--simba-color-primary-500);
     color: ${coolGray[50]};
   }
 
@@ -108,7 +108,7 @@ export const frameStyles = css`
   }
 
   .calendar-overlay__close-button:hover {
-    background-color: var(--color-primary-700);
+    background-color: var(--simba-color-primary-700);
   }
 
   .calendar-overlay__current {
@@ -154,7 +154,7 @@ export const calendarStyles = css`
 
   .calendar__day-button[selected] {
     color: ${coolGray[50]};
-    background-color: var(--color-primary-500);
+    background-color: var(--simba-color-primary-500);
   }
 
   .calendar__day-button:active {
@@ -162,50 +162,50 @@ export const calendarStyles = css`
   }
 
   .calendar__day-button:hover {
-    border: 1px solid var(--color-primary-500);
+    border: 1px solid var(--simba-color-primary-500);
   }
 
   .calendar__day-button:focus,
   .calendar__day-button:focus-visible {
-    border: 2px solid var(--color-primary-200);
+    border: 2px solid var(--simba-color-primary-200);
     outline: none;
   }
 
   .calendar__day-button[today] {
-    color: var(--color-primary-800);
+    color: var(--simba-color-primary-800);
     text-decoration: none;
   }
 
   .calendar__day-button[today] .calendar__day-button__text {
-    border-bottom: 2px solid var(--color-primary-800);
+    border-bottom: 2px solid var(--simba-color-primary-800);
     padding: 1 2px;
   }
 
   :host([theme='dark']) {
-    background-color: var(--bg-color-dark);
+    background-color: var(--simba-bg-color-dark);
   }
 
   :host([theme='dark']) .calendar__day-button {
-    background-color: var(--bg-color-dark);
+    background-color: var(--simba-bg-color-dark);
     color: ${coolGray[50]};
   }
 
   :host([theme='dark']) .calendar__day-button[today] {
-    color: var(--color-primary-200);
+    color: var(--simba-color-primary-200);
   }
 
   :host([theme='dark'])
     .calendar__day-button[today]
     .calendar__day-button__text {
-    border-color: var(--color-primary-200);
+    border-color: var(--simba-color-primary-200);
   }
 
   :host([theme='dark']) .calendar__day-button[selected] {
-    background-color: var(--color-primary-500);
+    background-color: var(--simba-color-primary-500);
   }
 
   :host([theme='dark']) .calendar__day-button:active {
-    background-color: var(--color-primary-700);
+    background-color: var(--simba-color-primary-700);
   }
 
   :host([theme='dark']) .calendar__day-button[disabled] {

@@ -8,7 +8,7 @@ export default css`
   :host {
     display: inline-block;
     cursor: pointer;
-    background-color: var(--color-primary-500);
+    background-color: var(--simba-color-primary-500);
     color: ${coolGray[50]};
     ${borderRadiusMixin()}
     ${typographyMixin('sans', 'base', 'medium')}
@@ -17,36 +17,36 @@ export default css`
   }
 
   :host(:hover) {
-    background-color: var(--color-primary-700);
+    background-color: var(--simba-color-primary-700);
   }
 
   :host(:active) {
-    background-color: var(--color-primary-800);
+    background-color: var(--simba-color-primary-800);
   }
 
   :host(:focus:not([disabled])),
   :host(:focus-visible) {
-    box-shadow: 0 0 0 3px var(--focus-ring-color);
+    box-shadow: 0 0 0 3px var(--simba-focus-ring-color);
     outline: none;
   }
 
   :host([variation='secondary']) {
-    background-color: var(--color-primary-200);
-    color: var(--color-primary-800);
+    background-color: var(--simba-color-primary-200);
+    color: var(--simba-color-primary-800);
   }
 
   :host([variation='secondary']:hover) {
-    background-color: var(--color-primary-100);
+    background-color: var(--simba-color-primary-100);
   }
 
   :host([variation='secondary']:active) {
-    background-color: var(--color-primary-50);
+    background-color: var(--simba-color-primary-50);
   }
 
   :host([variation='outline']),
   :host([variation='text']) {
     box-shadow: 0 0 1px 1px ${coolGray[300]};
-    color: var(--text-color);
+    color: var(--simba-text-color);
   }
 
   :host([variation='outline']) {
@@ -73,7 +73,8 @@ export default css`
 
   :host([variation='outline']:focus),
   :host([variation='text']:focus) {
-    box-shadow: 0 0 1px 1px ${coolGray[300]}, 0 0 0 3px var(--focus-ring-color);
+    box-shadow: 0 0 1px 1px ${coolGray[300]},
+      0 0 0 3px var(--simba-focus-ring-color);
   }
 
   :host([size='small']) {
@@ -97,7 +98,7 @@ export default css`
 
   :host([disabled][variation='primary']),
   :host([disabled]:not([variation])) {
-    background-color: var(--color-primary-500);
+    background-color: var(--simba-color-primary-500);
   }
 
   ::slotted([slot='suffix']) {

@@ -44,35 +44,35 @@ class TokenDisplay extends ThemeMixin(LitElement) {
       .cell--border {
         width: 100px;
         height: 50px;
-        background-color: var(--color-primary-700);
+        background-color: var(--simba-color-primary-700);
         box-shadow: none;
         ${borderRadiusMixin('none')};
       }
 
       :host([theme='dark']) .cell--border {
-        background-color: var(--color-primary-200);
+        background-color: var(--simba-color-primary-200);
       }
 
       .cell--typography {
         width: auto;
         height: auto;
         box-shadow: none;
-        color: var(--color-primary-700);
+        color: var(--simba-color-primary-700);
       }
 
       :host([theme='dark']) .cell--typography {
-        color: var(--color-primary-200);
+        color: var(--simba-color-primary-200);
       }
 
       .cell--spacing {
         height: 10px;
-        background-color: var(--color-primary-700);
+        background-color: var(--simba-color-primary-700);
         box-shadow: none;
         ${borderRadiusMixin('none')};
       }
 
       :host([theme='dark']) .cell--spacing {
-        background-color: var(--color-primary-200);
+        background-color: var(--simba-color-primary-200);
       }
 
       .horizontal-layout {
@@ -113,7 +113,7 @@ class TokenDisplay extends ThemeMixin(LitElement) {
   colorTemplate(cssLiteral, opts) {
     return html`
       <div
-        class="cell cell--color"
+        class="cell cell--simba-color"
         style="background-color: ${cssLiteral.cssText};"
       ></div>
       <p class="item__key">${opts.key}</p>

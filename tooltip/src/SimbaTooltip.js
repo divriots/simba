@@ -15,12 +15,12 @@ export class SimbaTooltip extends LionTooltip {
         }
 
         .arrow {
-          fill: var(--color-primary-900);
+          fill: var(--simba-color-primary-900);
         }
 
         #overlay-content-node-wrapper {
           padding: ${spacing['1.5']} ${spacing['2']};
-          background-color: var(--color-primary-900);
+          background-color: var(--simba-color-primary-900);
           color: ${coolGray[50]};
           ${borderRadiusMixin()};
         }

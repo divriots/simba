@@ -23,13 +23,13 @@ class DemoRounded extends ThemeMixin(LitElement) {
         display: block;
         width: 50px;
         height: 50px;
-        background-color: var(--color-primary-700);
+        background-color: var(--simba-color-primary-700);
         ${borderRadiusMixin()};
         transition: var(--theme-transition);
       }
 
       :host([theme='dark']) {
-        background-color: var(--color-primary-200);
+        background-color: var(--simba-color-primary-200);
       }
     `;
   }

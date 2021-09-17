@@ -16,7 +16,7 @@ const thumb = css`
   height: ${thumbSize};
   width: ${thumbSize};
   ${borderRadiusMixin('full')};
-  background-color: var(--color-primary-500);
+  background-color: var(--simba-color-primary-500);
   cursor: pointer;
 `;
 
@@ -58,16 +58,16 @@ export const inputRangeStyles = (scope) => css`
   }
 
   .${scope} .form-control:hover::-webkit-slider-thumb {
-    background: var(--color-primary-600);
+    background: var(--simba-color-primary-600);
   }
 
   .${scope} .form-control:focus::-webkit-slider-thumb,
   .${scope} .form-control:active::-webkit-slider-thumb {
-    background: var(--color-primary-700);
+    background: var(--simba-color-primary-700);
   }
 
   .${scope}[disabled] .form-control::-webkit-slider-thumb {
-    background: var(--color-primary-300);
+    background: var(--simba-color-primary-300);
   }
 `;
 

@@ -21,13 +21,13 @@ class DemoTypography extends ThemeMixin(LitElement) {
   static get styles() {
     return css`
       :host {
-        color: var(--color-primary-700);
+        color: var(--simba-color-primary-700);
         ${typographyMixin('sans', 'xl', 'semibold')};
         transition: var(--theme-transition);
       }
 
       :host([theme='dark']) {
-        color: var(--color-primary-200);
+        color: var(--simba-color-primary-200);
       }
     `;
   }
@@ -52,12 +52,12 @@ import { family, size, weight } from '../src/typography.css.js';
 
 css`
   :host {
-    --font-sans: ${family['sans']};
-    --font-serif: ${family['serif']};
-    --font-mono: ${family['mono']};
-    --font-size-base: ${size['base'].size};
-    --font-line-height-base: ${size['base'].lineHeight};
-    --font-weight-normal: ${weight['normal']};
+    --simba-font-sans: ${family['sans']};
+    --simba-font-serif: ${family['serif']};
+    --simba-font-mono: ${family['mono']};
+    --simba-font-size-base: ${size['base'].size};
+    --simba-font-line-height-base: ${size['base'].lineHeight};
+    --simba-font-weight-normal: ${weight['normal']};
   }
 `;
 ```

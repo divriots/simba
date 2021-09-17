@@ -37,7 +37,7 @@ export class SimbaDialogFrame extends ThemeMixin(LitElement) {
       }
 
       :host([theme='dark']) {
-        background-color: var(--bg-color-dark);
+        background-color: var(--simba-bg-color-dark);
       }
     `;
   }

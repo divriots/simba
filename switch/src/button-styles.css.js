@@ -44,7 +44,7 @@ export default css`
   }
 
   :host([checked]) .switch-button__track {
-    background-color: var(--color-primary-500);
+    background-color: var(--simba-color-primary-500);
   }
 
   :host(:hover:not([disabled])) .switch-button__thumb {
@@ -59,7 +59,7 @@ export default css`
 
   :host([checked]:hover:not([disabled])) .switch-button__thumb {
     --thumb-shadow: var(--thumb-elevation),
-      0 0 0 ${thumbShadow}px var(--switch-color-hover);
+      0 0 0 ${thumbShadow}px var(--simba-switch-color-hover);
   }
 
   :host(:focus:not([disabled])) .switch-button__thumb {
@@ -75,7 +75,7 @@ export default css`
 
   :host([checked]:focus:not([disabled])) .switch-button__thumb {
     --thumb-shadow: var(--thumb-elevation),
-      0 0 0 ${thumbShadow}px var(--switch-color-focus);
+      0 0 0 ${thumbShadow}px var(--simba-switch-color-focus);
   }
 
   :host([disabled]) .switch-button__thumb {
@@ -87,6 +87,6 @@ export default css`
   }
 
   :host([disabled][checked]) .switch-button__track {
-    background-color: var(--color-primary-700);
+    background-color: var(--simba-color-primary-700);
   }
 `;

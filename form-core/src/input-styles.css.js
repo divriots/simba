@@ -28,7 +28,7 @@ export const inputStyles = css`
     ::slotted(.form-control:focus-visible) {
     outline: none;
     border-color: transparent;
-    box-shadow: 0 0 0 2px var(--color-primary-500);
+    box-shadow: 0 0 0 2px var(--simba-color-primary-500);
   }
 
   ::slotted([slot='label']) {
@@ -56,7 +56,7 @@ export const inputStyles = css`
   :host([theme='dark'])
     ::slotted(.form-control:not([type='checkbox']):not([type='radio']):not([disabled])) {
     color: ${coolGray[100]};
-    background-color: var(--bg-color-dark);
+    background-color: var(--simba-bg-color-dark);
   }
 
   :host([theme='dark'])
