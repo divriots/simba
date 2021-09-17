@@ -24,12 +24,12 @@ class DemoSpacing extends ThemeMixin(LitElement) {
         display: block;
         width: ${spacing[48]};
         height: 10px;
-        background-color: var(--color-primary-700);
+        background-color: var(--simba-color-primary-700);
         transition: var(--theme-transition);
       }
 
       :host([theme='dark']) {
-        background-color: var(--color-primary-200);
+        background-color: var(--simba-color-primary-200);
       }
     `;
   }

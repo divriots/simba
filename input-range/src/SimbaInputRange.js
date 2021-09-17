@@ -120,8 +120,8 @@ export class SimbaInputRange extends InputMixin(LionInputRange) {
 
     this._inputNode.style.background = `
       linear-gradient(
-        to right, var(--color-${mainColor}) 0%, var(--color-${mainColor}) ${sliderPercentage}%,
-        var(--color-${secondaryColor}) ${sliderPercentage}%, var(--color-${secondaryColor}) 100%
+        to right, var(--simba-color-${mainColor}) 0%, var(--simba-color-${mainColor}) ${sliderPercentage}%,
+        var(--simba-color-${secondaryColor}) ${sliderPercentage}%, var(--simba-color-${secondaryColor}) 100%
       )
     `;
   }

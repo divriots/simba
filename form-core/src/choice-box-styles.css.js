@@ -12,7 +12,7 @@ export const choiceBoxStyles = css`
   :host {
     margin: 6px 0;
     align-items: center;
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
   }
 
@@ -43,7 +43,7 @@ export const choiceBoxStyles = css`
     position: relative;
     margin: 0;
     cursor: pointer;
-    border: 1px solid var(--border, var(--color-primary-200));
+    border: 1px solid var(--border, var(--simba-color-primary-200));
     background: var(--background, ${coolGray[50]});
     transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
   }
@@ -54,8 +54,8 @@ export const choiceBoxStyles = css`
    */
   :host([indeterminate]) ::slotted(.form-control),
   ::slotted(.form-control:checked) {
-    --background: var(--color-primary-500);
-    --border: var(--color-primary-500);
+    --background: var(--simba-color-primary-500);
+    --border: var(--simba-color-primary-500);
     --duration-opacity: 0.3s;
     --duration-transform: 0.6s;
     --transform-ease: cubic-bezier(0.2, 0.85, 0.32, 1.2);
@@ -64,22 +64,22 @@ export const choiceBoxStyles = css`
   }
 
   ::slotted(.form-control:hover:not(:disabled):not(:checked)) {
-    --border: var(--color-primary-500);
+    --border: var(--simba-color-primary-500);
   }
 
   ::slotted(.form-control:focus) {
-    box-shadow: 0 0 0 2px var(--color-primary-200);
+    box-shadow: 0 0 0 2px var(--simba-color-primary-200);
   }
 
   ::slotted(.form-control:disabled) {
-    --background: var(--color-primary-50);
+    --background: var(--simba-color-primary-50);
     cursor: not-allowed;
     opacity: 0.9;
   }
 
   ::slotted(.form-control:disabled:checked) {
-    --background: var(--color-primary-300);
-    --border: var(--color-primary-200);
+    --background: var(--simba-color-primary-300);
+    --border: var(--simba-color-primary-200);
   }
 
   ::slotted(.form-control):after {
@@ -97,6 +97,6 @@ export const choiceBoxStyles = css`
   }
 
   :host([theme='dark']) ::slotted(.form-control) {
-    background: var(--background, var(--bg-color-dark));
+    background: var(--background, var(--simba-bg-color-dark));
   }
 `;

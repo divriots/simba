@@ -10,7 +10,7 @@ export default css`
   }
 
   :host(:focus-within) .input-group__container {
-    box-shadow: 0 0 0 2px var(--color-primary-500);
+    box-shadow: 0 0 0 2px var(--simba-color-primary-500);
     ${borderRadiusMixin()};
     overflow: hidden;
   }
@@ -33,7 +33,8 @@ export default css`
   }
 
   ::slotted(simba-button:focus) {
-    box-shadow: 0 0 1px 1px ${coolGray[300]}, 0 0 0 3px var(--color-primary-500);
+    box-shadow: 0 0 1px 1px ${coolGray[300]},
+      0 0 0 3px var(--simba-color-primary-500);
   }
 
   ::slotted(simba-button[slot='prefix']) {
@@ -53,7 +54,7 @@ export default css`
   }
 
   :host([theme='dark']) ::slotted(simba-button) {
-    background-color: var(--bg-color-dark);
+    background-color: var(--simba-bg-color-dark);
     color: ${coolGray[100]};
   }
 

@@ -11,7 +11,8 @@ export default css`
   }
 
   ::slotted([slot='content']:focus-within) {
-    box-shadow: 0 0 0 1px ${coolGray['300']}, 0 0 0 3px var(--focus-ring-color);
+    box-shadow: 0 0 0 1px ${coolGray['300']},
+      0 0 0 3px var(--simba-focus-ring-color);
   }
 
   :host([theme='dark']) ::slotted([slot='content']) {
@@ -19,6 +20,7 @@ export default css`
   }
 
   :host([theme='dark']) ::slotted([slot='content']:focus-within) {
-    box-shadow: 0 0 0 1px ${coolGray['50']}, 0 0 0 3px var(--focus-ring-color);
+    box-shadow: 0 0 0 1px ${coolGray['50']},
+      0 0 0 3px var(--simba-focus-ring-color);
   }
 `;

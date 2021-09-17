@@ -12,7 +12,7 @@ export class SimbaIcon extends ThemeMixin(LionIcon) {
         }
 
         :host([theme='dark']) {
-          fill: var(--text-color-dark);
+          fill: var(--simba-text-color-dark);
         }
       `,
     ];

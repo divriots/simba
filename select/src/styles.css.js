@@ -25,7 +25,7 @@ export const invokerStyles = css`
   :host(:focus-visible) {
     outline: none;
     border: 1px solid transparent;
-    box-shadow: 0 0 0 2px var(--color-primary-500);
+    box-shadow: 0 0 0 2px var(--simba-color-primary-500);
   }
 
   :host(:active) {
@@ -38,17 +38,17 @@ export const invokerStyles = css`
   }
 
   :host([theme='dark']) {
-    background-color: var(--bg-color-dark);
+    background-color: var(--simba-bg-color-dark);
   }
 `;
 
 export const optionStyles = css`
   :host([checked]) {
-    background-color: var(--color-primary-100);
+    background-color: var(--simba-color-primary-100);
   }
 
   :host([theme='dark']) {
-    background-color: var(--bg-color-dark);
+    background-color: var(--simba-bg-color-dark);
   }
 
   :host([theme='dark']:hover) {
@@ -56,7 +56,7 @@ export const optionStyles = css`
   }
 
   :host([theme='dark'][checked]) {
-    background-color: var(--color-primary-900);
+    background-color: var(--simba-color-primary-900);
   }
 `;
 
