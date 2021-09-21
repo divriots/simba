@@ -13,7 +13,8 @@ export default css`
     ${borderRadiusMixin()}
     ${typographyMixin('sans', 'base', 'medium')}
     padding: ${spacing['2.5']} ${spacing['4']};
-    transition: var(--theme-transition);
+    transition: var(--theme-background-transition),
+      var(--theme-color-transition);
   }
 
   :host(:hover) {

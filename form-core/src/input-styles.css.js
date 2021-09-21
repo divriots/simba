@@ -10,7 +10,8 @@ export const inputStyles = css`
   }
 
   ::slotted(*:not(simba-select-invoker)) {
-    transition: var(--theme-transition);
+    transition: var(--theme-color-transition),
+      var(--theme-background-transition);
   }
 
   .input-group__container > .input-group__input ::slotted(.form-control) {

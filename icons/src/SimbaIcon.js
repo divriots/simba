@@ -8,7 +8,7 @@ export class SimbaIcon extends ThemeMixin(LionIcon) {
       ...super.styles,
       css`
         :host {
-          transition: var(--theme-transition);
+          transition: var(--theme-fill-transition);
         }
 
         :host([theme='dark']) {

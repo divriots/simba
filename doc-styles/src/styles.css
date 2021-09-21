@@ -25,11 +25,11 @@ h4,
 h5,
 h6 {
   color: var(--simba-heading-color);
-  transition: var(--theme-transition);
+  transition: var(--theme-color-transition);
 }
 
 a {
-  transition: var(--theme-transition);
+  transition: var(--theme-color-transition);
 }
 
 html[theme='dark'] h1,
