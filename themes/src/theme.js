@@ -47,7 +47,7 @@ export const setTheme = (_theme) => {
     styleSheet.innerText = `
       html,
       body {
-        transition: var(--theme-transition);
+        transition: var(--theme-background-transition), var(--theme-color-transition);
       }
     `;
     document.head.appendChild(styleSheet);
