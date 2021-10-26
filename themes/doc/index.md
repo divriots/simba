@@ -67,3 +67,37 @@ import { theme } from '~/themes';
 
 console.log(theme);
 ```
+
+## Custom Palettes
+
+We also support setting the Simba theme to a custom palette.
+
+The decision to make Simba easily themable without having to extend or fork the components started out as just being based on the "wow" factor of having a themable design system.
+After watching a [talk by Louis Chenais about multi-brand design systems](https://www.youtube.com/watch?v=uiCGvhI7Vwo&ab_channel=DesignFriends-IntoDesignSystems), we realized this feature ties into "hybrid" design systems; a model that aims to incorporate elements of both the "global" brand and the "local" brand to give each brand maximum advantage. Imagine Microsoft with all of its products, they all have the same visual identity and components yet every product has its own primary colors.
+
+After finding out there's actually many big corporations that fit this description, this theming "gimmick" is now considered a core feature of the design system.
+It shows how a design system can be consumed by different sister/child companies without the need to extend or fork components, but by simply using public theming API.
+
+```js
+import { setTheme } from '~/themes';
+
+setTheme('lime', {
+  50: '#F7FEE7',
+  100: '#ECFCCB',
+  200: '#D9F99D',
+  300: '#BEF264',
+  400: '#A3E635',
+  500: '#84CC16',
+  600: '#65A30D',
+  700: '#4D7C0F',
+  800: '#3F6212',
+  900: '#365314',
+});
+```
+
+This will set the simba theme to a custom palette called "lime".
+
+The strong recommendation here is to pick a hue and a saturation and then take value 50-900 for lightness.
+For an accessible color palette you will likely need to adjust slightly to get the contrast you want, so keep that in mind.
+
+[View full TailwindCSS color palette reference](https://tailwindcss.com/docs/customizing-colors#color-palette-reference)
