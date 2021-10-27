@@ -4,6 +4,7 @@
  *
  */
 body {
+  position: relative;
   font-family: var(--simba-font-sans);
   max-width: 1200px;
   margin: 100px auto 50px;

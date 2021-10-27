@@ -1,7 +1,8 @@
 import 'https://gitcdn.link/repo/PrismJS/prism-themes/master/themes/prism-vsc-dark-plus.css';
+import { preventFart } from 'dark-theme-utils';
 import './styles.css';
 import '../docs-menu.js';
-import { preventFart } from 'dark-theme-utils';
+import './Ghost/Ghost.js';
 
 /**
  * TODO: Find a way to put this inside a regular script tag in head so it executes
