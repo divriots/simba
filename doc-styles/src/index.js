@@ -1,4 +1,4 @@
-import 'https://gitcdn.link/repo/PrismJS/prism-themes/master/themes/prism-vsc-dark-plus.css';
+import 'prism-themes/themes/prism-vsc-dark-plus.min.css';
 import './styles.css';
 import '../docs-menu.js';
 import { preventFart } from 'dark-theme-utils';
