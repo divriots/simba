@@ -21,7 +21,7 @@ class DemoTypography extends ThemeMixin(LitElement) {
   static get styles() {
     return css`
       :host {
-        color: var(--simba-color-primary-700);
+        color: var(--simba-color-primary-600);
         ${typographyMixin('sans', 'xl', 'semibold')};
         transition: var(--theme-color-transition);
       }
