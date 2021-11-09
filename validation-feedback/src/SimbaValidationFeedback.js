@@ -1,5 +1,5 @@
 import { html } from '~/core';
-import { LionValidationFeedback } from '@lion/form-core';
+import { LionValidationFeedback } from '~/form-core';
 import { ThemeMixin } from 'dark-theme-utils';
 import styles from './styles.css.js';
 

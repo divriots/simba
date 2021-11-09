@@ -1,5 +1,5 @@
 import { LionInputAmount } from '@lion/input-amount';
-import { formatNumber } from '@lion/localize';
+import { formatNumber } from '~/localize';
 import { InputMixin } from '~/form-core';
 import styles from './styles.css.js';
 

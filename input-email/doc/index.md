@@ -4,9 +4,9 @@ Email input field Webcomponent.
 
 ```js script
 import { html } from '~/core';
-import { Required } from '@lion/form-core';
+import { Required } from '~/form-core';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
-import { localize } from '@lion/localize';
+import { localize } from '~/localize';
 import '~/doc-styles';
 import '../simba-input-email.js';
 
@@ -17,16 +17,20 @@ Click the flip locale button to see localized default label in action as well as
 
 ```js preview-story
 export const input = () => html`
-  <button @click=${() => {
-    if (localize.locale === 'en-GB') {
-      localize.locale = 'nl-NL';
-    } else {
-      localize.locale = 'en-GB';
-    }
-  }}>flip locale</button>
-  <simba-input-email 
+  <button
+    @click=${() => {
+      if (localize.locale === 'en-GB') {
+        localize.locale = 'nl-NL';
+      } else {
+        localize.locale = 'en-GB';
+      }
+    }}
+  >
+    flip locale
+  </button>
+  <simba-input-email
     .validators=${[new Required()]}
-    name="email" 
+    name="email"
     help-text="Your email address"
     placeholder="simba@example.com"
   ></simba-input-email>
@@ -38,13 +42,13 @@ export const input = () => html`
 You can create a Validator to constrain the domains of the email address
 
 ```js preview-story
-import { Validator } from '@lion/form-core';
+import { Validator } from '~/form-core';
 
 class GmailValidator extends Validator {
   constructor() {
     super();
     localize.loadNamespace({
-      'gmail-validator': locale => import(`./${locale}.js`),
+      'gmail-validator': (locale) => import(`./${locale}.js`),
     });
   }
 
@@ -71,9 +75,9 @@ class GmailValidator extends Validator {
 }
 
 export const inputGmail = () => html`
-  <simba-input-email 
+  <simba-input-email
     .validators=${[new Required(), new GmailValidator()]}
-    name="email" 
+    name="email"
     help-text="Your gmail address"
     placeholder="simba@gmail.com"
   ></simba-input-email>
@@ -86,8 +90,8 @@ You can also prefill and disable the email in case you don't want your user to c
 
 ```js preview-story
 export const inputDisabled = () => html`
-  <simba-input-email 
-    name="email" 
+  <simba-input-email
+    name="email"
     help-text="Preconfigured email"
     .modelValue=${'foo@example.com'}
     disabled
