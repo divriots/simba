@@ -4,8 +4,8 @@ Textarea Webcomponent.
 
 ```js script
 import { html } from '~/core';
-import { Required, Validator } from '@lion/form-core';
-import { localize } from '@lion/localize';
+import { Required, Validator } from '~/form-core';
+import { localize } from '~/localize';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
 import '~/doc-styles';
 import '../simba-textarea.js';
@@ -17,17 +17,21 @@ Click the flip locale button to see localized default label in action as well as
 
 ```js preview-story
 export const textarea = () => html`
-  <button @click=${() => {
-    if (localize.locale === 'en-GB') {
-      localize.locale = 'nl-NL';
-    } else {
-      localize.locale = 'en-GB';
-    }
-  }}>flip locale</button>
-  <simba-textarea 
+  <button
+    @click=${() => {
+      if (localize.locale === 'en-GB') {
+        localize.locale = 'nl-NL';
+      } else {
+        localize.locale = 'en-GB';
+      }
+    }}
+  >
+    flip locale
+  </button>
+  <simba-textarea
     style="max-width: 400px; resize: both;"
     .validators=${[new Required()]}
-    name="biography" 
+    name="biography"
     help-text="Your biography"
     placeholder="My name is Joe..."
   ></simba-textarea>
@@ -42,11 +46,11 @@ You can also specify the `max-rows` attribute for the maximum amount of rows, af
 
 ```js preview-story
 export const textareaRows = () => html`
-  <simba-textarea 
+  <simba-textarea
     style="max-width: 400px;"
     rows="3"
     max-rows="4"
-    name="biography" 
+    name="biography"
     help-text="Your biography"
     placeholder="My name is Joe..."
   ></simba-textarea>
@@ -57,15 +61,15 @@ export const textareaRows = () => html`
 
 You can enable horizontal resize by adding the `horizontal-resize` attribute.
 
-Vertical resize is disabled, because this textarea uses `max-rows` and `rows` for vertical resize boundaries, 
+Vertical resize is disabled, because this textarea uses `max-rows` and `rows` for vertical resize boundaries,
 and uses the `autosize` library to handle the height.
 
 ```js preview-story
 export const textareaHorizontal = () => html`
-  <simba-textarea 
+  <simba-textarea
     style="max-width: 400px;"
     horizontal-resize
-    name="biography" 
+    name="biography"
     help-text="Your biography"
     placeholder="My name is Joe..."
   ></simba-textarea>
@@ -78,11 +82,11 @@ You can also prefill and disable the textarea in case you don't want your user t
 
 ```js preview-story
 export const textareaDisabled = () => html`
-  <simba-textarea 
+  <simba-textarea
     style="max-width: 400px;"
-    name="biography" 
+    name="biography"
     help-text="Your biography"
-    .modelValue=${"My name is Joe..."}
+    .modelValue=${'My name is Joe...'}
     disabled
   ></simba-textarea>
 `;

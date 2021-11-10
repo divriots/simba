@@ -4,8 +4,8 @@ Input stepper Webcomponent.
 
 ```js script
 import { html } from '~/core';
-import { Required, Validator } from '@lion/form-core';
-import { localize } from '@lion/localize';
+import { Required, Validator } from '~/form-core';
+import { localize } from '~/localize';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
 import '~/doc-styles';
 import '../simba-input-stepper.js';
@@ -41,7 +41,7 @@ export const input = () => html`
 You can import and apply specific `NumberValidator`s, like `MinNumber`, `MaxNumber` or `MinMaxNumber` to constrain the allowed amounts.
 
 ```js preview-story
-import { MinNumber } from '@lion/form-core';
+import { MinNumber } from '~/form-core';
 
 export const inputMinimum = () => html`
   <simba-input-stepper
@@ -53,7 +53,7 @@ export const inputMinimum = () => html`
 ```
 
 ```js preview-story
-import { MinMaxNumber } from '@lion/form-core';
+import { MinMaxNumber } from '~/form-core';
 
 export const inputRange = () => html`
   <simba-input-stepper

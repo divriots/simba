@@ -4,8 +4,8 @@ Amount input field Webcomponent.
 
 ```js script
 import { html } from '~/core';
-import { Required, Validator } from '@lion/form-core';
-import { localize } from '@lion/localize';
+import { Required, Validator } from '~/form-core';
+import { localize } from '~/localize';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
 import '~/doc-styles';
 import '../simba-input-amount.js';
@@ -21,16 +21,20 @@ For example, for Dutch locale the thousand separator is a `.` and the decimal a 
 
 ```js preview-story
 export const input = () => html`
-  <button @click=${() => {
-    if (localize.locale === 'en-GB') {
-      localize.locale = 'nl-NL';
-    } else {
-      localize.locale = 'en-GB';
-    }
-  }}>flip locale</button>
-  <simba-input-amount 
+  <button
+    @click=${() => {
+      if (localize.locale === 'en-GB') {
+        localize.locale = 'nl-NL';
+      } else {
+        localize.locale = 'en-GB';
+      }
+    }}
+  >
+    flip locale
+  </button>
+  <simba-input-amount
     .validators=${[new Required()]}
-    name="donation_amount" 
+    name="donation_amount"
     help-text="Donation amount"
   ></simba-input-amount>
 `;
@@ -41,19 +45,19 @@ export const input = () => html`
 You can import and apply specific `NumberValidator`s, like `MinNumber`, `MaxNumber` or `MinMaxNumber` to constrain the allowed amounts.
 
 ```js preview-story
-import { MinNumber } from '@lion/form-core';
+import { MinNumber } from '~/form-core';
 
 export const inputMinimum = () => html`
   <simba-input-amount
     .validators=${[new Required(), new MinNumber(100)]}
-    name="price" 
+    name="price"
     help-text="Must exceed 100"
   ></simba-input-amount>
 `;
 ```
 
 ```js preview-story
-import { MinMaxNumber } from '@lion/form-core';
+import { MinMaxNumber } from '~/form-core';
 
 export const inputRange = () => html`
   <simba-input-amount
@@ -70,8 +74,8 @@ You can also prefill and disable the amount in case you don't want your user to 
 
 ```js preview-story
 export const inputDisabled = () => html`
-  <simba-input-amount 
-    name="price" 
+  <simba-input-amount
+    name="price"
     help-text="Preconfigured price"
     .modelValue=${123.45}
     disabled

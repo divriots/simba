@@ -1,6 +1,6 @@
 import { html, ScopedElementsMixin, render } from '~/core';
 import { LionCalendar } from '@lion/calendar';
-import { getMonthNames } from '@lion/localize';
+import { getMonthNames } from '~/localize';
 import { SimbaButton } from '~/button';
 import { ThemeMixin } from 'dark-theme-utils';
 import { calendarStyles } from './styles.css.js';

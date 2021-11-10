@@ -1,6 +1,6 @@
 import { html } from '~/core';
 import { LionInputRange } from '@lion/input-range';
-import { formatNumber } from '@lion/localize';
+import { formatNumber } from '~/localize';
 import { InputMixin } from '~/form-core';
 import styles, { inputRangeStyles } from './styles.css.js';
 

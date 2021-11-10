@@ -4,8 +4,8 @@ IBAN input field Webcomponent.
 
 ```js script
 import { html } from '~/core';
-import { Required, Validator } from '@lion/form-core';
-import { localize } from '@lion/localize';
+import { Required, Validator } from '~/form-core';
+import { localize } from '~/localize';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
 import '~/doc-styles';
 import '../simba-input-iban.js';
@@ -17,16 +17,20 @@ Click the flip locale button to see localized default label in action as well as
 
 ```js preview-story
 export const input = () => html`
-  <button @click=${() => {
-    if (localize.locale === 'en-GB') {
-      localize.locale = 'nl-NL';
-    } else {
-      localize.locale = 'en-GB';
-    }
-  }}>flip locale</button>
-  <simba-input-iban 
+  <button
+    @click=${() => {
+      if (localize.locale === 'en-GB') {
+        localize.locale = 'nl-NL';
+      } else {
+        localize.locale = 'en-GB';
+      }
+    }}
+  >
+    flip locale
+  </button>
+  <simba-input-iban
     .validators=${[new Required()]}
-    name="iban" 
+    name="iban"
     help-text="Your bank account number"
   ></simba-input-iban>
 `;
@@ -44,10 +48,10 @@ This validator also accepts a single string, for single country restriction.
 import { IsCountryIBAN } from '@lion/input-iban';
 
 export const inputCountryRestrictions = () => html`
-  <simba-input-iban 
+  <simba-input-iban
     .validators=${[new Required(), new IsCountryIBAN(['NL', 'BE', 'LU'])]}
     .modelValue=${'DE89370400440532013000'}
-    name="iban" 
+    name="iban"
     help-text="Your BeNeLux bank account number"
   ></simba-input-iban>
   <br />
@@ -61,8 +65,8 @@ You can also prefill and disable the iban in case you don't want your user to ch
 
 ```js preview-story
 export const inputDisabled = () => html`
-  <simba-input-iban 
-    name="iban" 
+  <simba-input-iban
+    name="iban"
     help-text="Preconfigured IBAN"
     .modelValue=${'NL91ABNA0417164300'}
     disabled

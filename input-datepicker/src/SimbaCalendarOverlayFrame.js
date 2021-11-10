@@ -1,5 +1,5 @@
 import { LitElement, html } from '~/core';
-import { LocalizeMixin } from '@lion/localize';
+import { LocalizeMixin } from '~/localize';
 import { ThemeMixin } from 'dark-theme-utils';
 import { frameStyles } from './styles.css.js';
 import '~/button/simba-button.js';

@@ -4,9 +4,9 @@ Select and select-rich Webcomponent.
 
 ```js script
 import { html, LitElement, render } from '~/core';
-import { Required } from '@lion/form-core';
+import { Required } from '~/form-core';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
-import { localize } from '@lion/localize';
+import { localize } from '~/localize';
 import '~/doc-styles';
 import { SimbaOption } from '../src/SimbaOption.js';
 import '../simba-select.js';
