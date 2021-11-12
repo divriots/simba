@@ -47,14 +47,16 @@ export const setTheme = (_theme, _colors) => {
   }
 
   if (!hasSetGlobalTransition) {
-    const styleSheet = document.createElement('style');
-    styleSheet.innerText = `
-      html,
-      body {
-        transition: var(--theme-background-transition), var(--theme-color-transition);
-      }
-    `;
-    document.head.appendChild(styleSheet);
+    const styleElement = document.createElement('style');
+    styleElement.appendChild(
+      document.createTextNode(`
+        html,
+        body {
+          transition: var(--theme-background-transition), var(--theme-color-transition);
+        }
+      `)
+    );
+    document.head.appendChild(styleElement);
     hasSetGlobalTransition = true;
   }
 };
