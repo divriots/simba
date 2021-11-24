@@ -1,7 +1,15 @@
 import { css } from '~/core';
-import { coolGray } from '~/colors';
-import { spacing } from '~/spacing';
-import { borderRadiusMixin } from '~/borders';
+import {
+  coolGray50,
+  coolGray100,
+  coolGray200,
+  coolGray300,
+  coolGray400,
+  coolGray600,
+  coolGray800,
+} from '~/colors';
+import { s1, s3 } from '~/spacing';
+import { base } from '~/radii';
 
 export const invokerStyles = css`
   :host(:focus:not([disabled])),
@@ -10,15 +18,15 @@ export const invokerStyles = css`
   }
 
   :host {
-    ${borderRadiusMixin()};
-    background-color: ${coolGray[50]};
-    border: 1px solid ${coolGray[300]};
-    margin-top: ${spacing['1']};
+    border-radius: ${base};
+    background-color: ${coolGray50};
+    border: 1px solid ${coolGray300};
+    margin-top: ${s1};
     transition: background-color 0.3s ease-in-out;
   }
 
   :host(:hover) {
-    background-color: ${coolGray[50]};
+    background-color: ${coolGray50};
   }
 
   :host(:focus),
@@ -29,12 +37,12 @@ export const invokerStyles = css`
   }
 
   :host(:active) {
-    background-color: ${coolGray[100]};
+    background-color: ${coolGray100};
   }
 
   ::slotted([slot='after']) {
-    width: ${spacing['3']};
-    height: ${spacing['3']};
+    width: ${s3};
+    height: ${s3};
   }
 
   :host([theme='dark']) {
@@ -52,7 +60,7 @@ export const optionStyles = css`
   }
 
   :host([theme='dark']:hover) {
-    background-color: ${coolGray[600]};
+    background-color: ${coolGray600};
   }
 
   :host([theme='dark'][checked]) {
@@ -63,7 +71,7 @@ export const optionStyles = css`
 export const optionsStyles = css`
   .input-group__container > .input-group__input ::slotted(.form-control) {
     display: block;
-    background-color: ${coolGray[50]};
+    background-color: ${coolGray50};
     padding: 0;
     overflow: hidden;
   }
@@ -84,15 +92,15 @@ export const selectStyles = css`
     width: 14px;
     right: 10px;
     top: 15px;
-    fill: ${coolGray[800]};
+    fill: ${coolGray800};
     transition: var(--theme-fill-transition);
   }
 
   :host([disabled]) .input-group__arrow {
-    fill: ${coolGray[400]};
+    fill: ${coolGray400};
   }
 
   :host([theme='dark']) .input-group__arrow {
-    fill: ${coolGray[200]};
+    fill: ${coolGray200};
   }
 `;

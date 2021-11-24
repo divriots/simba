@@ -4,9 +4,18 @@ Collapsible component, folds out content.
 
 ```js script
 import { html } from '~/core';
-import '../simba-collapsible.js';
-import '../simba-collapsible-button.js';
+import '@divriots/starter-simba/collapsible/simba-collapsible.js';
+import '@divriots/starter-simba/collapsible/simba-collapsible-button.js';
 import '~/button/simba-button.js';
+```
+
+## Usage
+
+Import the custom element definition file.
+
+```js
+import '@divriots/starter-simba/collapsible/simba-collapsible.js';
+import '@divriots/starter-simba/collapsible/simba-collapsible-button.js';
 ```
 
 ```js preview-story

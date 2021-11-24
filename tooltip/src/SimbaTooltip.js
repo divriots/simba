@@ -1,8 +1,8 @@
 import { LionTooltip } from '@lion/tooltip';
 import { css, html } from '~/core';
-import { coolGray } from '~/colors';
-import { spacing } from '~/spacing';
-import { borderRadiusMixin } from '~/borders';
+import { coolGray50 } from '~/colors';
+import { s1_5, s2 } from '~/spacing';
+import { base } from '~/radii';
 
 export class SimbaTooltip extends LionTooltip {
   static get styles() {
@@ -19,10 +19,10 @@ export class SimbaTooltip extends LionTooltip {
         }
 
         #overlay-content-node-wrapper {
-          padding: ${spacing['1.5']} ${spacing['2']};
+          padding: ${s1_5} ${s2};
           background-color: var(--simba-color-primary-900);
-          color: ${coolGray[50]};
-          ${borderRadiusMixin()};
+          color: ${coolGray50};
+          border-radius: ${base};
         }
       `,
     ];

@@ -6,11 +6,27 @@ Checkbox group Webcomponent.
 import { html } from '~/core';
 import { localize } from '~/localize';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
+<<<<<<< HEAD
 import '../simba-checkbox.js';
 import '../simba-checkbox-indeterminate.js';
 import '../simba-checkbox-group.js';
+=======
+import '@divriots/starter-simba/checkbox-group/simba-checkbox.js';
+import '@divriots/starter-simba/checkbox-group/simba-checkbox-indeterminate.js';
+import '@divriots/starter-simba/checkbox-group/simba-checkbox-group.js';
+>>>>>>> restructure tokens, improve documentation
 
 loadDefaultFeedbackMessages();
+```
+
+## Usage
+
+Import the custom element definition file.
+
+```js
+import '@divriots/starter-simba/checkbox-group/simba-checkbox.js';
+import '@divriots/starter-simba/checkbox-group/simba-checkbox-indeterminate.js';
+import '@divriots/starter-simba/checkbox-group/simba-checkbox-group.js';
 ```
 
 ```js preview-story

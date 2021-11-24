@@ -4,8 +4,17 @@ Switch button component.
 
 ```js script
 import { html } from '~/core';
-import '../simba-switch.js';
-import '../simba-switch-button.js';
+import '@divriots/starter-simba/switch/simba-switch.js';
+import '@divriots/starter-simba/switch/simba-switch-button.js';
+```
+
+## Usage
+
+Import the custom element definition file.
+
+```js
+import '@divriots/starter-simba/switch/simba-switch.js';
+import '@divriots/starter-simba/switch/simba-switch-button.js';
 ```
 
 This component has an optional label and help-text, and when present (e.g. inside a form),
@@ -24,9 +33,7 @@ export const switchDemo = () =>
 
 ```js preview-story
 export const switchStandalone = () =>
-  html`
-    <simba-switch-button></simba-switch-button>
-  `;
+  html` <simba-switch-button></simba-switch-button> `;
 ```
 
 ## Disabled

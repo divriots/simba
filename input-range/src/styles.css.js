@@ -1,9 +1,9 @@
 import { css } from '~/core';
-import { borderRadiusMixin } from '~/borders';
-import { spacing } from '~/spacing';
+import { full } from '~/radii';
+import { s0, s4 } from '~/spacing';
 
 const thumbSize = css`
-  ${spacing['4']}
+  ${s4}
 `;
 
 const track = css`
@@ -15,7 +15,7 @@ const track = css`
 const thumb = css`
   height: ${thumbSize};
   width: ${thumbSize};
-  ${borderRadiusMixin('full')};
+  border-radius: ${full};
   background-color: var(--simba-color-primary-500);
   cursor: pointer;
 `;
@@ -80,7 +80,7 @@ export default css`
   }
 
   .input-group__container > .input-group__input ::slotted(.form-control) {
-    padding: ${spacing['0']};
+    padding: ${s0};
     border: none;
   }
 

@@ -1,7 +1,12 @@
 import { html, css } from '~/core';
 import { SimbaButton } from '~/button';
-import { typographyMixin } from '~/typography';
-import { borderRadiusMixin } from '~/borders';
+import {
+  familyMono,
+  size2xlSize,
+  size2xlLineHeight,
+  weightBold,
+} from '~/typography';
+import { none } from '~/radii';
 
 export class SimbaCollapsibleButton extends SimbaButton {
   static get styles() {
@@ -10,7 +15,7 @@ export class SimbaCollapsibleButton extends SimbaButton {
       css`
         :host {
           width: 100%;
-          ${borderRadiusMixin('none')};
+          border-radius: ${none};
         }
 
         .button-content {
@@ -18,7 +23,10 @@ export class SimbaCollapsibleButton extends SimbaButton {
         }
 
         .suffix {
-          ${typographyMixin('mono', '2xl', 'bold')};
+          font-family: ${familyMono};
+          font-size: ${size2xlSize};
+          line-height: ${size2xlLineHeight};
+          font-weight: ${weightBold};
         }
       `,
     ];

@@ -7,10 +7,19 @@ import { html } from '~/core';
 import { Required, Validator } from '~/form-core';
 import { localize } from '~/localize';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
-import '../simba-radio.js';
-import '../simba-radio-group.js';
+import '@divriots/starter-simba/radio-group/simba-radio.js';
+import '@divriots/starter-simba/radio-group/simba-radio-group.js';
 
 loadDefaultFeedbackMessages();
+```
+
+## Usage
+
+Import the custom element definition file.
+
+```js
+import '@divriots/starter-simba/radio-group/simba-radio.js';
+import '@divriots/starter-simba/radio-group/simba-radio-group.js';
 ```
 
 ```js preview-story

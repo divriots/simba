@@ -3,25 +3,36 @@
 ```js script
 import { html } from '~/core';
 import '~/token-display';
-import { spacing as spacingTokens } from '../src/spacing.css.js';
+import * as spacing from '~/spacing';
 ```
 
 ## Usage
 
 The spacings are tokenized as CSS tagged literals (CSSResult) which can be used directly inside `static get styles`.
 
+You can import the token group from the main entrypoint (or `/tokens`):
+
+```js
+import { spacing } from '@divriots/starter-simba'; // spacing.s48
+```
+
+or a specific color from the token entrypoint:
+
+```js
+import { s48 } from '@divriots/starter-simba/spacing';
+```
+
 ```js preview-story
-import { css, LitElement } from '~/core';
-import { indigo } from '~/colors';
 import { ThemeMixin } from 'dark-theme-utils';
-import { spacing } from '../src/spacing.css.js';
+import { css, LitElement } from '@divriots/starter-simba';
+import { s48 } from '@divriots/starter-simba/spacing';
 
 class DemoSpacing extends ThemeMixin(LitElement) {
   static get styles() {
     return css`
       :host {
         display: block;
-        width: ${spacing[48]};
+        width: ${s48};
         height: 10px;
         background-color: var(--simba-color-primary-700);
         transition: var(--theme-background-transition);
@@ -44,6 +55,6 @@ export const usageInCE = () => html`<demo-spacing></demo-spacing>`;
 export const spacings = () =>
   html`<token-display
     token-type="spacing"
-    .tokens=${spacingTokens}
+    .tokens=${Object.entries(spacing)}
   ></token-display>`;
 ```

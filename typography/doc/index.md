@@ -3,25 +3,44 @@
 ```js script
 import { html } from '~/core';
 import '~/token-display';
-import { typographyMixin as _typographyMixin } from '../src/typography.css.js';
+import * as typography from '~/typography';
 ```
 
 ## Usage
 
-The color palettes are tokenized as CSS tagged literals (CSSResult) which can be used directly inside `static get styles`.
+The typography parts are tokenized as CSS tagged literals (CSSResult) which can be used directly inside `static get styles`.
+
+You can import the token group from the main entrypoint (or `/tokens`):
+
+```js
+import { typography } from '@divriots/starter-simba'; // typography.familyMono
+```
+
+or a specific color from the token entrypoint:
+
+```js
+import { familyMono } from '@divriots/starter-simba/typography';
+```
 
 ```js preview-story
-import { css, LitElement } from '~/core';
-import { indigo } from '~/colors';
 import { ThemeMixin } from 'dark-theme-utils';
-import { typographyMixin } from '../src/typography.css.js';
+import { css, LitElement } from '@divriots/starter-simba';
+import {
+  familySans,
+  sizeXlSize,
+  sizeXlLineHeight,
+  weightSemibold,
+} from '@divriots/starter-simba/typography';
 
 class DemoTypography extends ThemeMixin(LitElement) {
   static get styles() {
     return css`
       :host {
         color: var(--simba-color-primary-700);
-        ${typographyMixin('sans', 'xl', 'semibold')};
+        font-family: ${familySans};
+        font-size: ${sizeXlSize};
+        line-height: ${sizeXlLineHeight};
+        font-weight: ${weightSemibold};
         transition: var(--theme-color-transition);
       }
 
@@ -40,119 +59,71 @@ customElements.define('demo-typography', DemoTypography);
 export const usageInCE = () => html`<demo-typography></demo-typography>`;
 ```
 
-## CSS Values only
-
-It is also possible to only grab `family`, `size` or `weight` e.g. to create CSS custom properties,
-instead of using the mixin to grab the full set of typography declarations.
-
-```js
-import { css } from '~/core';
-import { family, size, weight } from '../src/typography.css.js';
-
-css`
-  :host {
-    --simba-font-sans: ${family['sans']};
-    --simba-font-serif: ${family['serif']};
-    --simba-font-mono: ${family['mono']};
-    --simba-font-size-base: ${size['base'].size};
-    --simba-font-line-height-base: ${size['base'].lineHeight};
-    --simba-font-weight-normal: ${weight['normal']};
-  }
-`;
-```
-
 ## Family
 
-You can specify the family of the font as the first parameter.
-
-E.g. for monospace:
-
-```js
-typographyMixin('mono');
-```
+You can specify the family of the font.
 
 ```js story
 export const family = () =>
   html`
     <token-display
-      css-mixin
       token-type="typography"
-      .mixin=${_typographyMixin}
-      .mixinParams=${['lg', 'normal']}
-      .mixinDynamicParamIndex=${0}
-      .mixinDynamicParams=${['sans', 'serif', 'mono']}
+      .cssProp=${'font-family'}
+      .tokens=${Object.entries(typography).filter((entry) =>
+        entry[0].startsWith('family')
+      )}
     ></token-display>
   `;
 ```
 
 ## Sizes
 
-You can specify the size of font as the second parameter.
-
-E.g. for large font-size:
-
-```js
-typographyMixin('sans', 'lg');
-```
+You can specify the size of font, which goes hand in hand with line-height.
 
 ```js story
 export const sizes = () =>
   html`
     <token-display
-      css-mixin
       token-type="typography"
-      .mixin=${_typographyMixin}
-      .mixinParams=${['sans', 'normal']}
-      .mixinDynamicParamIndex=${1}
-      .mixinDynamicParams=${[
-        'xs',
-        'sm',
-        'base',
-        'lg',
-        'xl',
-        '2xl',
-        '3xl',
-        '4xl',
-        '5xl',
-        '6xl',
-        '7xl',
-        '8xl',
-        '9xl',
-      ]}
+      .cssProp=${'font-size'}
+      .tokens=${Object.entries(typography).filter(
+        (entry) => entry[0].startsWith('size') && entry[0].endsWith('Size')
+      )}
+    ></token-display>
+  `;
+```
+
+## Line Heights
+
+You can specify the line height, line heights and sizes go hand in hand.
+
+```js story
+export const lineHeights = () =>
+  html`
+    <token-display
+      token-type="typography"
+      .cssProp=${'line-height'}
+      .tokens=${Object.entries(typography).filter(
+        (entry) =>
+          entry[0].startsWith('size') && entry[0].endsWith('LineHeight')
+      )}
     ></token-display>
   `;
 ```
 
 ## Weights
 
-You can specify the weight of font as the third parameter.
-
-E.g. for large font-size:
-
-```js
-typographyMixin('sans', 'lg', 'bold');
-```
+You can get different font weights.
 
 ```js story
 export const weights = () =>
   html`
     <token-display
-      css-mixin
       token-type="typography"
-      .mixin=${_typographyMixin}
-      .mixinParams=${['sans', 'lg']}
-      .mixinDynamicParamIndex=${2}
-      .mixinDynamicParams=${[
-        'thin',
-        'extralight',
-        'light',
-        'normal',
-        'medium',
-        'semibold',
-        'bold',
-        'extrabold',
-        'black',
-      ]}
+      .cssProp=${'font-weight'}
+      .tokens=${Object.entries(typography).filter((entry) =>
+        entry[0].startsWith('weight')
+      )}
     ></token-display>
   `;
 ```

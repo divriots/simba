@@ -1,5 +1,5 @@
 import { css } from '~/core';
-import { spacing } from '~/spacing';
+import { s3_5 } from '~/spacing';
 
 export default css`
   :host {
@@ -28,6 +28,6 @@ export default css`
   }
 
   ::slotted([slot='checkbox']) {
-    padding-left: ${spacing['3.5']};
+    padding-left: ${s3_5};
   }
 `;

@@ -1,1 +1,1 @@
-export * from './src/index.js';
+export * from './src/_typography.js';

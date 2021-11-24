@@ -1,7 +1,7 @@
 import { css } from '~/core';
-import { weight } from '~/typography';
-import { spacing } from '~/spacing';
-import { coolGray } from '~/colors';
+import { weightNormal } from '~/typography';
+import { s4 } from '~/spacing';
+import { coolGray50, coolGray100 } from '~/colors';
 
 /**
  * Styles that apply to all choice groups:
@@ -19,7 +19,7 @@ export const choiceBoxStyles = css`
   ::slotted([slot='label']) {
     cursor: pointer;
     margin-left: 6px;
-    font-weight: ${weight['normal']};
+    font-weight: ${weightNormal};
   }
 
   :host([disabled]) {
@@ -35,8 +35,8 @@ export const choiceBoxStyles = css`
   ::slotted(.form-control) {
     -webkit-appearance: none;
     -moz-appearance: none;
-    width: ${spacing['4']};
-    height: ${spacing['4']};
+    width: ${s4};
+    height: ${s4};
     outline: none;
     display: inline-block;
     vertical-align: top;
@@ -44,7 +44,7 @@ export const choiceBoxStyles = css`
     margin: 0;
     cursor: pointer;
     border: 1px solid var(--border, var(--simba-color-primary-200));
-    background: var(--background, ${coolGray[50]});
+    background: var(--background, ${coolGray50});
     transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
   }
 
@@ -93,7 +93,7 @@ export const choiceBoxStyles = css`
   }
 
   :host([theme='dark']) ::slotted([slot='label']) {
-    color: ${coolGray[100]};
+    color: ${coolGray100};
   }
 
   :host([theme='dark']) ::slotted(.form-control) {

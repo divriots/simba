@@ -1,10 +1,10 @@
 import { css } from '~/core';
-import { borderRadiusMixin } from '~/borders';
-import { coolGray } from '~/colors';
+import { none, base } from '~/radii';
+import { coolGray50 } from '~/colors';
 
 export default css`
   ::slotted(.form-control) {
-    ${borderRadiusMixin()};
+    border-radius: ${base};
   }
 
   ::slotted(.form-control:checked) {
@@ -12,13 +12,12 @@ export default css`
   }
 
   ::slotted(.form-control):after {
-    ${borderRadiusMixin('none')};
+    border-radius: ${none};
     background: transparent;
     width: 4px;
     height: 8px;
-    border: 2px solid ${coolGray[50]};
-    border-top: 0;
-    border-left: 0;
+    border-bottom: 2px solid ${coolGray50};
+    border-right: 2px solid ${coolGray50};
     left: 4px;
     top: 1px;
     transform: rotate(var(--rotation, 20deg));

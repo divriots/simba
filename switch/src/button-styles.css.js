@@ -1,6 +1,6 @@
 import { css } from '~/core';
-import { borderRadiusMixin } from '~/borders';
-import { coolGray } from '~/colors';
+import { full } from '~/radii';
+import { coolGray50, coolGray400, coolGray500, coolGray600 } from '~/colors';
 
 const trackPadding = -4;
 const thumbDiameter = 20;
@@ -10,7 +10,7 @@ export default css`
   :host {
     width: auto;
     height: auto;
-    --thumb-elevation: 0 1px 3px ${coolGray['600']};
+    --thumb-elevation: 0 1px 3px ${coolGray600};
     --thumb-shadow: var(--thumb-elevation);
   }
 
@@ -19,21 +19,21 @@ export default css`
   }
 
   .switch-button__track {
-    ${borderRadiusMixin('full')};
+    border-radius: ${full};
     height: calc(${thumbDiameter}px + 2 * ${trackPadding}px);
     width: calc(2.1 * ${thumbDiameter}px + 2 * ${trackPadding}px);
-    background-color: ${coolGray['400']};
+    background-color: ${coolGray400};
     transition: background-color 0.3s ease-in-out;
   }
 
   .switch-button__thumb {
-    ${borderRadiusMixin('full')};
+    border-radius: ${full};
     width: ${thumbDiameter}px;
     height: ${thumbDiameter}px;
     left: ${trackPadding}px;
     top: 50%;
     transform: translateY(-50%);
-    background-color: ${coolGray['50']};
+    background-color: ${coolGray50};
     box-shadow: var(--thumb-shadow);
     outline: none;
     transition: left 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -79,11 +79,11 @@ export default css`
   }
 
   :host([disabled]) .switch-button__thumb {
-    background-color: ${coolGray['400']};
+    background-color: ${coolGray400};
   }
 
   :host([disabled]) .switch-button__track {
-    background-color: ${coolGray['500']};
+    background-color: ${coolGray500};
   }
 
   :host([disabled][checked]) .switch-button__track {

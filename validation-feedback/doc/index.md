@@ -2,7 +2,7 @@
 
 ```js script
 import { html } from '~/core';
-import '../simba-validation-feedback.js';
+import '@divriots/starter-simba/validation-feedback/simba-validation-feedback.js';
 ```
 
 Validation feedback is useful for giving the user feedback about the values they assigned to input fields in a form.
@@ -15,6 +15,12 @@ The component can be used standalone, but relies on `feedbackData` property to c
 ## Usage
 
 Below is an example of using the component as standalone.
+
+Import the custom element definition file.
+
+```js
+import '@divriots/starter-simba/validation-feedback/simba-validation-feedback.js';
+```
 
 ```js preview-story
 export const feedback = () =>

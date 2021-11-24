@@ -1,13 +1,28 @@
 import { css } from '~/core';
-import { red, amber, emerald, blue } from '~/colors';
-import { typographyMixin } from '~/typography';
+import {
+  red400,
+  red500,
+  red600,
+  red700,
+  amber400,
+  amber500,
+  amber700,
+  emerald400,
+  emerald500,
+  emerald700,
+  blue400,
+  blue500,
+  blue700,
+} from '~/colors';
+import { sizeSmSize, sizeSmLineHeight } from '~/typography';
 
 export default css`
   :host {
     display: block;
-    color: ${red[600]};
+    color: ${red600};
     margin-top: 2px;
-    ${typographyMixin('sans', 'sm')};
+    font-size: ${sizeSmSize};
+    line-height: ${sizeSmLineHeight};
   }
 
   .feedback-container {
@@ -22,42 +37,42 @@ export default css`
   }
 
   .error {
-    fill: ${red[500]};
-    color: ${red[700]};
+    fill: ${red500};
+    color: ${red700};
   }
 
   .warning {
-    fill: ${amber[500]};
-    color: ${amber[700]};
+    fill: ${amber500};
+    color: ${amber700};
   }
 
   .success {
-    fill: ${emerald[500]};
-    color: ${emerald[700]};
+    fill: ${emerald500};
+    color: ${emerald700};
   }
 
   .info {
-    fill: ${blue[500]};
-    color: ${blue[700]};
+    fill: ${blue500};
+    color: ${blue700};
   }
 
   :host([theme='dark']) .error {
-    fill: ${red[400]};
-    color: ${red[400]};
+    fill: ${red400};
+    color: ${red400};
   }
 
   :host([theme='dark']) .warning {
-    fill: ${amber[400]};
-    color: ${amber[400]};
+    fill: ${amber400};
+    color: ${amber400};
   }
 
   :host([theme='dark']) .success {
-    fill: ${emerald[400]};
-    color: ${emerald[400]};
+    fill: ${emerald400};
+    color: ${emerald400};
   }
 
   :host([theme='dark']) .info {
-    fill: ${blue[400]};
-    color: ${blue[400]};
+    fill: ${blue400};
+    color: ${blue400};
   }
 `;

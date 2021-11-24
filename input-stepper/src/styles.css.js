@@ -1,7 +1,7 @@
 import { css } from '~/core';
-import { borderRadiusMixin } from '~/borders';
-import { spacing } from '~/spacing';
-import { coolGray } from '~/colors';
+import { base, none } from '~/radii';
+import { s1_5, s2_5 } from '~/spacing';
+import { coolGray100, coolGray300, coolGray600 } from '~/colors';
 
 export default css`
   .input-group__container {
@@ -11,7 +11,7 @@ export default css`
 
   :host(:focus-within) .input-group__container {
     box-shadow: 0 0 0 2px var(--simba-color-primary-500);
-    ${borderRadiusMixin()};
+    border-radius: ${base};
     overflow: hidden;
   }
 
@@ -24,41 +24,45 @@ export default css`
   }
 
   .input-group__container > .input-group__input ::slotted(.form-control) {
-    ${borderRadiusMixin('none')};
+    border-radius: ${none};
     margin-top: 0;
   }
 
   ::slotted(simba-button) {
-    padding: ${spacing['1.5']} ${spacing['2.5']};
+    padding: ${s1_5} ${s2_5};
   }
 
   ::slotted(simba-button:focus) {
-    box-shadow: 0 0 1px 1px ${coolGray[300]},
+    box-shadow: 0 0 1px 1px ${coolGray300},
       0 0 0 3px var(--simba-color-primary-500);
   }
 
   ::slotted(simba-button[slot='prefix']) {
-    ${borderRadiusMixin('', 'l')};
+    border-radius: ${none};
+    border-top-left-radius: ${base};
+    border-bottom-left-radius: ${base};
   }
 
   ::slotted(simba-button[slot='suffix']) {
-    ${borderRadiusMixin('', 'r')};
+    border-radius: ${none};
+    border-top-right-radius: ${base};
+    border-bottom-right-radius: ${base};
   }
 
   :host(:focus-within) ::slotted(simba-button[slot='prefix']) {
-    box-shadow: 1px 0 0 0 ${coolGray[300]};
+    box-shadow: 1px 0 0 0 ${coolGray300};
   }
 
   :host(:focus-within) ::slotted(simba-button[slot='suffix']) {
-    box-shadow: -1px 0 0 0 ${coolGray[300]};
+    box-shadow: -1px 0 0 0 ${coolGray300};
   }
 
   :host([theme='dark']) ::slotted(simba-button) {
     background-color: var(--simba-bg-color-dark);
-    color: ${coolGray[100]};
+    color: ${coolGray100};
   }
 
   :host([theme='dark'][disabled]) ::slotted(simba-button) {
-    background-color: ${coolGray[600]};
+    background-color: ${coolGray600};
   }
 `;

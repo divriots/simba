@@ -1,8 +1,20 @@
 import { css } from '~/core';
-import { borderRadiusMixin } from '~/borders';
-import { spacing } from '~/spacing';
-import { coolGray } from '~/colors';
-import { typographyMixin } from '~/typography';
+import { base, md, none, full } from '~/radii';
+import { s0, s1, s1_5, s2, s2_5, s3, s4 } from '~/spacing';
+import { coolGray50, coolGray200, coolGray300, coolGray600 } from '~/colors';
+import {
+  familyMono,
+  weightBold,
+  weightMedium,
+  sizeBaseSize,
+  sizeBaseLineHeight,
+  sizeLgSize,
+  sizeLgLineHeight,
+  sizeXlSize,
+  sizeXlLineHeight,
+  size2xlSize,
+  size2xlLineHeight,
+} from '~/typography';
 
 export const pickerStyles = css`
   .input-group__container {
@@ -13,12 +25,12 @@ export const pickerStyles = css`
 
   :host(:focus-within) .input-group__container {
     box-shadow: 0 0 0 2px var(--simba-color-primary-500);
-    ${borderRadiusMixin()};
+    border-radius: ${base};
     overflow: hidden;
   }
 
   :host(:focus-within) ::slotted([slot='suffix']) {
-    box-shadow: -1px 0 0 0 ${coolGray[300]};
+    box-shadow: -1px 0 0 0 ${coolGray300};
   }
 
   :host(:focus-within)
@@ -31,14 +43,18 @@ export const pickerStyles = css`
   }
 
   .input-group__container > .input-group__input ::slotted(.form-control) {
-    ${borderRadiusMixin('', 'l')};
+    border-radius: ${none};
+    border-top-left-radius: ${base};
+    border-bottom-left-radius: ${base};
     margin-top: 0;
   }
 
   ::slotted([slot='suffix']) {
     transition: unset;
-    ${borderRadiusMixin('', 'r')};
-    padding: ${spacing['1.5']} ${spacing['2.5']};
+    border-radius: ${none};
+    border-top-right-radius: ${base};
+    border-bottom-right-radius: ${base};
+    padding: ${s1_5} ${s2_5};
     border: 0;
   }
 
@@ -50,7 +66,7 @@ export const pickerStyles = css`
   }
 
   :host([disabled]) ::slotted([slot='suffix']) {
-    background-color: ${coolGray[50]};
+    background-color: ${coolGray50};
     filter: none;
   }
 
@@ -63,7 +79,7 @@ export const pickerStyles = css`
   }
 
   :host([theme='dark'][disabled]) ::slotted([slot='suffix']) {
-    background-color: ${coolGray[600]};
+    background-color: ${coolGray600};
   }
 `;
 
@@ -71,9 +87,9 @@ export const frameStyles = css`
   :host {
     display: block;
     box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.4);
-    background: ${coolGray[50]};
+    background: ${coolGray50};
     position: relative;
-    ${borderRadiusMixin('md')};
+    border-radius: ${md};
     overflow: hidden;
   }
 
@@ -88,23 +104,28 @@ export const frameStyles = css`
   .calendar-overlay__header {
     position: relative;
     background-color: var(--simba-color-primary-500);
-    color: ${coolGray[50]};
+    color: ${coolGray50};
   }
 
   .calendar-overlay__heading {
-    ${typographyMixin('sans', 'xl', 'bold')};
+    font-size: ${sizeXlSize};
+    line-height: ${sizeXlLineHeight};
+    font-weight: ${weightBold};
     margin: 0;
-    padding: ${spacing['1.5']} ${spacing['3']};
+    padding: ${s1_5} ${s3};
   }
 
   .calendar-overlay__close-button {
     position: absolute;
     top: 0;
     right: 0;
-    color: ${coolGray[50]};
-    ${typographyMixin('mono', '2xl', 'bold')};
-    ${borderRadiusMixin('none')};
-    padding: ${spacing['1']} ${spacing['2']};
+    color: ${coolGray50};
+    font-family: ${familyMono};
+    font-size: ${size2xlSize};
+    line-height: ${size2xlLineHeight};
+    font-weight: ${weightBold};
+    border-radius: ${none};
+    padding: ${s1} ${s2};
   }
 
   .calendar-overlay__close-button:hover {
@@ -113,9 +134,11 @@ export const frameStyles = css`
 
   .calendar-overlay__current {
     text-align: center;
-    padding-bottom: ${spacing['4']};
+    padding-bottom: ${s4};
     margin: 0;
-    ${typographyMixin('sans', 'lg', 'bold')};
+    font-size: ${sizeLgSize};
+    line-height: ${sizeLgLineHeight};
+    font-weight: ${weightBold};
   }
 `;
 
@@ -127,10 +150,12 @@ export const calendarStyles = css`
   }
 
   .calendar__navigation simba-button {
-    ${typographyMixin('mono', 'xl', 'medium')};
-    padding: ${spacing['0']};
-    margin: -2 ${spacing['2']} 0 ${spacing['2']};
-    margin-top: -2px;
+    font-family: ${familyMono};
+    font-size: ${sizeXlSize};
+    line-height: ${sizeXlLineHeight};
+    font-weight: ${weightMedium};
+    padding: ${s0};
+    margin: -2px ${s2} 0 ${s2};
   }
 
   .calendar__navigation__year,
@@ -139,26 +164,32 @@ export const calendarStyles = css`
   }
 
   .calendar__navigation-heading {
-    ${typographyMixin('sans', '', 'bold')};
+    font-weight: ${weightBold};
+    font-size: ${sizeBaseSize};
+    line-height: ${sizeBaseLineHeight};
     text-align: center;
+  }
+
+  .calendar__navigation__year .calendar__navigation-heading {
+    padding: ${s0} ${s2};
   }
 
   .calendar__day-button,
   .calendar__day-button[disabled] {
-    background-color: ${coolGray[50]};
+    background-color: ${coolGray50};
   }
 
   .calendar__day-button {
-    ${borderRadiusMixin('full')};
+    border-radius: ${full};
   }
 
   .calendar__day-button[selected] {
-    color: ${coolGray[50]};
+    color: ${coolGray50};
     background-color: var(--simba-color-primary-500);
   }
 
   .calendar__day-button:active {
-    background-color: ${coolGray[200]};
+    background-color: ${coolGray200};
   }
 
   .calendar__day-button:hover {
@@ -187,7 +218,7 @@ export const calendarStyles = css`
 
   :host([theme='dark']) .calendar__day-button {
     background-color: var(--simba-bg-color-dark);
-    color: ${coolGray[50]};
+    color: ${coolGray50};
   }
 
   :host([theme='dark']) .calendar__day-button[today] {
@@ -209,6 +240,6 @@ export const calendarStyles = css`
   }
 
   :host([theme='dark']) .calendar__day-button[disabled] {
-    color: ${coolGray[600]};
+    color: ${coolGray600};
   }
 `;
