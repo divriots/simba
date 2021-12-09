@@ -9,9 +9,8 @@ export class ColorToggler extends LitElement {
       css`
         :host {
           display: flex;
-          max-width: 125px;
+          max-width: calc(1.25rem * 4 + 4px * 2 * 4);
           flex-wrap: wrap;
-          margin: 0 10px;
         }
 
         .radio {
@@ -96,3 +95,5 @@ export class ColorToggler extends LitElement {
     setTheme(newColor);
   }
 }
+
+customElements.define('color-toggler', ColorToggler);

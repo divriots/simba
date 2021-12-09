@@ -7,7 +7,6 @@ import { html, LitElement, render } from '~/core';
 import { Required } from '~/form-core';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
 import { localize } from '~/localize';
-import '~/doc-styles';
 import { SimbaOption } from '../src/SimbaOption.js';
 import '../simba-select.js';
 import '../simba-select-rich.js';

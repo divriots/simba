@@ -2,7 +2,6 @@
 
 ```js script
 import { html } from '~/core';
-import '~/doc-styles';
 import '../simba-validation-feedback.js';
 ```
 

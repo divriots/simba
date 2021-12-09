@@ -4,7 +4,6 @@ Icon resolution manager. Ensures icons are bundled into iconsets and asynchronou
 
 ```js script
 import { html } from '~/core'
-import '~/doc-styles';
 import '../simba-icon.js';
 ```
 

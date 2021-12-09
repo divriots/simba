@@ -11,7 +11,6 @@ The frame acts as a visual container and allows adding an easy to use close butt
 ```js script
 import { html } from '~/core';
 import '~/button/simba-button.js';
-import '~/doc-styles';
 import '../simba-dialog.js';
 import '../simba-dialog-frame.js';
 import { emerald, coolGray } from '~/colors';
