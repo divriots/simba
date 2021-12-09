@@ -7,7 +7,6 @@ Interactive content should not be placed in a tooltip content slot. Tooltips are
 ```js script
 import { html } from '~/core';
 import '~/icons/simba-icon.js';
-import '~/doc-styles';
 import '../simba-tooltip.js';
 import { red, amber, emerald, blue } from '~/colors';
 ```

@@ -4,7 +4,6 @@ Collapsible component, folds out content.
 
 ```js script
 import { html } from '~/core';
-import '~/doc-styles';
 import '../simba-collapsible.js';
 import '../simba-collapsible-button.js';
 import '~/button/simba-button.js';

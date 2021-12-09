@@ -47,7 +47,7 @@
     "docs",
     [
      "token-display",
-     "doc-styles"
+     "doc-layout"
     ]
    ],
    [

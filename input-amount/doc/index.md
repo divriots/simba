@@ -7,7 +7,6 @@ import { html } from '~/core';
 import { Required, Validator } from '~/form-core';
 import { localize } from '~/localize';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
-import '~/doc-styles';
 import '../simba-input-amount.js';
 
 loadDefaultFeedbackMessages();

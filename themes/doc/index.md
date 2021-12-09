@@ -2,7 +2,6 @@
 
 ```js script
 import { html } from '~/core';
-import '~/doc-styles';
 ```
 
 Simba comes with some cool themes out of the box, that can be configured on runtime, dynamically!

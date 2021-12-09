@@ -6,7 +6,6 @@ Checkbox group Webcomponent.
 import { html } from '~/core';
 import { localize } from '~/localize';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
-import '~/doc-styles';
 import '../simba-checkbox.js';
 import '../simba-checkbox-indeterminate.js';
 import '../simba-checkbox-group.js';

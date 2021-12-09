@@ -2,7 +2,6 @@
 
 ```js script
 import { html } from '~/core';
-import '~/doc-styles';
 ```
 
 The form-core package is an umbrella package for form-related utilities, two examples:

@@ -1,0 +1,217 @@
+<svg width="505.85001" height="274.00592" viewBox="0 0 505.85001 274.00592">
+  <g fill="currentColor">
+    <path d="M92.09 181.45c-7.19-15.94-14.74-26.63-22.65-32.09-7.91-5.46-16.08-7.73-24.51-6.84-8.43.9-14.43 3.63-18 8.19s-4.96 9.61-4.19 15.16c.77 5.55 3.18 10.67 7.21 15.35s11.29 9.53 21.77 14.56c18.79 8.5 31.31 15.72 37.58 21.67 6.51 5.64 9.77 12.68 9.77 21.11 0 10.36-4.36 18.85-13.07 25.49-8.71 6.64-19.86 9.95-33.44 9.95-11.97.12-21.98-1.58-30.04-5.12-1.67-.93-3.52-1.16-5.53-.7-2.02.47-4.08 2.03-6.19 4.7H8.28L0 232.8h2.6c5.46 11.53 12.2 20.71 20.23 27.53s17.36 10.2 28 10.14c10.63-.06 17.92-2.62 21.86-7.67 3.94-5.05 5.78-10.74 5.53-17.07s-3.1-11.84-8.56-16.56c-4.59-4.59-13.21-10.05-25.86-16.37-14.64-7.32-24.53-13.73-29.67-19.25-5.21-5.46-7.81-12.28-7.81-20.46 0-9.55 3.72-17.39 11.16-23.53s16.96-9.21 28.56-9.21c7.07 0 15.38 1.77 24.93 5.3 2.91.81 5.49.99 7.72.56 2.23-.43 4.19-1.89 5.86-4.37l3.72.09 6.42 39.53-2.6-.01zm39.99-8.59c-1.27 1.17-1.85 2.71-1.76 4.63v85.28c-.1 2.53.44 4.63 1.61 6.28s5.99 2.5 14.45 2.55v1.29H99.27v-1.29c7.75.14 12.38-.36 13.91-1.51 1.53-1.15 2.25-3.59 2.15-7.32v-85.28c-.29-2.1-1.2-3.66-2.73-4.66s-5.98-1.51-13.34-1.51v-1.29h47.13v1.29c-8.27-.14-13.04.37-14.31 1.54zm38.47 77.42c0 9.27.96 15.11 2.89 17.52s5.79 3.74 11.6 3.99v1.1h-35.56v-1.02c4.88 0 8.53-1.55 10.97-4.64 2.44-3.1 3.61-8.74 3.51-16.94v-57.87c.1-9.75-1.18-15.75-3.84-18-2.66-2.24-6.21-3.41-10.64-3.51v-1.1h29.77l34.68 77.92 33.29-77.92h29.77v1.1c-5.37-.05-8.88 1-10.54 3.15-1.66 2.15-2.49 6.22-2.49 12.22v70.16c0 5.51.87 9.48 2.6 11.89 1.73 2.42 5.2 3.57 10.42 3.48v1.1h-42.8v-1.1c5.51 0 9.33-1.23 11.45-3.69s3.13-6.35 3.04-11.67V184l-37.9 88.89h-2.34l-37.9-85.23v62.62h.02zm108.35-80.25h44.97c14.15 0 24.8 2.13 31.95 6.38 7.15 4.26 10.72 10.59 10.72 19.01 0 8.08-2.92 14.18-8.75 18.29-3.44 2.44-7.96 4.14-13.56 5.09 6.5 1.2 11.88 3.04 16.14 5.52 7.79 4.64 11.69 11.57 11.69 20.8 0 9.18-3.69 16.1-11.08 20.76-7.39 4.66-18.42 6.99-33.1 6.99h-48.99v-1.08c7.17-.09 11.48-1.29 12.91-3.59 1.48-2.34 2.22-6.26 2.22-11.76v-70c-.38-7.6-2.18-12.14-5.38-13.63-3.01-1.39-6.26-1.98-9.75-1.79l.01-.99zm32.35 12.34v33.85h14.78c8.27 0 14.42-1.59 18.43-4.77 4.02-3.18 6.02-8.07 6.02-14.67-.62-9.47-3.73-16.03-9.32-19.69s-11.63-5.21-18.11-4.66c-6.48.55-10.07 1.71-10.76 3.48-.7 1.77-1.04 3.92-1.04 6.46zm0 39.95v36.8c0 3.16.67 5.85 2.01 8.07s6.55 3.22 15.64 2.98c9.08-.24 15.55-2.62 19.4-7.14 3.85-4.52 5.77-10.58 5.77-18.18 0-7.65-2.89-13.32-8.68-17-5.79-3.68-14.61-5.52-26.47-5.52h-7.67v-.01z" />
+    <path d="m382.13 251.86 24.84-56.18 12.37-28.09 7.63-20.18c.5-2.05-.02-3.67-1.54-4.88s-2.87-1.75-4.05-1.63v-1.4h21.77v1.4c-1.43-.5-2.68.02-3.77 1.53-1.09 1.52-.76 4.05.98 7.58l1.77 3.53 6.42 14.05 12.74 28.09 25.58 56.27c6.2 13.95 12.52 20.46 18.98 19.53v1.4h-53.11v-1.4c7.32.06 11.97-1.43 13.95-4.46 1.98-3.04 1.4-8.06-1.77-15.07l-9.58-21.77h-54.97l-6.42 14.88c-4.46 9.98-6.26 16.91-5.39 20.79s6.11 5.75 15.72 5.63v1.4H362.6v-1.4c5.71-.56 9.5-2.01 11.4-4.37 1.89-2.35 4.6-7.43 8.13-15.25zm20.65-27.99 50.14.09-25.21-60-24.93 59.91zm-209.97-99.15 11.9-18.11 4.83 2.39-4.72 6.94.38 8.86" />
+  </g>
+  <g fill="currentColor">
+    <path d="m202.05 187.17 4.37 1.04-11.9 18.01-21.85-.34 7.98-5.18 4.11.53z" mask="url(#a)" transform="translate(-1.43 -81.5)" />
+    <path d="m258.41 104.21-1.39-.47-4.61 24.01-7.15 12.1 2.05 22.5 15.23-11.69 8.44-10.71 13.34-4.26-4.22-3.33-7.85-11.54-5.07-3.23-4.16-6z" mask="url(#b)" transform="translate(-1.43 -81.5)" />
+    <path d="m246.41 83.89 10.72 19.89-4.47 24.08-7.37 12.45-5.26-58.81" mask="url(#c)" transform="translate(-1.43 -81.5)" />
+    <path d="m247.29 162.02 15.14-11.55 8.44-10.72 13.39-4.16 15.33 24.67-12.96 5.64-21.75 4.35-15.71 12.59-.97-9.59z" mask="url(#d)" transform="translate(-1.43 -81.5)" />
+    <path d="m249.1 182.97-.1-.21L264.77 170l21.79-4.33 12.92-5.54 11.54 13.39 12.96 13.89-25.88-.96-18.5-3.52z" mask="url(#e)" transform="translate(-1.43 -81.5)" />
+    <path d="m251.67 203.95 6.6-12.78 10.61-6.06 10.27 3.13-6.84 10.24-.36 4.95-16.71 2.98-7.86-.04z" mask="url(#f)" transform="translate(-1.43 -81.5)" />
+    <path d="m271.78 203.24.38-4.82 6.86-10.32 5.17 5.46 3.19 9.17 2.42 3.72-35.21-.04z" mask="url(#g)" transform="translate(-1.43 -81.5)" />
+    <path d="m341.63 206.55-2.73-5.37-14.95-13.81-.03-.03-.12-.11-25.74-.94-18.46-3.65-30.47.16-13.12-2.81-50.39-10.91-4.61 2.36-.03 1.25 1.6 1.71 8.11 4.79.37 1.68 2.45.89.36 1.68 8 3.9.14-.11 4.09.99 4.83 2.37.06-.03 14.72 4.15-14.31 10.83-1.26.79 37.19.03h.17l4.2-2.3 6.58-12.75 10.57-5.99 10.04 2.97 5.08 5.41 3.18 9.11 2.39 3.64" mask="url(#h)" transform="translate(-1.43 -81.5)" />
+    <path d="m240.18 81.56 9.37 101.36h-.39l-13.1-2.7-1.7-43.09 1.31-2.46-2.12-42.45 1.27-1.21.14-4.99" mask="url(#i)" transform="translate(-1.43 -81.5)" />
+  </g>
+  <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3" d="M99.57 157.5h295" />
+  <defs>
+    <filter id="j" width="33.75" height="19.05" x="172.67" y="187.17" filterUnits="userSpaceOnUse">
+      <feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
+    </filter>
+    <filter id="l" width="39.05" height="58.61" x="245.26" y="103.74" filterUnits="userSpaceOnUse">
+      <feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
+    </filter>
+    <filter id="n" width="17.1" height="58.81" x="240.03" y="81.5" filterUnits="userSpaceOnUse">
+      <feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
+    </filter>
+    <filter id="p" width="52.31" height="47.24" x="247.29" y="135.59" filterUnits="userSpaceOnUse">
+      <feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
+    </filter>
+    <filter id="r" width="74.98" height="27.27" x="249" y="160.13" filterUnits="userSpaceOnUse">
+      <feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
+    </filter>
+    <filter id="t" width="31.77" height="21.3" x="247.38" y="185.11" filterUnits="userSpaceOnUse">
+      <feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
+    </filter>
+    <filter id="v" width="35.21" height="18.35" x="254.59" y="188.1" filterUnits="userSpaceOnUse">
+      <feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
+    </filter>
+    <filter id="x" width="160.65" height="37.47" x="180.98" y="169.08" filterUnits="userSpaceOnUse">
+      <feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
+    </filter>
+    <filter id="z" width="16.01" height="101.36" x="233.55" y="81.56" filterUnits="userSpaceOnUse">
+      <feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
+    </filter>
+    <mask id="a" width="33.75" height="19.05" x="172.67" y="187.17" maskUnits="userSpaceOnUse">
+      <g filter="url(#j)">
+        <linearGradient id="k" x1="4389.4985" x2="4586.1406" y1="5881.4014" y2="5881.4014" gradientTransform="matrix(.1314 -.1564 .131 .1101 -1167.1904 252.4912)" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#fff" />
+          <stop offset=".3299" stop-color="#fdfdfd" />
+          <stop offset=".4665" stop-color="#f6f6f6" />
+          <stop offset=".5674" stop-color="#eaeaea" />
+          <stop offset=".6508" stop-color="#d8d8d8" />
+          <stop offset=".7233" stop-color="#c1c1c1" />
+          <stop offset=".7883" stop-color="#a5a5a5" />
+          <stop offset=".8477" stop-color="#838383" />
+          <stop offset=".9028" stop-color="#5c5c5c" />
+          <stop offset=".9521" stop-color="#313131" />
+          <stop offset=".9985" stop-color="#020202" />
+          <stop offset="1" />
+        </linearGradient>
+        <path fill="url(#k)" d="m215.86 191.22-25.85 30.75-19.89-16.72 25.85-30.75z" />
+      </g>
+    </mask>
+    <mask id="b" width="39.05" height="58.61" x="245.26" y="103.74" maskUnits="userSpaceOnUse">
+      <g filter="url(#l)">
+        <linearGradient id="m" x1="-1871.9133" x2="-1787.4403" y1="1501.3315" y2="1501.3315" gradientTransform="rotate(-132.135 -1085.25034525 356.2196696)" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#fff" />
+          <stop offset=".3726" stop-color="#fdfdfd" />
+          <stop offset=".5069" stop-color="#f6f6f6" />
+          <stop offset=".6026" stop-color="#ebebeb" />
+          <stop offset=".68" stop-color="#dadada" />
+          <stop offset=".7463" stop-color="#c4c4c4" />
+          <stop offset=".805" stop-color="#a8a8a8" />
+          <stop offset=".8581" stop-color="#888" />
+          <stop offset=".9069" stop-color="#626262" />
+          <stop offset=".9523" stop-color="#373737" />
+          <stop offset=".9926" stop-color="#090909" />
+          <stop offset="1" />
+        </linearGradient>
+        <path fill="url(#m)" d="m261.45 84.66 56.67 62.64-53.06 48-56.67-62.64z" />
+      </g>
+    </mask>
+    <mask id="c" width="17.1" height="58.81" x="240.03" y="81.5" maskUnits="userSpaceOnUse">
+      <g filter="url(#n)">
+        <linearGradient id="o" x1="248.4825" x2="248.4825" y1="145.2876" y2="71.4313" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#fff" />
+          <stop offset=".3726" stop-color="#fdfdfd" />
+          <stop offset=".5069" stop-color="#f6f6f6" />
+          <stop offset=".6026" stop-color="#ebebeb" />
+          <stop offset=".68" stop-color="#dadada" />
+          <stop offset=".7463" stop-color="#c4c4c4" />
+          <stop offset=".805" stop-color="#a8a8a8" />
+          <stop offset=".8581" stop-color="#888" />
+          <stop offset=".9069" stop-color="#626262" />
+          <stop offset=".9523" stop-color="#373737" />
+          <stop offset=".9926" stop-color="#090909" />
+          <stop offset="1" />
+        </linearGradient>
+        <path fill="url(#o)" d="M235.33 71.43h26.31v73.86h-26.31z" />
+      </g>
+    </mask>
+    <mask id="d" width="52.31" height="47.24" x="247.29" y="135.59" maskUnits="userSpaceOnUse">
+      <g filter="url(#p)">
+        <linearGradient id="q" x1="-1873.363" x2="-1788.1219" y1="1534.7285" y2="1534.7285" gradientTransform="rotate(-132.812 -1084.1906497 387.3299956)" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#fff" />
+          <stop offset=".2925" stop-color="#fdfdfd" />
+          <stop offset=".4301" stop-color="#f5f5f5" />
+          <stop offset=".5353" stop-color="#e8e8e8" />
+          <stop offset=".6241" stop-color="#d6d6d6" />
+          <stop offset=".7026" stop-color="#bebebe" />
+          <stop offset=".7737" stop-color="#a1a1a1" />
+          <stop offset=".8393" stop-color="#7e7e7e" />
+          <stop offset=".9007" stop-color="#555" />
+          <stop offset=".9563" stop-color="#292929" />
+          <stop offset="1" />
+        </linearGradient>
+        <path fill="url(#q)" d="m259.78 101.83 57.93 62.53-47.75 44.23-57.93-62.53z" />
+      </g>
+    </mask>
+    <mask id="e" width="74.98" height="27.27" x="249" y="160.13" maskUnits="userSpaceOnUse">
+      <g filter="url(#r)">
+        <linearGradient id="s" x1="-143.3998" x2="-285.415" y1="6.3711" y2="-135.6442" gradientTransform="matrix(1.5662 .3668 -.2401 1.0251 632.0837 360.02)" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#fff" />
+          <stop offset=".4274" stop-color="#fefefe" />
+          <stop offset=".5601" stop-color="#fcfcfc" />
+          <stop offset=".6384" stop-color="#f3f3f3" />
+          <stop offset=".7025" stop-color="#e5e5e5" />
+          <stop offset=".7589" stop-color="#d1d1d1" />
+          <stop offset=".8104" stop-color="#b7b7b7" />
+          <stop offset=".8582" stop-color="#979797" />
+          <stop offset=".9032" stop-color="#717171" />
+          <stop offset=".9459" stop-color="#444" />
+          <stop offset=".9855" stop-color="#141414" />
+          <stop offset="1" />
+        </linearGradient>
+        <path fill="url(#s)" d="m322.1 200.29-140.98-33.01 11.97-51.11 140.98 33.02z" />
+      </g>
+    </mask>
+    <mask id="f" width="31.77" height="21.3" x="247.38" y="185.11" maskUnits="userSpaceOnUse">
+      <g filter="url(#t)">
+        <linearGradient id="u" x1="-2514.1003" x2="-2468.8708" y1="1193.0035" y2="1201.1256" gradientTransform="matrix(-.8445 -.3069 .3415 -.9399 -2257.9963 552.9979)" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#fff" />
+          <stop offset=".1141" stop-color="#fbfbfb" />
+          <stop offset=".2384" stop-color="#ededed" />
+          <stop offset=".3674" stop-color="#d8d8d8" />
+          <stop offset=".4997" stop-color="#b9b9b9" />
+          <stop offset=".6347" stop-color="#929292" />
+          <stop offset=".7717" stop-color="#626262" />
+          <stop offset=".9079" stop-color="#2a2a2a" />
+          <stop offset="1" />
+        </linearGradient>
+        <path fill="url(#u)" d="m252.68 175.15 31.57 11.48-11.82 32.53-31.58-11.47z" />
+      </g>
+    </mask>
+    <mask id="g" width="35.21" height="18.35" x="254.59" y="188.1" maskUnits="userSpaceOnUse">
+      <g filter="url(#v)">
+        <linearGradient id="w" x1="-1832.8912" x2="-1796.8864" y1="1610.2035" y2="1610.2035" gradientTransform="matrix(-.727 -.727 .7071 -.7071 -2188.0781 20.1724)" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#fff" />
+          <stop offset=".2381" stop-color="#fdfdfd" />
+          <stop offset=".3748" stop-color="#f4f4f4" />
+          <stop offset=".486" stop-color="#e6e6e6" />
+          <stop offset=".5833" stop-color="#d2d2d2" />
+          <stop offset=".6717" stop-color="#b9b9b9" />
+          <stop offset=".7535" stop-color="#999" />
+          <stop offset=".8304" stop-color="#737373" />
+          <stop offset=".9033" stop-color="#484848" />
+          <stop offset=".9706" stop-color="#171717" />
+          <stop offset="1" />
+        </linearGradient>
+        <path fill="url(#w)" d="m268.83 175.76 26.18 26.17-24.16 24.16-26.17-26.18z" />
+      </g>
+    </mask>
+    <mask id="h" width="160.65" height="37.47" x="180.98" y="169.08" maskUnits="userSpaceOnUse">
+      <g filter="url(#x)">
+        <linearGradient id="y" x1="344.9192" x2="166.5072" y1="190.1209" y2="190.1209" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#b3b3b3" />
+          <stop offset=".00674468" stop-color="#b7b7b7" />
+          <stop offset=".0502" stop-color="#cdcdcd" />
+          <stop offset=".101" stop-color="#dedede" />
+          <stop offset=".1644" stop-color="#e9e9e9" />
+          <stop offset=".2533" stop-color="#f0f0f0" />
+          <stop offset=".5" stop-color="#f2f2f2" />
+          <stop offset=".7033" stop-color="#f0f0f0" />
+          <stop offset=".7766" stop-color="#e9e9e9" />
+          <stop offset=".8288" stop-color="#dedede" />
+          <stop offset=".871" stop-color="#cdcdcd" />
+          <stop offset=".9072" stop-color="#b7b7b7" />
+          <stop offset=".9392" stop-color="#9b9b9b" />
+          <stop offset=".9682" stop-color="#7b7b7b" />
+          <stop offset=".994" stop-color="#575757" />
+          <stop offset="1" stop-color="#4d4d4d" />
+        </linearGradient>
+        <path fill="url(#y)" d="M166.51 163.35h178.41v53.55H166.51z" />
+      </g>
+    </mask>
+    <mask id="i" width="16.01" height="101.36" x="233.55" y="81.56" maskUnits="userSpaceOnUse">
+      <g filter="url(#z)">
+        <linearGradient id="A" x1="239.2505" x2="239.2505" y1="188.6781" y2="65.4305" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#fff" />
+          <stop offset=".3726" stop-color="#fdfdfd" />
+          <stop offset=".5069" stop-color="#f6f6f6" />
+          <stop offset=".6026" stop-color="#ebebeb" />
+          <stop offset=".68" stop-color="#dadada" />
+          <stop offset=".7463" stop-color="#c4c4c4" />
+          <stop offset=".805" stop-color="#a8a8a8" />
+          <stop offset=".8581" stop-color="#888" />
+          <stop offset=".9069" stop-color="#626262" />
+          <stop offset=".9523" stop-color="#373737" />
+          <stop offset=".9926" stop-color="#090909" />
+          <stop offset="1" />
+        </linearGradient>
+        <path fill="url(#A)" d="M227.48 65.43h23.54v123.25h-23.54z" />
+      </g>
+    </mask>
+  </defs>
+</svg>

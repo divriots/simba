@@ -3,7 +3,6 @@
 ```js script
 import { html } from '~/core'
 import '~/token-display';
-import '~/doc-styles';
 import {
   coolGray as coolGrayTokens,
   red as redTokens,
