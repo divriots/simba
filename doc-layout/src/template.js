@@ -1,12 +1,14 @@
 import '@divriots/dockit-core/mdjs-layout/define';
-import { breakpoints, styles } from '@divriots/dockit-core/mdjs-layout';
+import { breakpoints, misc } from '@divriots/dockit-core/mdjs-layout';
 import { html, unsafeHTML } from '~/core';
 import './color-toggler';
 import logoSvg from './logo.svg?raw';
 
 export const docLayoutTemplate = (content, context) => html`
   <style>
-    ${unsafeHTML(styles)} .logo {
+    @import 'https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-vsc-dark-plus.min.css';
+    @import 'https://cdn.jsdelivr.net/npm/@tailwindcss/typography@0.5.0/dist/typography.min.css';
+    ${unsafeHTML(misc)} .logo {
       color: #f59e0b;
     }
     .topbar {
