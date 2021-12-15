@@ -11,6 +11,17 @@ Biggest change here is the (base) tokens:
 
 They have been simplified and the syntax has changed.
 
+We also added a breaking change where CSS rules inside ::slotted selectors now use !important.
+
+### !important
+
+Due to an implementation detail of `::slotted` selector in combination with global stylesheets, we've had to put `!important` for many CSS rules for slotted elements.
+This is necessary for them to have higher specificity than selectors in stylesheets from the outside.
+
+For more info, read our [Rationale](./README.md)
+
+This will mean that if you extend Simba components and write your own CSS overrides in `::slotted` selectors, you will have to use `!important` to override Simba's base styles.
+
 ### Colors
 
 #### Before
