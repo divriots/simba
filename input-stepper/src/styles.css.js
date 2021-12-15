@@ -20,49 +20,49 @@ export default css`
   }
 
   .input-group__container > .input-group__input ::slotted(.form-control:focus) {
-    box-shadow: none;
+    box-shadow: none !important;
   }
 
   .input-group__container > .input-group__input ::slotted(.form-control) {
-    border-radius: ${none};
-    margin-top: 0;
+    border-radius: ${none} !important;
+    margin-top: 0 !important;
   }
 
   ::slotted(simba-button) {
-    padding: ${s1_5} ${s2_5};
+    padding: ${s1_5} ${s2_5} !important;
   }
 
   ::slotted(simba-button:focus) {
     box-shadow: 0 0 1px 1px ${coolGray300},
-      0 0 0 3px var(--simba-color-primary-500);
+      0 0 0 3px var(--simba-color-primary-500) !important;
   }
 
   ::slotted(simba-button[slot='prefix']) {
-    border-radius: ${none};
-    border-top-left-radius: ${base};
-    border-bottom-left-radius: ${base};
+    border-radius: ${none} !important;
+    border-top-left-radius: ${base} !important;
+    border-bottom-left-radius: ${base} !important;
   }
 
   ::slotted(simba-button[slot='suffix']) {
-    border-radius: ${none};
-    border-top-right-radius: ${base};
-    border-bottom-right-radius: ${base};
+    border-radius: ${none} !important;
+    border-top-right-radius: ${base} !important;
+    border-bottom-right-radius: ${base} !important;
   }
 
   :host(:focus-within) ::slotted(simba-button[slot='prefix']) {
-    box-shadow: 1px 0 0 0 ${coolGray300};
+    box-shadow: 1px 0 0 0 ${coolGray300} !important;
   }
 
   :host(:focus-within) ::slotted(simba-button[slot='suffix']) {
-    box-shadow: -1px 0 0 0 ${coolGray300};
+    box-shadow: -1px 0 0 0 ${coolGray300} !important;
   }
 
   :host([theme='dark']) ::slotted(simba-button) {
-    background-color: var(--simba-bg-color-dark);
-    color: ${coolGray100};
+    background-color: var(--simba-bg-color-dark) !important;
+    color: ${coolGray100} !important;
   }
 
   :host([theme='dark'][disabled]) ::slotted(simba-button) {
-    background-color: ${coolGray600};
+    background-color: ${coolGray600} !important;
   }
 `;

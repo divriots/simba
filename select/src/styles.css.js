@@ -41,8 +41,8 @@ export const invokerStyles = css`
   }
 
   ::slotted([slot='after']) {
-    width: ${s3};
-    height: ${s3};
+    width: ${s3} !important;
+    height: ${s3} !important;
   }
 
   :host([theme='dark']) {
@@ -70,17 +70,17 @@ export const optionStyles = css`
 
 export const optionsStyles = css`
   .input-group__container > .input-group__input ::slotted(.form-control) {
-    display: block;
-    background-color: ${coolGray50};
-    padding: 0;
-    overflow: hidden;
+    display: block !important;
+    background-color: ${coolGray50} !important;
+    padding: 0 !important;
+    overflow: hidden !important;
   }
 `;
 
 export const selectStyles = css`
   ::slotted([slot='input']) {
-    -webkit-appearance: none;
-    appearance: none;
+    -webkit-appearance: none !important;
+    appearance: none !important;
   }
 
   .input-group__input {

@@ -37,12 +37,12 @@ export class SimbaDialogFrame extends ThemeMixin(LitElement) {
       }
 
       ::slotted([slot='header']) {
-        text-align: center;
-        padding: ${s3};
-        border-bottom: 1px solid ${coolGray300};
-        font-weight: ${weightSemibold};
-        font-size: ${sizeLgSize};
-        line-height: ${sizeLgLineHeight};
+        text-align: center !important;
+        padding: ${s3} !important;
+        border-bottom: 1px solid ${coolGray300} !important;
+        font-weight: ${weightSemibold} !important;
+        font-size: ${sizeLgSize} !important;
+        line-height: ${sizeLgLineHeight} !important;
       }
 
       :host([theme='dark']) {

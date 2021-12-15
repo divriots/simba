@@ -17,9 +17,9 @@ export const choiceBoxStyles = css`
   }
 
   ::slotted([slot='label']) {
-    cursor: pointer;
-    margin-left: 6px;
-    font-weight: ${weightNormal};
+    cursor: pointer !important;
+    margin-left: 6px !important;
+    font-weight: ${weightNormal} !important;
   }
 
   :host([disabled]) {
@@ -29,23 +29,23 @@ export const choiceBoxStyles = css`
   }
 
   :host([disabled]) ::slotted([slot='label']) {
-    cursor: not-allowed;
+    cursor: not-allowed !important;
   }
 
   ::slotted(.form-control) {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    width: ${s4};
-    height: ${s4};
-    outline: none;
-    display: inline-block;
-    vertical-align: top;
-    position: relative;
-    margin: 0;
-    cursor: pointer;
-    border: 1px solid var(--border, var(--simba-color-primary-200));
-    background: var(--background, ${coolGray50});
-    transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    width: ${s4} !important;
+    height: ${s4} !important;
+    outline: none !important;
+    display: inline-block !important;
+    vertical-align: top !important;
+    position: relative !important;
+    margin: 0 !important;
+    cursor: pointer !important;
+    border: 1px solid var(--border, var(--simba-color-primary-200)) !important;
+    background: var(--background, ${coolGray50}) !important;
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.2s !important;
   }
 
   /**
@@ -68,13 +68,13 @@ export const choiceBoxStyles = css`
   }
 
   ::slotted(.form-control:focus) {
-    box-shadow: 0 0 0 2px var(--simba-color-primary-200);
+    box-shadow: 0 0 0 2px var(--simba-color-primary-200) !important;
   }
 
   ::slotted(.form-control:disabled) {
     --background: var(--simba-color-primary-50);
-    cursor: not-allowed;
-    opacity: 0.9;
+    cursor: not-allowed !important;
+    opacity: 0.9 !important;
   }
 
   ::slotted(.form-control:disabled:checked) {
@@ -83,20 +83,21 @@ export const choiceBoxStyles = css`
   }
 
   ::slotted(.form-control):after {
-    content: '';
-    display: block;
-    position: absolute;
+    content: '' !important;
+    display: block !important;
+    position: absolute !important;
     transition: transform var(--duration-transform, 0.3s)
         var(--transform-ease, ease),
-      opacity var(--duration-opacity, 0.2s);
-    opacity: var(--opacity, 0);
+      opacity var(--duration-opacity, 0.2s) !important;
+    opacity: var(--opacity, 0) !important;
+    box-sizing: content-box !important;
   }
 
   :host([theme='dark']) ::slotted([slot='label']) {
-    color: ${coolGray100};
+    color: ${coolGray100} !important;
   }
 
   :host([theme='dark']) ::slotted(.form-control) {
-    background: var(--background, var(--simba-bg-color-dark));
+    background: var(--background, var(--simba-bg-color-dark)) !important;
   }
 `;

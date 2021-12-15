@@ -105,6 +105,7 @@ export const noHeader = () => html`
       <div slot="content">
         <div
           style="
+          box-sizing: content-box;
           font-size: 1.5rem; color: ${emerald500}; 
           padding: ${s1_5};
           width: 30px;

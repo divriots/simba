@@ -28,6 +28,18 @@ export const docLayoutTemplate = (content, context) => html`
       background-color: var(--simba-bg-color-dark);
       color: var(--simba-text-color-dark);
     }
+    .markdown-body {
+      padding: 0;
+      color: white;
+    }
+    .markdown-body code:not([class*='language-']),
+    .markdown-body tt {
+      background-color: transparent;
+      border: none;
+    }
+    .prose {
+      line-height: initial;
+    }
   </style>
   <mdjs-layout
     .context="${context}"

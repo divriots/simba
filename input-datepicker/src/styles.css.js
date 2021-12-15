@@ -30,56 +30,56 @@ export const pickerStyles = css`
   }
 
   :host(:focus-within) ::slotted([slot='suffix']) {
-    box-shadow: -1px 0 0 0 ${coolGray300};
+    box-shadow: -1px 0 0 0 ${coolGray300} !important;
   }
 
   :host(:focus-within)
     ::slotted(.form-control:not([type='checkbox']):not([type='radio']):not(:focus)) {
-    border-color: transparent;
+    border-color: transparent !important;
   }
 
   .input-group__container > .input-group__input ::slotted(.form-control:focus) {
-    box-shadow: none;
+    box-shadow: none !important;
   }
 
   .input-group__container > .input-group__input ::slotted(.form-control) {
-    border-radius: ${none};
-    border-top-left-radius: ${base};
-    border-bottom-left-radius: ${base};
-    margin-top: 0;
+    border-radius: ${none} !important;
+    border-top-left-radius: ${base} !important;
+    border-bottom-left-radius: ${base} !important;
+    margin-top: 0 !important;
   }
 
   ::slotted([slot='suffix']) {
-    transition: unset;
-    border-radius: ${none};
-    border-top-right-radius: ${base};
-    border-bottom-right-radius: ${base};
-    padding: ${s1_5} ${s2_5};
-    border: 0;
+    transition: unset !important;
+    border-radius: ${none} !important;
+    border-top-right-radius: ${base} !important;
+    border-bottom-right-radius: ${base} !important;
+    padding: ${s1_5} ${s2_5} !important;
+    border: 0 !important;
   }
 
   ::slotted([slot='suffix']:focus),
   ::slotted([slot='suffix']:focus-visible) {
-    box-shadow: 0 0 0 2px var(--simba-color-primary-500);
-    overflow: hidden;
-    outline: 0;
+    box-shadow: 0 0 0 2px var(--simba-color-primary-500) !important;
+    overflow: hidden !important;
+    outline: 0 !important;
   }
 
   :host([disabled]) ::slotted([slot='suffix']) {
-    background-color: ${coolGray50};
-    filter: none;
+    background-color: ${coolGray50} !important;
+    filter: none !important;
   }
 
   :host([theme='dark']) ::slotted([slot='suffix']) {
-    background-color: var(--simba-bg-color-dark);
+    background-color: var(--simba-bg-color-dark) !important;
   }
 
   :host([theme='dark']) ::slotted([slot='suffix']:focus) {
-    background-color: var(--simba-color-primary-900);
+    background-color: var(--simba-color-primary-900) !important;
   }
 
   :host([theme='dark'][disabled]) ::slotted([slot='suffix']) {
-    background-color: ${coolGray600};
+    background-color: ${coolGray600} !important;
   }
 `;
 
