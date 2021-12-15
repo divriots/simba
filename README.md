@@ -75,3 +75,14 @@ This is recommended, because it avoids deduplication issues.
 If you need to import from `@lion` directly, it's important that installations of lion and its dependencies are properly deduped.
 In Backlight, this is taken care of for you on the backend, and you won't have to worry about it.
 If you use `starter-simba` outside of Backlight, you will need to ensure that deduplication is handled, otherwise you will run into breaking bugs.
+
+### !important in ::slotted selectors
+
+Right now, as per W3C specs, ::slotted CSS specificity is just that of a pseudo element.
+Unlike :host, it does not include the specificity of the passed argument selector.
+
+This means that almost any selector from outside that targets the slotted element will override your ::slotted CSS.
+This is awful, [there's an open issue](https://github.com/w3c/csswg-drafts/issues/6466) but hasn't gained much traction.
+
+For now the workaround is to use `!important` for all your CSS rules inside ::slotted to protect them from being overriden by the outside.
+Sadly, this means you will have to fight cascade battles and use `!important` yourself too, which is probably worse than fighting specificity battles, but so be it until the spec changes.

@@ -37,6 +37,9 @@ export const docLayoutTemplate = (content, context) => html`
       background-color: transparent;
       border: none;
     }
+    .prose {
+      line-height: initial;
+    }
   </style>
   <mdjs-layout
     .context="${context}"

@@ -80,13 +80,13 @@ export default css`
   }
 
   .input-group__container > .input-group__input ::slotted(.form-control) {
-    padding: ${s0};
-    border: none;
+    padding: ${s0} !important;
+    border: none !important;
   }
 
   .input-group__container > .input-group__input ::slotted(.form-control:focus) {
-    box-shadow: none;
-    border: none;
+    box-shadow: none !important;
+    border: none !important;
   }
 
   .input-group__input {

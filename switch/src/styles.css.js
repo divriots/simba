@@ -9,13 +9,13 @@ export default css`
   }
 
   .input-group__container > .input-group__input ::slotted(.form-control) {
-    border: none;
-    padding: 0;
-    margin: 0;
-    border-radius: ${full};
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: ${full} !important;
   }
 
   .input-group__container > .input-group__input ::slotted(.form-control:focus) {
-    box-shadow: none;
+    box-shadow: none !important;
   }
 `;

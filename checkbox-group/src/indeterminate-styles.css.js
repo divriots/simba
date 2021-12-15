@@ -7,13 +7,17 @@ export default css`
     position: relative;
   }
 
+  ::slotted([slot='checkbox']:first-child) {
+    margin-top: 2px !important;
+  }
+
   :host(:not([checked])) ::slotted(.form-control):after {
-    border-bottom: 0;
-    transform: rotate(70deg);
+    border-bottom: 0 !important;
+    transform: rotate(70deg) !important;
   }
 
   :host([indeterminate]) ::slotted(.form-control):after {
-    transform: rotate(90deg);
+    transform: rotate(90deg) !important;
   }
 
   /**
@@ -21,13 +25,13 @@ export default css`
    * against the nested checkbox slottables
    */
   ::slotted([slot='label']) {
-    position: absolute;
-    top: -3px;
-    margin-left: 22px;
-    white-space: nowrap;
+    position: absolute !important;
+    top: -3px !important;
+    margin-left: 22px !important;
+    white-space: nowrap !important;
   }
 
   ::slotted([slot='checkbox']) {
-    padding-left: ${s3_5};
+    padding-left: ${s3_5} !important;
   }
 `;

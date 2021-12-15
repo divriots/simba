@@ -123,12 +123,17 @@ export default css`
     background-color: var(--simba-color-primary-500);
   }
 
+  ::slotted([slot='suffix']),
+  ::slotted([slot='prefix']) {
+    box-sizing: content-box !important;
+  }
+
   ::slotted([slot='suffix']) {
-    padding-left: 0.5rem;
+    padding-left: 0.5rem !important;
   }
 
   ::slotted([slot='prefix']) {
-    padding-right: 0.5rem;
+    padding-right: 0.5rem !important;
   }
 
   :host([theme='dark'][variation='text']),

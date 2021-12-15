@@ -55,10 +55,11 @@ export class SimbaCollapsible extends LionCollapsible {
   }
 
   async _showAnimation() {
-    const expectedHeight = await this.__calculateHeight(this._contentNode);
+    const expectedHeight = await this.__calculateHeight();
     this._contentNode.style.setProperty('opacity', '1');
     this.__addPadding();
     await new Promise((resolve) => requestAnimationFrame(() => resolve()));
+    // TODO: recalc on resize as text-wrapping changes may change content height
     this._contentNode.style.setProperty('max-height', expectedHeight);
     await this._waitForTransition();
   }
@@ -103,9 +104,18 @@ export class SimbaCollapsible extends LionCollapsible {
     // remove max-height prop which triggers a render frame, only then compute and return content height
     this._contentNode.style.setProperty('max-height', '');
     await new Promise((resolve) => requestAnimationFrame(() => resolve()));
-    const contentHeight = this._contentHeight;
+
+    const contentHeight = parseFloat(this._contentHeight.replace('px', ''));
+    const baseFontSize = parseFloat(
+      getComputedStyle(this._contentNode)
+        .getPropertyValue('font-size')
+        .replace('px', '')
+    );
+    const paddingHeight =
+      2 * parseFloat(s3_5.cssText.replace('rem', '') * baseFontSize);
+    const heightWithPadding = `${contentHeight + paddingHeight}px`;
     this._contentNode.style.setProperty('max-height', '0px');
-    return contentHeight;
+    return heightWithPadding;
   }
 
   __addPadding() {
