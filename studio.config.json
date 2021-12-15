@@ -29,7 +29,7 @@
         ]
       ],
       ["infrastructure", ["form-core", "themes"]],
-      ["docs", ["token-display", "doc-styles"]],
+      ["docs", ["token-display", "doc-layout"]],
       ["re-exports-only", ["core", "localize", "overlays"]]
     ]
   }
