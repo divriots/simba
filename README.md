@@ -82,7 +82,7 @@ Right now, as per W3C specs, ::slotted CSS specificity is just that of a pseudo 
 Unlike :host, it does not include the specificity of the passed argument selector.
 
 This means that almost any selector from outside that targets the slotted element will override your ::slotted CSS.
-This is awful, [there's an open issue](https://github.com/w3c/csswg-drafts/issues/6466) but hasn't gained much traction.
+This is not ideal, [there's an open issue](https://github.com/w3c/csswg-drafts/issues/6466) to try to improve this.
 
 For now the workaround is to use `!important` for all your CSS rules inside ::slotted to protect them from being overriden by the outside.
 Sadly, this means you will have to fight cascade battles and use `!important` yourself too, which is probably worse than fighting specificity battles, but so be it until the spec changes.
