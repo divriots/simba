@@ -1,13 +1,11 @@
-import { packd_export_0 as mod } from 'https://srv.divriots.com/packd/browser-style-dictionary@3.0.2-browser.7/format-helpers.esm.js';
-
-const { default: formatHelpers } = mod;
+import StyleDictionary from 'style-dictionary';
 
 const tokenFilter = (cat) => (token) => token.attributes.category === cat;
 
 const generateFilesArr = (tokensCategories) => {
   return tokensCategories.map((cat) => ({
     filter: tokenFilter(cat),
-    destination: `colors/src/_${cat}.js`,
+    destination: `${cat}/src/_${cat}.js`,
     format: 'cssLiterals',
   }));
 };
@@ -17,7 +15,7 @@ export default {
   format: {
     cssLiterals: (opts) => {
       const { dictionary, file } = opts;
-      let output = formatHelpers.fileHeader(file);
+      let output = StyleDictionary.formatHelpers.fileHeader(file);
       output += `import { css } from '@lion/core';\n\n`;
 
       dictionary.allTokens.forEach((token) => {
