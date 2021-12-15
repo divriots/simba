@@ -142,7 +142,11 @@ export class SimbaCalendar extends ScopedElementsMixin(
         }
       });
 
-      monthNavHeading.style.setProperty('width', `${Math.ceil(maxWidth)}px`);
+      monthNavHeading.style.setProperty(
+        'width',
+        // 8px extra padding
+        `${Math.ceil(maxWidth) + 8}px`
+      );
     }
   }
 

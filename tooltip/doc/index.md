@@ -7,8 +7,25 @@ Interactive content should not be placed in a tooltip content slot. Tooltips are
 ```js script
 import { html } from '~/core';
 import '~/icons/simba-icon.js';
-import '../simba-tooltip.js';
-import { red, amber, emerald, blue } from '~/colors';
+import '@divriots/starter-simba/tooltip/simba-tooltip.js';
+import {
+  red400,
+  red700,
+  amber400,
+  amber700,
+  emerald400,
+  emerald700,
+  blue400,
+  blue700,
+} from '~/colors';
+```
+
+## Usage
+
+Import the custom element definition file.
+
+```js
+import '@divriots/starter-simba/tooltip/simba-tooltip.js';
 ```
 
 ```js preview-story
@@ -16,7 +33,7 @@ export const tooltip = () => html`
   <style>
     .demo-tooltip-invoker {
       margin: 30px;
-      fill: ${red[700]};
+      fill: ${red700};
     }
   </style>
   <simba-tooltip .config=${{ popperConfig: { placement: 'right' } }}>
@@ -42,35 +59,35 @@ export const placements = () => html`
     }
 
     [icon-id$='error'] {
-      fill: ${red[700]};
+      fill: ${red700};
     }
 
     [icon-id$='warning'] {
-      fill: ${amber[700]};
+      fill: ${amber700};
     }
 
     [icon-id$='success'] {
-      fill: ${emerald[700]};
+      fill: ${emerald700};
     }
 
     [icon-id$='info'] {
-      fill: ${blue[700]};
+      fill: ${blue700};
     }
 
     html[theme='dark'] [icon-id$='error'] {
-      fill: ${red[400]};
+      fill: ${red400};
     }
 
     html[theme='dark'] [icon-id$='warning'] {
-      fill: ${amber[400]};
+      fill: ${amber400};
     }
 
     html[theme='dark'] [icon-id$='success'] {
-      fill: ${emerald[400]};
+      fill: ${emerald400};
     }
 
     html[theme='dark'] [icon-id$='info'] {
-      fill: ${blue[400]};
+      fill: ${blue400};
     }
   </style>
   <simba-tooltip .config=${{ popperConfig: { placement: 'top' } }}>

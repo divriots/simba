@@ -1,63 +1,36 @@
 {
- "packages": {
-  "dir": "",
-  "menu": [
-   "introduction",
-   [
-    "tokens",
-    [
-     "colors",
-     "borders",
-     "typography",
-     "spacing"
+  "packages": {
+    "dir": "",
+    "menu": [
+      "introduction",
+      ["tokens", ["colors", "radii", "typography", "spacing", "tokens"]],
+      [
+        "components",
+        [
+          "button",
+          "collapsible",
+          "checkbox-group",
+          "dialog",
+          "icons",
+          "input",
+          "input-amount",
+          "input-date",
+          "input-datepicker",
+          "input-email",
+          "input-iban",
+          "input-range",
+          "input-stepper",
+          "radio-group",
+          "select",
+          "switch",
+          "textarea",
+          "tooltip",
+          "validation-feedback"
+        ]
+      ],
+      ["infrastructure", ["form-core", "themes"]],
+      ["docs", ["token-display", "doc-styles"]],
+      ["re-exports-only", ["core", "localize", "overlays"]]
     ]
-   ],
-   [
-    "components",
-    [
-     "button",
-     "collapsible",
-     "checkbox-group",
-     "dialog",
-     "icons",
-     "input",
-     "input-amount",
-     "input-date",
-     "input-datepicker",
-     "input-email",
-     "input-iban",
-     "input-range",
-     "input-stepper",
-     "radio-group",
-     "select",
-     "switch",
-     "textarea",
-     "tooltip",
-     "validation-feedback"
-    ]
-   ],
-   [
-    "infrastructure",
-    [
-     "form-core",
-     "themes"
-    ]
-   ],
-   [
-    "docs",
-    [
-     "token-display",
-     "doc-layout"
-    ]
-   ],
-   [
-    "re-exports-only",
-    [
-     "core",
-     "localize",
-     "overlays"
-    ]
-   ]
-  ]
- }
+  }
 }

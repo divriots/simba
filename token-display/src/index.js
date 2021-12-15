@@ -1,6 +1,6 @@
 import { LitElement, html, css } from '~/core';
-import { coolGray } from '~/colors';
-import { borderRadiusMixin } from '~/borders';
+import { coolGray400, blue300, blue500 } from '~/colors';
+import { sm, none, base } from '~/radii';
 import { ThemeMixin } from 'dark-theme-utils';
 
 class TokenDisplay extends ThemeMixin(LitElement) {
@@ -29,24 +29,28 @@ class TokenDisplay extends ThemeMixin(LitElement) {
         margin: 0;
       }
 
+      :host([token-type='typography']) .item p {
+        margin: 1em 0 0 0;
+      }
+
       .item__css-text {
-        color: ${coolGray[400]};
+        color: ${coolGray400};
       }
 
       .cell {
         width: 50px;
         height: 25px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-        ${borderRadiusMixin('sm')};
+        border-radius: ${sm};
         transition: var(--simba-theme-transition);
       }
 
       .cell--border {
         width: 100px;
-        height: 50px;
+        height: 100px;
         background-color: var(--simba-color-primary-700);
         box-shadow: none;
-        ${borderRadiusMixin('none')};
+        border-radius: ${none};
       }
 
       :host([theme='dark']) .cell--border {
@@ -60,15 +64,24 @@ class TokenDisplay extends ThemeMixin(LitElement) {
         color: var(--simba-color-primary-700);
       }
 
+      .cell--line-height {
+        border: 1px solid ${blue500};
+        border-radius: ${base};
+      }
+
       :host([theme='dark']) .cell--typography {
         color: var(--simba-color-primary-200);
+      }
+
+      :host([theme='dark']) .cell--line-height {
+        border-color: ${blue300};
       }
 
       .cell--spacing {
         height: 10px;
         background-color: var(--simba-color-primary-700);
         box-shadow: none;
-        ${borderRadiusMixin('none')};
+        border-radius: ${none};
       }
 
       :host([theme='dark']) .cell--spacing {
@@ -90,24 +103,61 @@ class TokenDisplay extends ThemeMixin(LitElement) {
         attribute: 'token-type',
       },
       tokens: { attribute: false },
-      cssKeyIncluded: {
-        type: Boolean,
-        reflect: true,
-        attribute: 'css-key-included',
-      },
-      cssMixin: {
-        type: Boolean,
-        reflect: true,
-        attribute: 'css-mixin',
-      },
+      cssProp: { attribute: false },
     };
   }
 
   constructor() {
     super();
     this.tokenType = '';
+    this.cssProp = '';
     this.tokens = {};
     this.cssKeyIncluded = false;
+  }
+
+  sortTokens() {
+    switch (this.tokenType) {
+      case 'spacing':
+        return this.tokens.sort((a, b) => {
+          const spaceMatchA = a[1].cssText.match(/([\d.]+)(.+)/);
+          const spaceMatchB = b[1].cssText.match(/([\d.]+)(.+)/);
+          const pixelsA =
+            spaceMatchA[2] === 'rem'
+              ? parseFloat(spaceMatchA[1]) * 16
+              : parseFloat(spaceMatchA);
+          const pixelsB =
+            spaceMatchB[2] === 'rem'
+              ? parseFloat(spaceMatchB[1]) * 16
+              : parseFloat(spaceMatchB);
+
+          return pixelsA - pixelsB;
+        });
+      case 'color':
+        return this.tokens.sort((a, b) => {
+          const lightnessAMatch = a[0].match(/(.+?)(\d+)/);
+          const lightnessBMatch = b[0].match(/(.+?)(\d+)/);
+          if (lightnessAMatch[1] !== lightnessBMatch[1]) {
+            return a[0] - b[0];
+          }
+          return (
+            parseInt(lightnessAMatch[2], 10) - parseInt(lightnessBMatch[2], 10)
+          );
+        });
+      case 'typography':
+        if (
+          this.tokens[0][0].endsWith('Size') ||
+          this.tokens[0][0].endsWith('LineHeight') ||
+          this.tokens[0][0].startsWith('weight')
+        ) {
+          return this.tokens.sort((a, b) => {
+            const aNumber = parseFloat(a[1].cssText.match(/[\d.]+/g)[0]);
+            const bNumber = parseFloat(b[1].cssText.match(/[\d.]+/g)[0]);
+            return aNumber - bNumber;
+          });
+        }
+        return this.tokens;
+    }
+    return this.tokens;
   }
 
   colorTemplate(cssLiteral, opts) {
@@ -121,9 +171,12 @@ class TokenDisplay extends ThemeMixin(LitElement) {
     `;
   }
 
-  borderTemplate(cssLiteral, opts) {
+  radiiTemplate(cssLiteral, opts) {
     return html`
-      <div class="cell cell--border" style="${cssLiteral.cssText}"></div>
+      <div
+        class="cell cell--border"
+        style="border-radius: ${cssLiteral.cssText}"
+      ></div>
       <p class="item__key">${opts.param}</p>
       <pre class="item__css-text"><code>${cssLiteral.cssText}</code></pre>
     `;
@@ -131,11 +184,17 @@ class TokenDisplay extends ThemeMixin(LitElement) {
 
   typographyTemplate(cssLiteral, opts) {
     return html`
-      <div class="cell cell--typography" style="${cssLiteral.cssText}">
+      <div
+        class="cell cell--typography${this.cssProp === 'line-height'
+          ? ' cell--line-height'
+          : ''}"
+        style="${this.cssProp}: ${cssLiteral.cssText}"
+      >
         The quick brown fox jumped over the lazy dog.
       </div>
-      <p class="item__key">${opts.param}</p>
-      <pre class="item__css-text"><code>${cssLiteral.cssText}</code></pre>
+      <p class="item__key">${opts.key}</p>
+      <pre class="item__css-text"><code>${this
+        .cssProp}: ${cssLiteral.cssText}</code></pre>
     `;
   }
 
@@ -156,8 +215,8 @@ class TokenDisplay extends ThemeMixin(LitElement) {
     switch (this.tokenType) {
       case 'color':
         return this.colorTemplate(cssLiteral, opts);
-      case 'border':
-        return this.borderTemplate(cssLiteral, opts);
+      case 'radii':
+        return this.radiiTemplate(cssLiteral, opts);
       case 'typography':
         return this.typographyTemplate(cssLiteral, opts);
       case 'spacing':
@@ -188,20 +247,11 @@ class TokenDisplay extends ThemeMixin(LitElement) {
   }
 
   render() {
-    let entries = Object.entries(this.tokens);
-    if (this.tokenType === 'spacing') {
-      entries = entries.sort((a, b) => {
-        let _a = a[0] === 'px' ? '0.25' : a[0];
-        let _b = b[0] === 'px' ? '0.25' : b[0];
-        return _a - _b;
-      });
-    }
-
     return html`
       <div class="row">
         ${this.cssMixin
           ? this.cssMixinTemplate()
-          : entries.map(
+          : this.sortTokens().map(
               (entry) => html`
                 <div class="item">
                   ${this.tokenTemplate(entry[1], { key: entry[0] })}

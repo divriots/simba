@@ -1,5 +1,5 @@
 import { LionCollapsible } from '@lion/collapsible';
-import { spacing } from '~/spacing';
+import { s3_5 } from '~/spacing';
 import { SimbaCollapsibleButton } from './SimbaCollapsibleButton.js';
 import styles from './styles.css.js';
 
@@ -109,10 +109,7 @@ export class SimbaCollapsible extends LionCollapsible {
   }
 
   __addPadding() {
-    this._contentNode.style.setProperty('padding-top', spacing['3.5'].cssText);
-    this._contentNode.style.setProperty(
-      'padding-bottom',
-      spacing['3.5'].cssText
-    );
+    this._contentNode.style.setProperty('padding-top', s3_5.cssText);
+    this._contentNode.style.setProperty('padding-bottom', s3_5.cssText);
   }
 }

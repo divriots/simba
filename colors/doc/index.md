@@ -1,37 +1,39 @@
 # Colors
 
 ```js script
-import { html } from '~/core'
+import { html } from '~/core';
 import '~/token-display';
-import {
-  coolGray as coolGrayTokens,
-  red as redTokens,
-  amber as amberTokens,
-  emerald as emeraldTokens,
-  blue as blueTokens,
-  indigo as indigoTokens,
-  purple as purpleTokens,
-  pink as pinkTokens,
-} from '../src/colors.css.js';
-
+import * as _colors from '~/colors';
 ```
 
 ## Usage
 
 The color palettes are tokenized as CSS tagged literals (CSSResult) which can be used directly inside `static get styles`.
 
-```js preview-story
-import { css, LitElement } from '~/core';
-import { red } from '../src/colors.css.js';
+You can import the token group from the main entrypoint (or `/tokens`):
 
-class DemoRed extends LitElement { 
+```js
+import { colors } from '@divriots/starter-simba'; // colors.red500
+```
+
+or a specific color from the token entrypoint:
+
+```js
+import { red500 } from '@divriots/starter-simba/colors';
+```
+
+```js preview-story
+import { css, LitElement } from '@divriots/starter-simba';
+import { red500 } from '@divriots/starter-simba/colors';
+
+class DemoRed extends LitElement {
   static get styles() {
     return css`
       :host {
         display: block;
         width: 50px;
         height: 50px;
-        background-color: ${red[500]};
+        background-color: ${red500};
       }
     `;
   }
@@ -47,53 +49,94 @@ export const usageInCE = () => html`<demo-red></demo-red>`;
 
 ```js story
 export const coolGray = () =>
-  html`<token-display token-type="color" .tokens=${coolGrayTokens}></token-display>`;
+  html`<token-display
+    token-type="color"
+    .tokens=${Object.entries(_colors).filter((entry) =>
+      entry[0].startsWith('coolGray')
+    )}
+  ></token-display>`;
 ```
 
 ### Red
 
 ```js story
 export const redd = () =>
-  html`<token-display token-type="color" .tokens=${redTokens}></token-display>`;
+  html`<token-display
+    token-type="color"
+    .tokens=${Object.entries(_colors).filter((entry) =>
+      entry[0].startsWith('red')
+    )}
+  ></token-display>`;
 ```
 
 ### Amber
 
 ```js story
 export const amber = () =>
-  html`<token-display token-type="color" .tokens=${amberTokens}></token-display>`;
+  html`<token-display
+    token-type="color"
+    .tokens=${Object.entries(_colors).filter((entry) =>
+      entry[0].startsWith('amber')
+    )}
+  ></token-display>`;
 ```
 
 ### Emerald
 
 ```js story
 export const emerald = () =>
-  html`<token-display token-type="color" .tokens=${emeraldTokens}></token-display>`;
+  html`<token-display
+    token-type="color"
+    .tokens=${Object.entries(_colors).filter((entry) =>
+      entry[0].startsWith('emerald')
+    )}
+  ></token-display>`;
 ```
 
 ### Blue
 
 ```js story
 export const blue = () =>
-  html`<token-display token-type="color" .tokens=${blueTokens}></token-display>`;
+  html`<token-display
+    token-type="color"
+    .tokens=${Object.entries(_colors).filter((entry) =>
+      entry[0].startsWith('blue')
+    )}
+  ></token-display>`;
 ```
 
 ### Indigo
 
 ```js story
 export const indigo = () =>
-  html`<token-display token-type="color" .tokens=${indigoTokens}></token-display>`;
+  html`<token-display
+    token-type="color"
+    .tokens=${Object.entries(_colors).filter((entry) =>
+      entry[0].startsWith('indigo')
+    )}
+  ></token-display>`;
 ```
 
 ### Purple
 
 ```js story
 export const purple = () =>
-  html`<token-display token-type="color" .tokens=${purpleTokens}></token-display>`;
+  html`<token-display
+    token-type="color"
+    .tokens=${Object.entries(_colors).filter((entry) =>
+      entry[0].startsWith('purple')
+    )}
+  ></token-display>`;
 ```
 
 ### Pink
 
 ```js story
-export const pink = () => html`<token-display token-type="color" .tokens=${pinkTokens}></token-display>`;
+export const pink = () =>
+  html`<token-display
+    token-type="color"
+    .tokens=${Object.entries(_colors).filter((entry) =>
+      entry[0].startsWith('pink')
+    )}
+  ></token-display>`;
 ```

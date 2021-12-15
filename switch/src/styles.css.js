@@ -1,5 +1,5 @@
 import { css } from '~/core';
-import { borderRadiusMixin } from '~/borders';
+import { full } from '~/radii';
 
 export default css`
   :host {
@@ -12,7 +12,7 @@ export default css`
     border: none;
     padding: 0;
     margin: 0;
-    ${borderRadiusMixin('full')};
+    border-radius: ${full};
   }
 
   .input-group__container > .input-group__input ::slotted(.form-control:focus) {

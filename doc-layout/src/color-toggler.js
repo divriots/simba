@@ -1,7 +1,14 @@
 import { LitElement, html, css, unsafeCSS } from '~/core';
-import { spacing } from '~/spacing';
-import { theme, setTheme } from '~/themes';
+import { theme, setTheme, defaultThemes } from '~/themes';
+import { s5 } from '~/spacing';
 import * as colors from '~/colors';
+
+// Get unique color values, "red", "purple", without the lightness suffixes (50, 100)
+const colorKeys = [
+  ...new Set(
+    Object.entries(colors).map(([clr, val]) => clr.replace(/\d/g, ''))
+  ),
+];
 
 export class ColorToggler extends LitElement {
   static get styles() {
@@ -16,15 +23,15 @@ export class ColorToggler extends LitElement {
         .radio {
           -webkit-appearance: none;
           -moz-appearance: none;
-          width: ${spacing['5']};
-          height: ${spacing['5']};
+          width: ${s5};
+          height: ${s5};
           outline: none;
           display: inline-block;
           vertical-align: top;
           position: relative;
           margin: 4px;
           cursor: pointer;
-          border: 1px solid ${colors.coolGray[600]};
+          border: 1px solid ${colors.coolGray600};
           border-radius: 100%;
           transition: border-color 0.2s ease-in-out;
         }
@@ -39,18 +46,18 @@ export class ColorToggler extends LitElement {
         }
 
         .radio:hover {
-          border-color: ${colors.coolGray[400]};
+          border-color: ${colors.coolGray400};
         }
 
-        ${Object.entries(colors)
+        ${colorKeys
           .map(
             (col) => css`
-              .${unsafeCSS(col[0])} {
-                background-color: ${col[1][500]};
+              .${unsafeCSS(col)} {
+                background-color: ${colors[`${col}500`]};
               }
 
-              .${unsafeCSS(col[0])}:checked {
-                border-color: ${col[1][500]};
+              .${unsafeCSS(col)}:checked {
+                border-color: ${colors[`${col}500`]};
               }
             `
           )
@@ -66,24 +73,29 @@ export class ColorToggler extends LitElement {
 
   constructor() {
     super();
+    // if the theme from local storage is a custom theme, don't do anything
     let colorTheme = localStorage.getItem('simba-color');
-    if (!colorTheme || colorTheme === 'null') {
+    if (!colorTheme) {
       setTheme('indigo');
-    } else {
+    } else if (defaultThemes.includes(colorTheme)) {
       setTheme(colorTheme);
+    } else {
+      console.warn(
+        `${colorTheme} is not a default color, this Toggler component doesn't know how to set custom themes`
+      );
     }
   }
 
   render() {
     return html`
-      ${Object.entries(colors).map(
+      ${colorKeys.map(
         (col) =>
           html`<input
             @click=${this.switchTheme}
             type="radio"
-            aria-label=${col[0]}
-            ?checked=${theme === col[0]}
-            class="radio ${col[0]}"
+            aria-label=${col}
+            ?checked=${theme === col}
+            class="radio ${col}"
             name="colors"
           />`
       )}

@@ -8,9 +8,9 @@ import { Required } from '~/form-core';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
 import { localize } from '~/localize';
 import { SimbaOption } from '../src/SimbaOption.js';
-import '../simba-select.js';
-import '../simba-select-rich.js';
-import '../simba-option.js';
+import '@divriots/starter-simba/select/simba-select.js';
+import '@divriots/starter-simba/select/simba-select-rich.js';
+import '@divriots/starter-simba/select/simba-option.js';
 
 loadDefaultFeedbackMessages();
 
@@ -43,6 +43,17 @@ class ColorOption extends SimbaOption {
   }
 }
 customElements.define('color-option', ColorOption);
+```
+
+## Usage
+
+Import the custom element definition file.
+
+```js
+import '@divriots/starter-simba/select/simba-select.js';
+
+import '@divriots/starter-simba/select/simba-select-rich.js';
+import '@divriots/starter-simba/select/simba-option.js';
 ```
 
 Click the flip locale button to see localized default label in action as well as the validator messages, switching between Dutch and English.

@@ -1,8 +1,13 @@
 import { LitElement, html, css } from '~/core';
-import { coolGray } from '~/colors';
-import { spacing } from '~/spacing';
-import { borderRadiusMixin } from '~/borders';
-import { typographyMixin } from '~/typography';
+import { coolGray100, coolGray300 } from '~/colors';
+import { s0_5, s3, s4, s5 } from '~/spacing';
+import { md } from '~/radii';
+import {
+  weightSemibold,
+  sizeLgSize,
+  sizeLgLineHeight,
+  familyMono,
+} from '~/typography';
 import { ThemeMixin } from 'dark-theme-utils';
 
 export class SimbaDialogFrame extends ThemeMixin(LitElement) {
@@ -13,27 +18,31 @@ export class SimbaDialogFrame extends ThemeMixin(LitElement) {
         width: 600px;
         position: relative;
         box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.4);
-        background-color: ${coolGray[100]};
-        ${borderRadiusMixin('md')};
+        background-color: ${coolGray100};
+        border-radius: ${md};
       }
 
       .close-btn {
         position: absolute;
-        top: ${spacing['0.5']};
-        right: ${spacing['0.5']};
+        top: ${s0_5};
+        right: ${s0_5};
         margin: 0;
-        ${typographyMixin('mono', 'lg', 'normal')}
+        font-family: ${familyMono};
+        font-size: ${sizeLgSize};
+        line-height: ${sizeLgLineHeight};
       }
 
       :host(:not([no-padding])) .content-container {
-        padding: ${spacing['4']} ${spacing['5']};
+        padding: ${s4} ${s5};
       }
 
       ::slotted([slot='header']) {
         text-align: center;
-        padding: ${spacing['3']};
-        border-bottom: 1px solid ${coolGray[300]};
-        ${typographyMixin('sans', 'lg', 'semibold')}
+        padding: ${s3};
+        border-bottom: 1px solid ${coolGray300};
+        font-weight: ${weightSemibold};
+        font-size: ${sizeLgSize};
+        line-height: ${sizeLgLineHeight};
       }
 
       :host([theme='dark']) {

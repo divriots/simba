@@ -1,12 +1,20 @@
 import { css } from '~/core';
-import { borderRadiusMixin } from '~/borders';
-import { coolGray } from '~/colors';
-import { typographyMixin, weight } from '~/typography';
-import { spacing } from '~/spacing';
+import { md } from '~/radii';
+import {
+  coolGray100,
+  coolGray300,
+  coolGray400,
+  coolGray500,
+  coolGray600,
+  coolGray700,
+  coolGray900,
+} from '~/colors';
+import { sizeSmSize, sizeSmLineHeight, weightMedium } from '~/typography';
+import { s1, s2, s3 } from '~/spacing';
 
 export const inputStyles = css`
   :host {
-    display: block;
+    display: block;~
   }
 
   ::slotted(*:not(simba-select-invoker)) {
@@ -15,11 +23,12 @@ export const inputStyles = css`
   }
 
   .input-group__container > .input-group__input ::slotted(.form-control) {
-    border: 1px solid ${coolGray[300]};
-    ${borderRadiusMixin('md')};
-    ${typographyMixin('sans', 'sm')};
-    padding: ${spacing['2']} ${spacing['3']};
-    margin-top: ${spacing['1']};
+    border: 1px solid ${coolGray300};
+    border-radius: ${md};
+    font-size: ${sizeSmSize};
+    line-height: ${sizeSmLineHeight};
+    padding: ${s2} ${s3};
+    margin-top: ${s1};
     width: 100%;
   }
 
@@ -33,52 +42,53 @@ export const inputStyles = css`
   }
 
   ::slotted([slot='label']) {
-    color: ${coolGray[700]};
-    font-weight: ${weight['medium']};
+    color: ${coolGray700};
+    font-weight: ${weightMedium};
   }
 
   ::slotted([slot='help-text']) {
-    color: ${coolGray[500]};
-    ${typographyMixin('sans', 'sm', 'normal')}
+    color: ${coolGray500};
+    font-size: ${sizeSmSize};
+    line-height: ${sizeSmLineHeight};
   }
 
   ::slotted(.form-control) {
-    color: ${coolGray[900]};
+    color: ${coolGray900};
   }
 
   :host([theme='dark']) ::slotted([slot='label']) {
-    color: ${coolGray[100]};
+    color: ${coolGray100};
   }
 
   :host([theme='dark']) ::slotted([slot='help-text']) {
-    color: ${coolGray[300]};
+    color: ${coolGray300};
   }
 
   :host([theme='dark'])
     ::slotted(.form-control:not([type='checkbox']):not([type='radio']):not([disabled])) {
-    color: ${coolGray[100]};
+    color: ${coolGray100};
     background-color: var(--simba-bg-color-dark);
   }
 
   :host([theme='dark'])
     ::slotted(.form-control:not([type='checkbox']):not([type='radio']):not(:focus)) {
-    border-color: ${coolGray[400]};
+    border-color: ${coolGray400};
   }
 
   :host([theme='dark']) ::slotted(.form-control)::placeholder {
-    color: ${coolGray[500]};
+    color: ${coolGray500};
   }
 
   :host([theme='dark'][disabled]) ::slotted(.form-control) {
-    background-color: ${coolGray[600]};
-    color: ${coolGray[400]};
+    background-color: ${coolGray600};
+    color: ${coolGray400};
   }
 
   :host([theme='dark'][disabled]) ::slotted([slot='label']) {
-    color: ${coolGray[500]};
+    color: ${coolGray500};
   }
 
   :host([theme='dark'][disabled]) ::slotted([slot='help-text']) {
-    color: ${coolGray[600]};
+    color: ${coolGray600};
   }
 `;

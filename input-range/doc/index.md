@@ -7,9 +7,17 @@ import { html } from '~/core';
 import { Required, Validator } from '~/form-core';
 import { localize } from '~/localize';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
-import '../simba-input-range.js';
+import '@divriots/starter-simba/input-range/simba-input-range.js';
 
 loadDefaultFeedbackMessages();
+```
+
+## Usage
+
+Import the custom element definition file.
+
+```js
+import '@divriots/starter-simba/input-range/simba-input-range.js';
 ```
 
 Click the flip locale button to see localized default label in action as well as the validator messages, switching between Dutch and English.

@@ -18,6 +18,10 @@ Click the "Edit" button to also see the source code in the Backlight editor.
 
 > In case you don't use Backlight.dev but use straight from NPM, refer to our [usage from NPM guide](./UsingNPM.md).
 
+## Migration
+
+Migrating to a new minor (since this is alpha), see [Migration Docs](./migration.md).
+
 ## Usage
 
 ### Duplicate in Backlight

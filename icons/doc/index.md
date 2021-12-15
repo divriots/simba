@@ -3,8 +3,16 @@
 Icon resolution manager. Ensures icons are bundled into iconsets and asynchronously loaded for performance.
 
 ```js script
-import { html } from '~/core'
-import '../simba-icon.js';
+import { html } from '~/core';
+import '@divriots/starter-simba/icons/simba-icon.js';
+```
+
+## Usage
+
+Import the custom element definition file.
+
+```js
+import '@divriots/starter-simba/icons/simba-icon.js';
 ```
 
 ## Adding a resolver
@@ -29,5 +37,6 @@ Where this `index.js` re-exports svgs inside lit templates from the different `.
 To load an icon:
 
 ```js preview-story
-export const simbaIcon = () => html`<simba-icon icon-id="simba:alerts:error"></simba-icon>`;
+export const simbaIcon = () =>
+  html`<simba-icon icon-id="simba:alerts:error"></simba-icon>`;
 ```
