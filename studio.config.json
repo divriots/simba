@@ -3,7 +3,16 @@
     "dir": "",
     "menu": [
       "introduction",
-      ["tokens", ["colors", "radii", "typography", "spacing", "tokens"]],
+      [
+        "tokens",
+        [
+          "colors",
+          "radii",
+          "typography",
+          "spacing",
+          "tokens"
+        ]
+      ],
       [
         "components",
         [
@@ -28,9 +37,28 @@
           "validation-feedback"
         ]
       ],
-      ["infrastructure", ["form-core", "themes"]],
-      ["docs", ["token-display", "doc-styles"]],
-      ["re-exports-only", ["core", "localize", "overlays"]]
+      [
+        "infrastructure",
+        [
+          "form-core",
+          "themes"
+        ]
+      ],
+      [
+        "docs",
+        [
+          "token-display",
+          "doc-layout"
+        ]
+      ],
+      [
+        "re-exports-only",
+        [
+          "core",
+          "localize",
+          "overlays"
+        ]
+      ]
     ]
   }
 }
