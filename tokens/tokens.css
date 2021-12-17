@@ -1,9 +1,61 @@
 /**
  * Do not edit directly
- * Generated on Wed, 15 Dec 2021 14:37:30 GMT
+ * Generated on Fri, 17 Dec 2021 13:14:01 GMT
  */
 
 :root {
+  --simba-button-background-color: var(--simba-color-primary-500);
+  --simba-button-padding-horizontal: 1rem;
+  --simba-button-padding-vertical: 0.625rem;
+  --simba-button-border-radius: 0.25rem;
+  --simba-button-content-family: 'Inter var', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --simba-button-content-size: 1rem;
+  --simba-button-content-line-height: 1.5rem;
+  --simba-button-content-weight: 500;
+  --simba-button-content-color: #F9FAFB;
+  --simba-button-prefix-padding-right: 0.5rem;
+  --simba-button-suffix-padding-left: 0.5rem;
+  --simba-button-sizes-small-padding-horizontal: 0.75rem;
+  --simba-button-sizes-small-padding-vertical: 0.375rem;
+  --simba-button-sizes-small-content-size: 0.875rem;
+  --simba-button-sizes-small-content-line-height: 1.25rem;
+  --simba-button-sizes-large-padding-horizontal: 1.25rem;
+  --simba-button-sizes-large-padding-vertical: 0.75rem;
+  --simba-button-sizes-large-content-size: 1.25rem;
+  --simba-button-sizes-large-content-line-height: 1.75rem;
+  --simba-button-sizes-rounded-border-radius: 9999px;
+  --simba-button-variants-secondary-background-color: var(--simba-color-primary-200);
+  --simba-button-variants-secondary-content-color: var(--simba-color-primary-800);
+  --simba-button-variants-text-background-color: transparent;
+  --simba-button-variants-text-content-color: var(--simba-text-color);
+  --simba-button-variants-outline-background-color: transparent;
+  --simba-button-variants-outline-content-color: var(--simba-text-color);
+  --simba-button-variants-outline-border-shadow-size: 0 0 1px 1px;
+  --simba-button-variants-outline-border-shadow-color: #D1D5DB;
+  --simba-button-states-hover-background-color: var(--simba-color-primary-700);
+  --simba-button-states-hover-variants-secondary-background-color: var(--simba-color-primary-100);
+  --simba-button-states-hover-variants-text-background-color: #F3F4F6;
+  --simba-button-states-hover-variants-outline-background-color: #F3F4F6;
+  --simba-button-states-active-background-color: var(--simba-color-primary-800);
+  --simba-button-states-active-variants-secondary-background-color: var(--simba-color-primary-50);
+  --simba-button-states-active-variants-text-background-color: #E5E7EB;
+  --simba-button-states-active-variants-outline-background-color: #E5E7EB;
+  --simba-button-states-focus-border-shadow-size: 0 0 0 3px;
+  --simba-button-states-focus-border-shadow-color: var(--simba-focus-ring-color);
+  --simba-button-states-focus-variants-text-border-shadow-size: 0 0 0 3px;
+  --simba-button-states-focus-variants-text-border-shadow-color: var(--simba-focus-ring-color);
+  --simba-button-states-focus-variants-outline-border-shadow-one-size: 0 0 1px 1px;
+  --simba-button-states-focus-variants-outline-border-shadow-one-color: #D1D5DB;
+  --simba-button-states-focus-variants-outline-border-shadow-two-size: 0 0 0 3px;
+  --simba-button-states-focus-variants-outline-border-shadow-two-color: var(--simba-focus-ring-color);
+  --simba-button-states-disabled-background-color: var(--simba-color-primary-500);
+  --simba-button-states-disabled-filter: brightness(75%);
+  --simba-button-theme-dark-variants-text-content-color: #F9FAFB;
+  --simba-button-theme-dark-variants-outline-content-color: #F9FAFB;
+  --simba-button-theme-dark-states-hover-variants-text-background-color: #374151;
+  --simba-button-theme-dark-states-hover-variants-outline-background-color: #374151;
+  --simba-button-theme-dark-states-active-variants-outline-background-color: #4B5563;
+  --simba-button-theme-dark-states-active-variants-text-background-color: #4B5563;
   --simba-colors-cool-gray-50: #F9FAFB;
   --simba-colors-cool-gray-100: #F3F4F6;
   --simba-colors-cool-gray-200: #E5E7EB;
