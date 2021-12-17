@@ -1,5 +1,7 @@
 import StyleDictionary from 'style-dictionary';
 
+const baseTokens = ['colors', 'typography', 'spacing', 'radii'];
+
 const tokenFilter = (cat) => (token) => token.attributes.category === cat;
 
 const generateFilesArr = (tokensCategories) => {
@@ -40,6 +42,7 @@ export default {
       buildPath: '/tokens/',
       files: [
         {
+          filter: (token) => baseTokens.includes(token.attributes.category),
           destination: 'tokens.css',
           format: 'css/variables',
         },
@@ -48,13 +51,7 @@ export default {
     js: {
       transformGroup: 'js',
       buildPath: '/',
-      files: generateFilesArr([
-        'colors',
-        'typography',
-        'spacing',
-        'radii',
-        'button',
-      ]),
+      files: generateFilesArr([...baseTokens, 'button']),
     },
   },
 };
