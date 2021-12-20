@@ -1,5 +1,7 @@
 import StyleDictionary from 'style-dictionary';
 
+const baseTokens = ['colors', 'typography', 'spacing', 'radii'];
+
 const tokenFilter = (cat) => (token) => token.attributes.category === cat;
 
 const generateFilesArr = (tokensCategories) => {
@@ -19,7 +21,7 @@ export default {
       output += `import { css } from '@lion/core';\n\n`;
 
       dictionary.allTokens.forEach((token) => {
-        const { path, original } = token;
+        const { path, value } = token;
         const [, ..._path] = path;
         const name = _path.reduce((acc, str, index) => {
           // converts to camelCase
@@ -27,7 +29,7 @@ export default {
             index === 0 ? str : str.charAt(0).toUpperCase() + str.slice(1);
           return acc.concat(_str);
         }, '');
-        output += `export const ${name} = css\`${original.value}\`;\n`;
+        output += `export const ${name} = css\`${value}\`;\n`;
       });
 
       return output;
@@ -40,6 +42,7 @@ export default {
       buildPath: '/tokens/',
       files: [
         {
+          filter: (token) => baseTokens.includes(token.attributes.category),
           destination: 'tokens.css',
           format: 'css/variables',
         },
@@ -48,7 +51,7 @@ export default {
     js: {
       transformGroup: 'js',
       buildPath: '/',
-      files: generateFilesArr(['colors', 'typography', 'spacing', 'radii']),
+      files: generateFilesArr([...baseTokens, 'button']),
     },
   },
 };

@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 02 Dec 2021 13:44:16 GMT
+ * Generated on Fri, 17 Dec 2021 12:28:28 GMT
  */
 
 import { css } from '@lion/core';

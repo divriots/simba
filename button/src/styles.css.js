@@ -1,126 +1,120 @@
 import { css } from '~/core';
-import { base, full } from '~/radii';
-import {
-  coolGray50,
-  coolGray100,
-  coolGray200,
-  coolGray300,
-  coolGray600,
-  coolGray700,
-} from '~/colors';
-import {
-  familySans,
-  sizeBaseSize,
-  sizeBaseLineHeight,
-  weightMedium,
-  sizeSmSize,
-  sizeSmLineHeight,
-  sizeXlSize,
-  sizeXlLineHeight,
-} from '~/typography';
-import { s1_5, s2_5, s3, s4, s5 } from '~/spacing';
+import { tokens as t } from '../index.js';
 
 export default css`
   :host {
     display: inline-block;
     cursor: pointer;
-    background-color: var(--simba-color-primary-500);
-    color: ${coolGray50};
-    border-radius: ${base};
-    font-family: ${familySans};
-    font-size: ${sizeBaseSize};
-    line-height: ${sizeBaseLineHeight};
-    font-weight: ${weightMedium};
-    padding: ${s2_5} ${s4};
+    background-color: ${t.backgroundColor};
+    color: ${t.contentColor};
+    border-radius: ${t.borderRadius};
+    font-family: ${t.contentFamily};
+    font-size: ${t.contentSize};
+    line-height: ${t.contentLineHeight};
+    font-weight: ${t.contentWeight};
+    padding: ${t.paddingVertical} ${t.paddingHorizontal};
     transition: var(--theme-background-transition),
       var(--theme-color-transition);
   }
 
   :host(:hover) {
-    background-color: var(--simba-color-primary-700);
+    background-color: ${t.statesHoverBackgroundColor};
   }
 
   :host(:active) {
-    background-color: var(--simba-color-primary-800);
+    background-color: ${t.statesActiveBackgroundColor};
   }
 
   :host(:focus:not([disabled])),
   :host(:focus-visible) {
-    box-shadow: 0 0 0 3px var(--simba-focus-ring-color);
+    box-shadow: ${t.statesFocusBorderShadowSize}
+      ${t.statesFocusBorderShadowColor};
     outline: none;
   }
 
   :host([variation='secondary']) {
-    background-color: var(--simba-color-primary-200);
-    color: var(--simba-color-primary-800);
+    background-color: ${t.variantsSecondaryBackgroundColor};
+    color: ${t.variantsSecondaryContentColor};
   }
 
   :host([variation='secondary']:hover) {
-    background-color: var(--simba-color-primary-100);
+    background-color: ${t.statesHoverVariantsSecondaryBackgroundColor};
   }
 
   :host([variation='secondary']:active) {
-    background-color: var(--simba-color-primary-50);
-  }
-
-  :host([variation='outline']),
-  :host([variation='text']) {
-    box-shadow: 0 0 1px 1px ${coolGray300};
-    color: var(--simba-text-color);
+    background-color: ${t.statesActiveVariantsSecondaryBackgroundColor};
   }
 
   :host([variation='outline']) {
-    background-color: transparent;
+    color: ${t.variantsOutlineContentColor};
   }
 
   :host([variation='text']) {
-    background-color: transparent;
+    color: ${t.variantsTextContentColor};
+  }
+
+  :host([variation='outline']) {
+    box-shadow: ${t.variantsOutlineBorderShadowSize}
+      ${t.variantsOutlineBorderShadowColor};
+    background-color: ${t.variantsOutlineBackgroundColor};
   }
 
   :host([variation='text']) {
-    box-shadow: none;
+    background-color: ${t.variantsTextBackgroundColor};
   }
 
-  :host([variation='outline']:hover),
+  :host([variation='outline']:hover) {
+    background-color: ${t.statesHoverVariantsOutlineBackgroundColor};
+  }
+
   :host([variation='text']:hover) {
-    background-color: ${coolGray100};
+    background-color: ${t.statesHoverVariantsTextBackgroundColor};
   }
 
-  :host([variation='outline']:active),
+  :host([variation='outline']:active) {
+    background-color: ${t.statesActiveVariantsOutlineBackgroundColor};
+  }
+
   :host([variation='text']:active) {
-    background-color: ${coolGray200};
+    background-color: ${t.statesActiveVariantsTextBackgroundColor};
   }
 
-  :host([variation='outline']:focus),
+  :host([variation='outline']:focus) {
+    box-shadow: ${t.statesFocusVariantsOutlineBorderShadowOneSize}
+        ${t.statesFocusVariantsOutlineBorderShadowOneColor},
+      ${t.statesFocusVariantsOutlineBorderShadowTwoSize}
+        ${t.statesFocusVariantsOutlineBorderShadowTwoColor};
+  }
+
   :host([variation='text']:focus) {
-    box-shadow: 0 0 1px 1px ${coolGray300},
-      0 0 0 3px var(--simba-focus-ring-color);
+    box-shadow: ${t.statesFocusVariantsTextBorderShadowSize}
+      ${t.statesFocusVariantsTextBorderShadowColor};
   }
 
   :host([size='small']) {
-    font-size: ${sizeSmSize};
-    line-height: ${sizeSmLineHeight};
-    padding: ${s1_5} ${s3};
+    font-size: ${t.sizesSmallContentSize};
+    line-height: ${t.sizesSmallContentLineHeight};
+    padding: ${t.sizesSmallPaddingVertical} ${t.sizesSmallPaddingHorizontal};
   }
 
   :host([size='large']) {
-    font-size: ${sizeXlSize};
-    line-height: ${sizeXlLineHeight};
-    padding: ${s3} ${s5};
+    font-size: ${t.sizesLargeContentSize};
+    line-height: ${t.sizesLargeContentLineHeight};
+    padding: ${t.sizesLargePaddingVertical} ${t.sizesLargePaddingHorizontal};
   }
 
   :host([rounded]) {
-    border-radius: ${full};
+    border-radius: ${t.sizesRoundedBorderRadius};
   }
 
   :host([disabled]) {
-    filter: brightness(75%);
+    filter: ${t.statesDisabledFilter};
     pointer-events: none;
   }
 
   :host([disabled][variation='primary']),
   :host([disabled]:not([variation])) {
-    background-color: var(--simba-color-primary-500);
+    background-color: ${t.statesDisabledBackgroundColor};
   }
 
   ::slotted([slot='suffix']),
@@ -129,25 +123,32 @@ export default css`
   }
 
   ::slotted([slot='suffix']) {
-    padding-left: 0.5rem !important;
+    padding-left: ${t.suffixPaddingLeft} !important;
   }
 
   ::slotted([slot='prefix']) {
-    padding-right: 0.5rem !important;
+    padding-right: ${t.prefixPaddingRight} !important;
   }
 
-  :host([theme='dark'][variation='text']),
+  :host([theme='dark'][variation='text']) {
+    color: ${t.themeDarkVariantsTextContentColor};
+  }
+
   :host([theme='dark'][variation='outline']) {
-    color: ${coolGray50};
+    color: ${t.themeDarkVariantsOutlineContentColor};
   }
 
-  :host([theme='dark'][variation='text']:hover),
+  :host([theme='dark'][variation='text']:hover) {
+    background-color: ${t.themeDarkStatesHoverVariantsTextBackgroundColor};
+  }
   :host([theme='dark'][variation='outline']:hover) {
-    background-color: ${coolGray700};
+    background-color: ${t.themeDarkStatesHoverVariantsOutlineBackgroundColor};
   }
 
-  :host([theme='dark'][variation='text']:active),
+  :host([theme='dark'][variation='text']:active) {
+    background-color: ${t.themeDarkStatesActiveVariantsTextBackgroundColor};
+  }
   :host([theme='dark'][variation='outline']:active) {
-    background-color: ${coolGray600};
+    background-color: ${t.themeDarkStatesActiveVariantsOutlineBackgroundColor};
   }
 `;
