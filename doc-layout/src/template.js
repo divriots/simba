@@ -20,6 +20,9 @@ export const docLayoutTemplate = (content, context) => html`
         justify-content: unset;
       }
     }
+    .story_padded {
+      line-height: initial;
+    }
     .preview-story .story_padded {
       background-color: var(--simba-bg-color);
       color: var(--simba-text-color);
@@ -36,9 +39,6 @@ export const docLayoutTemplate = (content, context) => html`
     .markdown-body tt {
       background-color: transparent;
       border: none;
-    }
-    .prose {
-      line-height: initial;
     }
   </style>
   <mdjs-layout
