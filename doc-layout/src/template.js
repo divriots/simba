@@ -60,6 +60,6 @@ export const docLayoutTemplate = (content, context) => html`
       Themes:&nbsp;
       <color-toggler></color-toggler>
     </div>
-    <div class="prose dark:prose-dark">${unsafeHTML(content)}</div>
+    <div class="prose dark:prose-invert">${unsafeHTML(content)}</div>
   </mdjs-layout>
 `;
