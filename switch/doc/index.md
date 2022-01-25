@@ -4,8 +4,7 @@ Switch button component.
 
 ```js script
 import { html } from '~/core';
-import '@divriots/starter-simba/switch/simba-switch.js';
-import '@divriots/starter-simba/switch/simba-switch-button.js';
+import '@divriots/starter-simba/switch/define';
 ```
 
 ## Usage
@@ -13,8 +12,13 @@ import '@divriots/starter-simba/switch/simba-switch-button.js';
 Import the custom element definition file.
 
 ```js
-import '@divriots/starter-simba/switch/simba-switch.js';
-import '@divriots/starter-simba/switch/simba-switch-button.js';
+import '@divriots/starter-simba/switch/define';
+```
+
+Or if you only need a specific element instead of all (switch, switch-button):
+
+```js
+import '@divriots/starter-simba/switch/define-switch-button';
 ```
 
 This component has an optional label and help-text, and when present (e.g. inside a form),

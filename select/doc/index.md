@@ -8,9 +8,7 @@ import { Required } from '~/form-core';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
 import { localize } from '~/localize';
 import { SimbaOption } from '../src/SimbaOption.js';
-import '@divriots/starter-simba/select/simba-select.js';
-import '@divriots/starter-simba/select/simba-select-rich.js';
-import '@divriots/starter-simba/select/simba-option.js';
+import '@divriots/starter-simba/define';
 
 loadDefaultFeedbackMessages();
 
@@ -50,10 +48,13 @@ customElements.define('color-option', ColorOption);
 Import the custom element definition file.
 
 ```js
-import '@divriots/starter-simba/select/simba-select.js';
+import '@divriots/starter-simba/select/define';
+```
 
-import '@divriots/starter-simba/select/simba-select-rich.js';
-import '@divriots/starter-simba/select/simba-option.js';
+Or if you only need a specific element instead of all (option, options, select-rich, select, select-rich-invoker):
+
+```js
+import '@divriots/starter-simba/select/define-select-rich';
 ```
 
 Click the flip locale button to see localized default label in action as well as the validator messages, switching between Dutch and English.

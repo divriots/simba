@@ -1,8 +1,8 @@
 export * from '~/tokens';
 
 export * from '~/button';
-export * from '~/collapsible';
 export * from '~/checkbox-group';
+export * from '~/collapsible';
 export * from '~/dialog';
 export * from '~/icons';
 export * from '~/input';

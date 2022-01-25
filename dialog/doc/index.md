@@ -10,9 +10,8 @@ The frame acts as a visual container and allows adding an easy to use close butt
 
 ```js script
 import { html } from '~/core';
-import '~/button/simba-button.js';
-import '@divriots/starter-simba/dialog/simba-dialog.js';
-import '@divriots/starter-simba/dialog/simba-dialog-frame.js';
+import '@divriots/starter-simba/button/define';
+import '@divriots/starter-simba/dialog/define';
 import { emerald100, emerald500, coolGray500 } from '~/colors';
 import { s1_5 } from '~/spacing';
 import { full } from '~/radii';
@@ -24,8 +23,13 @@ import { sizeXlSize, sizeXlLineHeight, weightSemibold } from '~/typography';
 Import the custom element definition file.
 
 ```js
-import '@divriots/starter-simba/dialog/simba-dialog.js';
-import '@divriots/starter-simba/dialog/simba-dialog-frame.js';
+import '@divriots/starter-simba/dialog/define';
+```
+
+Or if you only need a specific element instead of all (dialog, dialog-frame):
+
+```js
+import '@divriots/starter-simba/collapsible/define-dialog-frame';
 ```
 
 ```js preview-story
