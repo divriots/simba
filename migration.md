@@ -1,5 +1,16 @@
 # Migration
 
+## 0.5.0
+
+### Fixed dependencies on @lion
+
+Dependencies on `@lion` are now fixed instead of using a caret. This is due to the fact that Lion also internally fixes dependencies on itself.
+Not doing this could result in multiple undedupable installations of things like `@lion/core` or `@lion/form-core` resulting in fatal errors.
+The reason the installations would be undedupable because e.g. simba would rely on `^0.5.3` of `@lion/form-core` which would resolve to for example `0.5.5`, whereas
+internally lion would also rely on this package but with a fixed `0.5.3` meaning NPM would not dedupe the `0.5.3` installation to the `0.5.5` installation.
+
+Furthermore, not fixing our dependencies on `@lion` may result in different versions of `@lion` for the same version of `@divriots/starter-simba`, causing the scenario of "it works for me but not for you but we have the same version of simba".
+
 ## 0.4.0
 
 Biggest change here is the (base) tokens:
