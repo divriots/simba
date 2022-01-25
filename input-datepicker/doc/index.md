@@ -7,7 +7,7 @@ import { html } from '~/core';
 import { Required, Validator } from '~/form-core';
 import { localize } from '~/localize';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
-import '@divriots/starter-simba/input-datepicker/simba-input-datepicker.js';
+import '@divriots/starter-simba/input-datepicker/define';
 
 loadDefaultFeedbackMessages();
 ```
@@ -17,7 +17,13 @@ loadDefaultFeedbackMessages();
 Import the custom element definition file.
 
 ```js
-import '@divriots/starter-simba/input-datepicker/simba-input-datepicker.js';
+import '@divriots/starter-simba/input-datepicker/define';
+```
+
+Or if you only need a specific element instead of all (calendar, calendar-frame, input-datepicker):
+
+```js
+import '@divriots/starter-simba/input-datepicker/define-calendar';
 ```
 
 Click the flip locale button to see localized default label in action as well as the validator messages, switching between Dutch and English.

@@ -7,7 +7,7 @@ Interactive content should not be placed in a tooltip content slot. Tooltips are
 ```js script
 import { html } from '~/core';
 import '~/icons/simba-icon.js';
-import '@divriots/starter-simba/tooltip/simba-tooltip.js';
+import '@divriots/starter-simba/tooltip/define';
 import {
   red400,
   red700,
@@ -25,7 +25,7 @@ import {
 Import the custom element definition file.
 
 ```js
-import '@divriots/starter-simba/tooltip/simba-tooltip.js';
+import '@divriots/starter-simba/tooltip/define';
 ```
 
 ```js preview-story
