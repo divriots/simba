@@ -4,7 +4,7 @@ Button web component.
 
 ```js script
 import { html } from '~/core';
-import '@divriots/starter-simba/button/simba-button.js';
+import '@divriots/starter-simba/button/define';
 ```
 
 ## Usage
@@ -12,7 +12,7 @@ import '@divriots/starter-simba/button/simba-button.js';
 Import the custom element definition file.
 
 ```js
-import '@divriots/starter-simba/button/simba-button.js';
+import '@divriots/starter-simba/button/define';
 ```
 
 ```js preview-story
