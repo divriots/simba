@@ -40,5 +40,29 @@
   },
   "devDependencies": {
     "@divriots/dockit-core": "^0.6.0"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./*": "./*/index.js",
+    "./*/define": "./*/define.js",
+    "./checkbox/define-checkbox": "./checkbox/simba-checkbox.js",
+    "./checkbox/define-checkbox-group": "./checkbox/simba-checkbox-group.js",
+    "./checkbox/define-checkbox-indeterminate": "./checkbox/simba-checkbox-indeterminate.js",
+    "./collapsible/define-collapsible": "./collapsible/simba-collapsible.js",
+    "./collapsible/define-collapsible-button": "./collapsible/simba-collapsible-button.js",
+    "./dialog/define-dialog": "./dialog/simba-dialog.js",
+    "./dialog/define-dialog-frame": "./dialog/simba-dialog-frame.js",
+    "./input-datepicker/define-calendar": "./input-datepicker/simba-calendar.js",
+    "./input-datepicker/define-calendar-overlay-frame": "./input-datepicker/simba-calendar-overlay-frame.js",
+    "./input-datepicker/define-input-datepicker": "./input-datepicker/simba-input-datepicker.js",
+    "./radio-group/define-radio": "./radio-group/simba-radio.js",
+    "./radio-group/define-radio-group": "./radio-group/simba-radio-group.js",
+    "./select/define-option": "./select/simba-option.js",
+    "./select/define-options": "./select/simba-options.js",
+    "./select/define-select": "./select/simba-select.js",
+    "./select/define-select-invoker": "./select/simba-select-invoker.js",
+    "./select/define-select-rich": "./select/simba-select-rich.js",
+    "./switch/define-switch": "./switch/simba-switch.js",
+    "./switch/define-switch-button": "./switch/simba-switch-button.js"
   }
 }
