@@ -1,5 +1,6 @@
 import { css } from '~/core';
-import { tokens as t } from '../index.js';
+// import { tokens as t } from '../index.js'; // for some reason this doesn't work anymore
+import * as t from './_button.js';
 
 export default css`
   :host {
