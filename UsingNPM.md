@@ -14,7 +14,7 @@ Using a component directly in your application
 
 ```html
 <head>
-  <script type="module" src="@divriots/starter-simba/button/simba-button.js"></script>
+  <script type="module" src="@divriots/starter-simba/button/define"></script>
 </head> 
 <body>
   <simba-button>Submit</simba-button>

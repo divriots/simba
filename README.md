@@ -34,7 +34,7 @@ Make sure you have a Backlight Workspace, then go to [simba-starter on backlight
 
 ```js
 import { html } from '~/core';
-import '~/button/simba-button.js';
+import '~/button/define';
 
 export const templ = html`<simba-button>Submit</simba-button>`;
 ```

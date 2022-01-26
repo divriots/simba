@@ -3,7 +3,7 @@ import { LionSelectInvoker } from '@lion/select-rich';
 import { SimbaIcon } from '~/icons';
 import { ThemeMixin } from 'dark-theme-utils';
 import { invokerStyles } from './styles.css.js';
-import '~/icons/simba-icon.js';
+import '~/icons/define';
 
 export class SimbaSelectInvoker extends ScopedElementsMixin(
   ThemeMixin(LionSelectInvoker)

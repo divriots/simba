@@ -1,6 +1,6 @@
 import { dedupeMixin } from '~/core';
 import { localize, LocalizeMixin } from '~/localize';
-import '~/validation-feedback/simba-validation-feedback.js';
+import '~/validation-feedback/define';
 
 export const LocalizeLabelMixinImplementation = (superclass) =>
   class extends LocalizeMixin(superclass) {

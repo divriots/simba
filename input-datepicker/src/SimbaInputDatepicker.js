@@ -3,7 +3,7 @@ import { LionInputDatepicker } from '@lion/input-datepicker';
 import { withModalDialogConfig, withBottomSheetConfig } from '~/overlays';
 import { formatDate } from '~/localize';
 import { InputMixin } from '~/form-core';
-import '~/button/simba-button.js';
+import '~/button/define';
 import { pickerStyles } from './styles.css.js';
 import { SimbaCalendarOverlayFrame } from './SimbaCalendarOverlayFrame.js';
 import { SimbaCalendar } from './SimbaCalendar.js';
