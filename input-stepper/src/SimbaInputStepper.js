@@ -2,7 +2,7 @@ import { html } from '~/core';
 import { LionInputStepper } from '@lion/input-stepper';
 import { InputMixin } from '~/form-core';
 import styles from './styles.css.js';
-import '~/button/simba-button.js';
+import '~/button/define';
 
 export class SimbaInputStepper extends InputMixin(LionInputStepper) {
   static get localizeNamespaces() {

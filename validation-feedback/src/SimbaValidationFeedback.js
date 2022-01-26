@@ -3,7 +3,7 @@ import { LionValidationFeedback } from '~/form-core';
 import { ThemeMixin } from 'dark-theme-utils';
 import styles from './styles.css.js';
 
-import '~/icons/simba-icon.js';
+import '~/icons/define';
 
 export class SimbaValidationFeedback extends ThemeMixin(
   LionValidationFeedback

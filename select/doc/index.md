@@ -8,7 +8,7 @@ import { Required } from '~/form-core';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
 import { localize } from '~/localize';
 import { SimbaOption } from '../src/SimbaOption.js';
-import '@divriots/starter-simba/define';
+import '@divriots/starter-simba/select/define';
 
 loadDefaultFeedbackMessages();
 

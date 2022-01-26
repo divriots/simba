@@ -1,6 +1,6 @@
 import { DefaultSuccess } from '~/form-core';
 import { dedupeMixin } from '~/core';
-import '~/validation-feedback/simba-validation-feedback.js';
+import '~/validation-feedback/define';
 
 export const ValidationFeedbackMixinImplementation = (superclass) =>
   class extends superclass {

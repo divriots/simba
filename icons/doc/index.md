@@ -4,7 +4,7 @@ Icon resolution manager. Ensures icons are bundled into iconsets and asynchronou
 
 ```js script
 import { html } from '~/core';
-import '@divriots/starter-simba/icons/simba-icon.js';
+import '@divriots/starter-simba/icons/define';
 ```
 
 ## Usage
@@ -12,7 +12,7 @@ import '@divriots/starter-simba/icons/simba-icon.js';
 Import the custom element definition file.
 
 ```js
-import '@divriots/starter-simba/icons/simba-icon.js';
+import '@divriots/starter-simba/icons/define';
 ```
 
 ## Adding a resolver
