@@ -45,6 +45,7 @@
     ".": "./index.js",
     "./button": "./button/index.js",
     "./button/define": "./button/define.js",
+    "./button/define-submit": "./button/define-submit-button.js",
     "./checkbox-group": "./checkbox-group/index.js",
     "./checkbox-group/define": "./checkbox-group/define.js",
     "./checkbox-group/define-checkbox": "./checkbox-group/simba-checkbox.js",
