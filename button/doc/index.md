@@ -5,6 +5,7 @@ Button web component.
 ```js script
 import { html } from '~/core';
 import '@divriots/starter-simba/button/define';
+import '../define-submit-button.js';
 ```
 
 ## Usage
@@ -13,6 +14,7 @@ Import the custom element definition file.
 
 ```js
 import '@divriots/starter-simba/button/define';
+import '@divriots/starter-simba/button/define-submit';
 ```
 
 ```js preview-story
@@ -124,5 +126,24 @@ export const disabledButton = () => html`
   <simba-button variation="secondary" disabled>Submit</simba-button>
   <simba-button variation="outline" disabled>Submit</simba-button>
   <simba-button variation="text" disabled>Submit</simba-button>
+`;
+```
+
+## Form Submit
+
+```js preview-story
+export const submit = () => html`
+  <form
+    @submit=${(ev) => {
+      ev.preventDefault();
+      console.log(ev.target.elements);
+    }}
+  >
+    <label>
+      Text input
+      <input name="text_input" />
+    </label>
+    <simba-button-submit>Submit</simba-button-submit>
+  </form>
 `;
 ```
