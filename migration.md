@@ -1,5 +1,25 @@
 # Migration
 
+## 0.6.0
+
+Last breaking change (0.5.0) we introduced a changed saying "Fixed dependencies on @lion".
+We fixed our dependencies on Lion inside Simba, because lion does so internally as well.
+This way, we ensure users don't get duplicate installs when Lion releases a new version but internally another Lion packages is still depending on the older version.
+
+However, the Lion team took another look at how this was working for its users and came to the conclusion that this approach is flawed.
+We're better served if the versions are using carets (^), this will prevent lots of cases where duplicate installations are inevitable, and also allows users to import from Lion directly when using Simba.
+For more information, [refer to Versioning docs](https://lion-web.netlify.app/docs/rationales/versioning/) in Lion.
+
+What does this mean for you?
+
+- Please do not use fixed NPM versions of Simba, just use `^`.
+- This will allow importing directly from latest Lion without issues, again, using `^`
+- Less likely to get these hard to troubleshoot bugs due to undeduped duplicate installations. `^`s, assuming semver is followed properly, are way more developer friendly, as it turns out.
+
+We decided to release a breaking change (0.6.0) for this, just in case this dependency resolution is breaking somehow.
+It's a bit unpredictable with this change whether it would break something for someone.
+However, we expect that for 99% of cases it's a simple drop-in replacement and only requires you to put `^` carrets in your `package.json` for simba dependencies to reap the benefits of this change.
+
 ## 0.5.0
 
 ### Package exports
@@ -30,7 +50,7 @@ For custom elements definitions, use:
 import '@divriots/starter-simba/input/define';
 ```
 
-When a package exports multiple custom elements, the `define` entrypoint will define all of them. 
+When a package exports multiple custom elements, the `define` entrypoint will define all of them.
 In case you only need a specific one, for example a `checkbox` but not the `checkbox-group` or `checkbox-indeterminate`, use:
 
 ```js
