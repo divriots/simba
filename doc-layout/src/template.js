@@ -1,5 +1,5 @@
-import '@divriots/dockit-core/mdjs-layout/define';
-import { breakpoints, styles } from '@divriots/dockit-core/mdjs-layout';
+import '@divriots/dockit-core/layout/dockit-layout.define.js';
+import { breakpoints, styles } from '@divriots/dockit-core/layout';
 import { html, unsafeHTML } from '~/core';
 import './color-toggler';
 import logoSvg from './logo.svg?raw';
@@ -42,7 +42,7 @@ export const docLayoutTemplate = (content, context) => {
         border: none;
       }
     </style>
-    <mdjs-layout
+    <dockit-layout
       .context="${context}"
       @color-scheme-change="${(event) => {
         if (event.detail.colorScheme === 'dark') {
@@ -62,6 +62,6 @@ export const docLayoutTemplate = (content, context) => {
         <color-toggler></color-toggler>
       </div>
       <div class="prose dark:prose-invert">${unsafeHTML(content)}</div>
-    </mdjs-layout>
+    </dockit-layout>
   `;
 };
