@@ -1,10 +1,16 @@
 import '@divriots/dockit-core/layout/dockit-layout.define.js';
 import { breakpoints, styles } from '@divriots/dockit-core/layout';
+import { setupSpeedyLinks } from '@divriots/dockit-core/speedy-links';
 import { html, unsafeHTML } from '~/core';
 import './color-toggler';
 import logoSvg from './logo.svg?raw';
 
 export const docLayoutTemplate = (content, context) => {
+  setupSpeedyLinks({
+    mapLinkUrlToModuleUrl: (url) => {
+      return context.mapPageUrlToRenderModuleUrl(url);
+    },
+  });
   return html`
     <style>
       ${unsafeHTML(styles)} .logo {
