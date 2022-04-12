@@ -22,7 +22,7 @@ export class SimbaSelectInvoker extends ScopedElementsMixin(
     return {
       ...super.slots,
       after: () => {
-        const icon = document.createElement('simba-icon');
+        const icon = this.createScopedElement('simba-icon');
         icon.setAttribute('icon-id', 'simba:arrows:arrowDown');
         return icon;
       },

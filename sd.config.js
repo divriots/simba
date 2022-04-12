@@ -39,7 +39,7 @@ export default {
     css: {
       transformGroup: 'css',
       prefix: 'simba',
-      buildPath: '/tokens/',
+      buildPath: 'tokens/',
       files: [
         {
           filter: (token) => baseTokens.includes(token.attributes.category),
@@ -50,7 +50,7 @@ export default {
     },
     js: {
       transformGroup: 'js',
-      buildPath: '/',
+      buildPath: '',
       files: generateFilesArr([...baseTokens, 'button']),
     },
   },

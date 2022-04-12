@@ -17,8 +17,7 @@ export class SimbaSwitch extends InputMixin(ScopedElementsMixin(LionSwitch)) {
     return {
       ...super.slots,
       input: () => {
-        // @ts-ignore we load a polyfill to support createElement on shadowRoot
-        const btnEl = this.shadowRoot.createElement('simba-switch-button');
+        const btnEl = this.createScopedElement('simba-switch-button');
         btnEl.setAttribute('data-tag-name', 'simba-switch-button');
         return btnEl;
       },

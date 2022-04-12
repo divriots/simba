@@ -17,7 +17,7 @@ export const ValidationFeedbackMixinImplementation = (superclass) =>
       return {
         ...super.slots,
         feedback: () => {
-          const feedbackEl = document.createElement(
+          const feedbackEl = this.createScopedElement(
             'simba-validation-feedback'
           );
           return feedbackEl;

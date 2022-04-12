@@ -21,13 +21,13 @@ export class SimbaSelectRich extends ScopedElementsMixin(
     return {
       ...super.slots,
       input: () => {
-        const simbaOptions = this.shadowRoot.createElement('simba-options');
+        const simbaOptions = this.createScopedElement('simba-options');
         simbaOptions.setAttribute('data-tag-name', 'simba-options');
         simbaOptions.registrationTarget = this;
         return simbaOptions;
       },
       invoker: () => {
-        const invokerEl = this.shadowRoot.createElement('simba-select-invoker');
+        const invokerEl = this.createScopedElement('simba-select-invoker');
         invokerEl.setAttribute('data-tag-name', 'simba-select-invoker');
         return invokerEl;
       },
