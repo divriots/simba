@@ -9,12 +9,8 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "paths": {
-      "~/*": [
-        "/*"
-      ],
-      "@divriots/starter-simba/*": [
-        "/*"
-      ]
+      "~/*": ["/*"],
+      "@divriots/simba/*": ["/*"]
     }
   }
 }

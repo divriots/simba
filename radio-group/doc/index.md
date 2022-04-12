@@ -7,7 +7,7 @@ import { html } from '~/core';
 import { Required, Validator } from '~/form-core';
 import { localize } from '~/localize';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
-import '@divriots/starter-simba/radio-group/define';
+import '@divriots/simba/radio-group/define';
 
 loadDefaultFeedbackMessages();
 ```
@@ -17,13 +17,13 @@ loadDefaultFeedbackMessages();
 Import the custom element definition file.
 
 ```js
-import '@divriots/starter-simba/radio-group/define';
+import '@divriots/simba/radio-group/define';
 ```
 
 Or if you only need a specific element instead of all (radio, radio-group):
 
 ```js
-import '@divriots/starter-simba/radio-group/define-radio';
+import '@divriots/simba/radio-group/define-radio';
 ```
 
 ```js preview-story

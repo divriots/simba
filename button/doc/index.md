@@ -4,7 +4,7 @@ Button web component.
 
 ```js script
 import { html } from '~/core';
-import '@divriots/starter-simba/button/define';
+import '@divriots/simba/button/define';
 import '../define-submit-button.js';
 ```
 
@@ -13,8 +13,8 @@ import '../define-submit-button.js';
 Import the custom element definition file.
 
 ```js
-import '@divriots/starter-simba/button/define';
-import '@divriots/starter-simba/button/define-submit';
+import '@divriots/simba/button/define';
+import '@divriots/simba/button/define-submit';
 ```
 
 ```js preview-story

@@ -14,7 +14,7 @@ TODO: Add info on how to contribute by forking & creating PR from Backlight.dev
 
 ```sh
 # Clone the repo:
-git clone https://github.com/divriots/starter-simba.git
+git clone https://github.com/divriots/simba.git
 cd lion
 
 # Install dependencies
@@ -29,11 +29,11 @@ npm run serve
 
 ### Fork
 
-At <https://github.com/divriots/starter-simba> click on fork (at the top-right)
+At <https://github.com/divriots/simba> click on fork (at the top-right)
 
 ```sh
 # add fork to your remotes
-git remote add fork https://github.com/<your-user>/starter-simba.git
+git remote add fork https://github.com/<your-user>/simba.git
 
 # push new branch to your fork
 git push -u fork fix/buttonSize

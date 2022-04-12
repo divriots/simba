@@ -13,19 +13,19 @@ The spacings are tokenized as CSS tagged literals (CSSResult) which can be used 
 You can import the token group from the main entrypoint (or `/tokens`):
 
 ```js
-import { spacing } from '@divriots/starter-simba'; // spacing.s48
+import { spacing } from '@divriots/simba'; // spacing.s48
 ```
 
 or a specific color from the token entrypoint:
 
 ```js
-import { s48 } from '@divriots/starter-simba/spacing';
+import { s48 } from '@divriots/simba/spacing';
 ```
 
 ```js preview-story
 import { ThemeMixin } from 'dark-theme-utils';
-import { css, LitElement } from '@divriots/starter-simba';
-import { s48 } from '@divriots/starter-simba/spacing';
+import { css, LitElement } from '@divriots/simba';
+import { s48 } from '@divriots/simba/spacing';
 
 class DemoSpacing extends ThemeMixin(LitElement) {
   static get styles() {

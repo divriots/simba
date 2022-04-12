@@ -1,4 +1,4 @@
-# simba-starter
+# Simba
 
 A [lion](https://lion-web.netlify.app/) based design system as a starter kit
 for [Backlight](https://backlight.dev/), an all-in-one Design System platform,
@@ -14,7 +14,7 @@ Click the "Edit" button to also see the source code in the Backlight editor.
 - 🦄 Theming capabilities, choose any color from Tailwind palette out of the box, with room for more!
 - 📦 Available on NPM to extend or use directly
 
-> In case you don't use Backlight.dev but use straight from NPM, refer to our [usage from NPM guide](https://github.com/divriots/starter-simba/blob/main/UsingNPM.md).
+> In case you don't use Backlight.dev but use straight from NPM, refer to our [usage from NPM guide](https://github.com/divriots/simba/blob/main/UsingNPM.md).
 
 ## Usage
 

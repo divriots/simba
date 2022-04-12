@@ -60,7 +60,7 @@ export const docLayoutTemplate = (content, context) => {
         }
       }}"
     >
-      <div class="logo" slot="logo" aria-label="starter-simba">
+      <div class="logo" slot="logo" aria-label="simba">
         ${unsafeHTML(logoSvg)}
       </div>
       <div class="topbar" slot="topbar">

@@ -1,4 +1,6 @@
-# simba-starter
+# Simba
+
+> For the old NPM package, see [starter-simba](https://www.npmjs.com/package/@divriots/starter-simba).
 
 <p>
   <a href="https://divRIOTS.com">Brought to you by<br/></a>
@@ -84,7 +86,7 @@ This is recommended, because it avoids deduplication issues.
 
 If you need to import from `@lion` directly, it's important that installations of lion and its dependencies are properly deduped.
 In Backlight, this is taken care of for you on the backend, and you won't have to worry about it.
-If you use `starter-simba` outside of Backlight, you will need to ensure that deduplication is handled, otherwise you will run into breaking bugs.
+If you use `simba` outside of Backlight, you will need to ensure that deduplication is handled, otherwise you will run into breaking bugs.
 
 ### !important in ::slotted selectors
 
