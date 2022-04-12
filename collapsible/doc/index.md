@@ -4,8 +4,8 @@ Collapsible component, folds out content.
 
 ```js script
 import { html } from '~/core';
-import '@divriots/starter-simba/collapsible/define';
-import '@divriots/starter-simba/button/define';
+import '@divriots/simba/collapsible/define';
+import '@divriots/simba/button/define';
 ```
 
 ## Usage
@@ -13,13 +13,13 @@ import '@divriots/starter-simba/button/define';
 Import the custom element definition file.
 
 ```js
-import '@divriots/starter-simba/collapsible/define';
+import '@divriots/simba/collapsible/define';
 ```
 
 Or if you only need a specific element instead of all (collapsible, collapsible-button):
 
 ```js
-import '@divriots/starter-simba/collapsible/define-collapsible-button';
+import '@divriots/simba/collapsible/define-collapsible-button';
 ```
 
 ```js preview-story

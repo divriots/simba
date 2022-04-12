@@ -6,7 +6,7 @@ Checkbox group Webcomponent.
 import { html } from '~/core';
 import { localize } from '~/localize';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
-import '@divriots/starter-simba/checkbox-group/define';
+import '@divriots/simba/checkbox-group/define';
 
 loadDefaultFeedbackMessages();
 ```
@@ -16,13 +16,13 @@ loadDefaultFeedbackMessages();
 Import the custom element definition file.
 
 ```js
-import '@divriots/starter-simba/checkbox-group/define';
+import '@divriots/simba/checkbox-group/define';
 ```
 
 Or if you only need a specific element instead of all (group, checkbox and indeterminate):
 
 ```js
-import '@divriots/starter-simba/checkbox-group/define-checkbox';
+import '@divriots/simba/checkbox-group/define-checkbox';
 ```
 
 ```js preview-story

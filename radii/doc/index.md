@@ -13,18 +13,18 @@ The border radii are tokenized as CSS tagged literals (CSSResult) which can be u
 You can import the token group from the main entrypoint (or `/tokens`):
 
 ```js
-import { radii } from '@divriots/starter-simba'; // radii.base
+import { radii } from '@divriots/simba'; // radii.base
 ```
 
 or a specific color from the token entrypoint:
 
 ```js
-import { base } from '@divriots/starter-simba/radii';
+import { base } from '@divriots/simba/radii';
 ```
 
 ```js preview-story
-import { css, LitElement } from '@divriots/starter-simba';
-import { base } from '@divriots/starter-simba/radii';
+import { css, LitElement } from '@divriots/simba';
+import { base } from '@divriots/simba/radii';
 import { ThemeMixin } from 'dark-theme-utils';
 
 class DemoRounded extends ThemeMixin(LitElement) {

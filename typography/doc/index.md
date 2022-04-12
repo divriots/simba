@@ -13,24 +13,24 @@ The typography parts are tokenized as CSS tagged literals (CSSResult) which can 
 You can import the token group from the main entrypoint (or `/tokens`):
 
 ```js
-import { typography } from '@divriots/starter-simba'; // typography.familyMono
+import { typography } from '@divriots/simba'; // typography.familyMono
 ```
 
 or a specific color from the token entrypoint:
 
 ```js
-import { familyMono } from '@divriots/starter-simba/typography';
+import { familyMono } from '@divriots/simba/typography';
 ```
 
 ```js preview-story
 import { ThemeMixin } from 'dark-theme-utils';
-import { css, LitElement } from '@divriots/starter-simba';
+import { css, LitElement } from '@divriots/simba';
 import {
   familySans,
   sizeXlSize,
   sizeXlLineHeight,
   weightSemibold,
-} from '@divriots/starter-simba/typography';
+} from '@divriots/simba/typography';
 
 class DemoTypography extends ThemeMixin(LitElement) {
   static get styles() {

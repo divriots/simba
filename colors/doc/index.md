@@ -13,18 +13,18 @@ The color palettes are tokenized as CSS tagged literals (CSSResult) which can be
 You can import the token group from the main entrypoint (or `/tokens`):
 
 ```js
-import { colors } from '@divriots/starter-simba'; // colors.red500
+import { colors } from '@divriots/simba'; // colors.red500
 ```
 
 or a specific color from the token entrypoint:
 
 ```js
-import { red500 } from '@divriots/starter-simba/colors';
+import { red500 } from '@divriots/simba/colors';
 ```
 
 ```js preview-story
-import { css, LitElement } from '@divriots/starter-simba';
-import { red500 } from '@divriots/starter-simba/colors';
+import { css, LitElement } from '@divriots/simba';
+import { red500 } from '@divriots/simba/colors';
 
 class DemoRed extends LitElement {
   static get styles() {
