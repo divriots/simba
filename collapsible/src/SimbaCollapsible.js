@@ -5,7 +5,7 @@ import styles from './styles.css.js';
 
 const EVENT = {
   TRANSITION_END: 'transitionend',
-  TRANSITION_START: 'transitionstart',
+  TRANSITION_START: 'transitionstar',
 };
 
 export class SimbaCollapsible extends LionCollapsible {
