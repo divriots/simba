@@ -66,8 +66,37 @@ export const setTheme = (_theme, _colors) => {
     }30`,
   };
 
+  let simbaPropsSheetInner = ':root {';
   for (let [key, value] of Object.entries(obj)) {
-    document.documentElement.style.setProperty(key, value);
+    simbaPropsSheetInner += `${key}:${value};\n`;
+  }
+  simbaPropsSheetInner += '}';
+
+  // Constructible stylesheets not supported on Safari
+  if (document.adoptedStyleSheets) {
+    const existingSheetIndex = [...document.adoptedStyleSheets].findIndex(
+      (sheet) => sheet.id === 'simba-props'
+    );
+    if (existingSheetIndex > -1) {
+      document.adoptedStyleSheets.splice(existingSheetIndex, 1);
+    }
+
+    const sheet = new CSSStyleSheet();
+    sheet.id = 'simba-props';
+    sheet.replaceSync(simbaPropsSheetInner);
+    document.adoptedStyleSheets = [...document.adoptedStyleSheets, sheet];
+  } else {
+    // use <style> tag instead
+    let simbaPropsSheet = document.querySelector(
+      'style[data-sheet="simba-props"]'
+    );
+    if (simbaPropsSheet) {
+      simbaPropsSheet.remove();
+    }
+    simbaPropsSheet = document.createElement('style');
+    simbaPropsSheet.setAttribute('data-sheet', 'simba-props');
+    simbaPropsSheet.innerHTML = simbaPropsSheetInner;
+    document.head.appendChild(simbaPropsSheet);
   }
 
   if (!hasSetGlobalTransition) {
