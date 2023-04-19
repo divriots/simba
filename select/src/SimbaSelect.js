@@ -1,5 +1,6 @@
-import { html, ScopedElementsMixin } from '~/core';
-import { LionSelect } from '@lion/select';
+import { html } from 'lit';
+import { ScopedElementsMixin } from '@open-wc/scoped-elements';
+import { LionSelect } from '@lion/ui/select.js';
 import { InputMixin } from '~/form-core';
 import { SimbaIcon } from '~/icons';
 import { selectStyles } from './styles.css.js';

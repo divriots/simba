@@ -3,7 +3,7 @@
 Button web component.
 
 ```js script
-import { html } from '~/core';
+import { html } from 'lit';
 import '@divriots/simba/button/define';
 import '../define-submit-button.js';
 ```

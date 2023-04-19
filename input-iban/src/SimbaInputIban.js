@@ -1,4 +1,4 @@
-import { LionInputIban } from '@lion/input-iban';
+import { LionInputIban } from '@lion/ui/input-iban.js';
 import { InputMixin } from '~/form-core';
 
 export class SimbaInputIban extends InputMixin(LionInputIban) {

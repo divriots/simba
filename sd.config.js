@@ -18,7 +18,7 @@ export default {
     cssLiterals: (opts) => {
       const { dictionary, file } = opts;
       let output = StyleDictionary.formatHelpers.fileHeader(file);
-      output += `import { css } from '@lion/core';\n\n`;
+      output += `import { css } from 'lit';\n\n`;
 
       dictionary.allTokens.forEach((token) => {
         const { path, value } = token;

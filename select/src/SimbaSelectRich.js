@@ -1,10 +1,9 @@
-import { ScopedElementsMixin } from '~/core';
-import { LionSelectRich } from '@lion/select-rich';
+import { ScopedElementsMixin } from '@open-wc/scoped-elements';
+import { LionSelectRich } from '@lion/ui/select-rich.js';
 import { InputMixin } from '~/form-core';
 import { SimbaOptions } from './SimbaOptions.js';
 import { SimbaSelectInvoker } from './SimbaSelectInvoker.js';
 import { optionsStyles } from './styles.css.js';
-// import { selectRichStyles } from './styles.css.js';
 
 export class SimbaSelectRich extends ScopedElementsMixin(
   InputMixin(LionSelectRich)

@@ -1,4 +1,4 @@
-import { dedupeMixin } from '~/core';
+import { dedupeMixin } from '@open-wc/dedupe-mixin';
 import { localize, LocalizeMixin } from '~/localize';
 import '~/validation-feedback/define';
 

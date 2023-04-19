@@ -1,4 +1,4 @@
-import { LionSwitchButton } from '@lion/switch';
+import { LionSwitchButton } from '@lion/ui/switch.js';
 import { ThemeMixin } from 'dark-theme-utils';
 import styles from './button-styles.css.js';
 

@@ -1,4 +1,4 @@
-import { css } from '~/core';
+import { css } from 'lit';
 // import { tokens as t } from '../index.js'; // for some reason this doesn't work anymore
 import * as t from './_button.js';
 

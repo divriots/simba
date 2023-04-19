@@ -1,5 +1,5 @@
-import { css } from '~/core';
-import { LionIcon } from '@lion/icon';
+import { css } from 'lit';
+import { LionIcon } from '@lion/ui/icon.js';
 import { ThemeMixin } from 'dark-theme-utils';
 
 export class SimbaIcon extends ThemeMixin(LionIcon) {

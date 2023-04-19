@@ -1,4 +1,4 @@
-import { LitElement, html, css } from '~/core';
+import { LitElement, html, css } from 'lit';
 import { coolGray100, coolGray300 } from '~/colors';
 import { s0_5, s3, s4, s5 } from '~/spacing';
 import { md } from '~/radii';

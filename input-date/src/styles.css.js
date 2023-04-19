@@ -1,4 +1,4 @@
-import { css } from '~/core';
+import { css } from 'lit';
 
 export default css`
   .input-group__container {

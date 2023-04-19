@@ -1,7 +1,7 @@
 # Spacing
 
 ```js script
-import { html } from '~/core';
+import { html } from 'lit';
 import '~/token-display';
 import * as spacing from '~/spacing';
 ```

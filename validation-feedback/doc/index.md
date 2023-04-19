@@ -1,7 +1,7 @@
 # Validation Feedback
 
 ```js script
-import { html } from '~/core';
+import { html } from 'lit';
 import '@divriots/simba/validation-feedback/define';
 ```
 

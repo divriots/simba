@@ -1,4 +1,4 @@
-import { html } from '~/core';
+import { html } from 'lit';
 
 /**
  * @license

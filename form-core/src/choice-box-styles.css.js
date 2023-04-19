@@ -1,4 +1,4 @@
-import { css } from '~/core';
+import { css } from 'lit';
 import { weightNormal } from '~/typography';
 import { s4 } from '~/spacing';
 import { coolGray50, coolGray100 } from '~/colors';

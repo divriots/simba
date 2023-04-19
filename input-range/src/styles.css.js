@@ -1,4 +1,4 @@
-import { css } from '~/core';
+import { css } from 'lit';
 import { full } from '~/radii';
 import { s0, s4 } from '~/spacing';
 

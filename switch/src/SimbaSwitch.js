@@ -1,5 +1,5 @@
-import { LionSwitch } from '@lion/switch';
-import { ScopedElementsMixin } from '~/core';
+import { LionSwitch } from '@lion/ui/switch.js';
+import { ScopedElementsMixin } from '@open-wc/scoped-elements';
 import { InputMixin } from '~/form-core';
 import { SimbaSwitchButton } from './SimbaSwitchButton.js';
 import styles from './styles.css.js';

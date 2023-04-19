@@ -1,4 +1,4 @@
-import { LionCheckboxGroup } from '@lion/checkbox-group';
+import { LionCheckboxGroup } from '@lion/ui/checkbox-group.js';
 import { ThemeMixin } from 'dark-theme-utils';
 import { inputStyles } from '~/form-core';
 

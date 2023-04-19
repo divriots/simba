@@ -3,9 +3,9 @@
 Email input field Webcomponent.
 
 ```js script
-import { html } from '~/core';
+import { html } from 'lit';
 import { Required } from '~/form-core';
-import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
+import { loadDefaultFeedbackMessages } from '@lion/ui/validate-messages.js';
 import { localize } from '~/localize';
 import '@divriots/simba/input-email/define';
 

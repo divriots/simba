@@ -1,7 +1,7 @@
 # Colors
 
 ```js script
-import { html } from '~/core';
+import { html } from 'lit';
 import '~/token-display';
 import * as _colors from '~/colors';
 ```

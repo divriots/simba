@@ -1,4 +1,4 @@
-import { LionCollapsible } from '@lion/collapsible';
+import { LionCollapsible } from '@lion/ui/collapsible.js';
 import { s3_5 } from '~/spacing';
 import { SimbaCollapsibleButton } from './SimbaCollapsibleButton.js';
 import styles from './styles.css.js';

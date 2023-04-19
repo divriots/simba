@@ -1,5 +1,6 @@
-import { html, ifDefined } from '~/core';
-import { LionInputDatepicker } from '@lion/input-datepicker';
+import { html } from 'lit';
+import { ifDefined } from 'lit/directives/if-defined.js';
+import { LionInputDatepicker } from '@lion/ui/input-datepicker.js';
 import { withModalDialogConfig, withBottomSheetConfig } from '~/overlays';
 import { formatDate } from '~/localize';
 import { InputMixin } from '~/form-core';
@@ -49,19 +50,6 @@ export class SimbaInputDatepicker extends InputMixin(LionInputDatepicker) {
     this._calendarNode.addEventListener('central-date-changed', () => {
       this.centralDate = this._calendarNode.centralDate;
     });
-
-    /**
-     * Override the backdrop background-color for dark-mode.
-     * TODO: File issue on lion, as this way of doing it is not
-     * very developer-friendly.
-     */
-    const globalStyleNode = document.querySelector(
-      'style[data-global-overlays]'
-    );
-    globalStyleNode.sheet.insertRule(
-      'html[theme="dark"] .global-overlays .global-overlays__backdrop { background-color: #000 }',
-      globalStyleNode.sheet.cssRules.length
-    );
   }
 
   _defineOverlayConfig() {

@@ -1,9 +1,9 @@
 /**
  * Do not edit directly
- * Generated on Fri, 17 Dec 2021 13:14:01 GMT
+ * Generated on Mon, 17 Apr 2023 14:59:51 GMT
  */
 
-import { css } from '@lion/core';
+import { css } from 'lit';
 
 export const backgroundColor = css`var(--simba-color-primary-500)`;
 export const paddingHorizontal = css`1rem`;

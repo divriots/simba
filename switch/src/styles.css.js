@@ -1,4 +1,4 @@
-import { css } from '~/core';
+import { css } from 'lit';
 import { full } from '~/radii';
 
 export default css`
