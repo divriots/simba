@@ -1,4 +1,4 @@
-import { html } from '~/core';
+import { html } from 'lit';
 import { LionValidationFeedback } from '~/form-core';
 import { ThemeMixin } from 'dark-theme-utils';
 import styles from './styles.css.js';

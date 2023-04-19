@@ -5,7 +5,7 @@ Tooltip webcomponent.
 Interactive content should not be placed in a tooltip content slot. Tooltips are just meant for showing additional information.
 
 ```js script
-import { html } from '~/core';
+import { html } from 'lit';
 import '~/icons/define';
 import '@divriots/simba/tooltip/define';
 import {

@@ -1,9 +1,9 @@
 /**
  * Do not edit directly
- * Generated on Fri, 17 Dec 2021 12:28:28 GMT
+ * Generated on Mon, 17 Apr 2023 14:59:51 GMT
  */
 
-import { css } from '@lion/core';
+import { css } from 'lit';
 
 export const familySans = css`'Inter var', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'`;
 export const familySerif = css`ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif`;

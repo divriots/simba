@@ -3,9 +3,9 @@
 Select and select-rich Webcomponent.
 
 ```js script
-import { html, LitElement, render } from '~/core';
+import { html, LitElement, render } from 'lit';
 import { Required } from '~/form-core';
-import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
+import { loadDefaultFeedbackMessages } from '@lion/ui/validate-messages.js';
 import { localize } from '~/localize';
 import { SimbaOption } from '../src/SimbaOption.js';
 import '@divriots/simba/select/define';
@@ -138,7 +138,7 @@ In case you're curious, below is the code for the color-option element, which is
   <summary>Code</summary>
 
 ```js copy
-import { html, LitElement, render } from '~/core';
+import { html, LitElement, render } from 'lit';
 import { SimbaOption } from '../src/SimbaOption.js';
 
 /**

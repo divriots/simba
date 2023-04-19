@@ -1,7 +1,7 @@
 # Typography
 
 ```js script
-import { html } from '~/core';
+import { html } from 'lit';
 import '~/token-display';
 import * as typography from '~/typography';
 ```

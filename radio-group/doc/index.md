@@ -3,10 +3,10 @@
 Radio group Webcomponent.
 
 ```js script
-import { html } from '~/core';
+import { html } from 'lit';
 import { Required, Validator } from '~/form-core';
 import { localize } from '~/localize';
-import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
+import { loadDefaultFeedbackMessages } from '@lion/ui/validate-messages.js';
 import '@divriots/simba/radio-group/define';
 
 loadDefaultFeedbackMessages();

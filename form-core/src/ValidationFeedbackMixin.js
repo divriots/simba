@@ -1,5 +1,5 @@
+import { dedupeMixin } from '@open-wc/dedupe-mixin';
 import { DefaultSuccess } from '~/form-core';
-import { dedupeMixin } from '~/core';
 import '~/validation-feedback/define';
 
 export const ValidationFeedbackMixinImplementation = (superclass) =>

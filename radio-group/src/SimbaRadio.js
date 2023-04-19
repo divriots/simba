@@ -1,5 +1,5 @@
-import { html } from '~/core';
-import { LionRadio } from '@lion/radio-group';
+import { html } from 'lit';
+import { LionRadio } from '@lion/ui/radio-group.js';
 import { inputStyles, choiceBoxStyles } from '~/form-core';
 import { ThemeMixin } from 'dark-theme-utils';
 import styles from './styles.css.js';

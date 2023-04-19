@@ -1,5 +1,5 @@
-import { ScopedElementsMixin } from '~/core';
-import { LionSelectInvoker } from '@lion/select-rich';
+import { ScopedElementsMixin } from '@open-wc/scoped-elements';
+import { LionSelectInvoker } from '@lion/ui/select-rich.js';
 import { SimbaIcon } from '~/icons';
 import { ThemeMixin } from 'dark-theme-utils';
 import { invokerStyles } from './styles.css.js';

@@ -1,5 +1,5 @@
-import { html } from '~/core';
-import { LionInputStepper } from '@lion/input-stepper';
+import { html } from 'lit';
+import { LionInputStepper } from '@lion/ui/input-stepper.js';
 import { InputMixin } from '~/form-core';
 import styles from './styles.css.js';
 import '~/button/define';

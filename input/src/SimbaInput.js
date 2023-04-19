@@ -1,4 +1,4 @@
-import { LionInput } from '@lion/input';
+import { LionInput } from '@lion/ui/input.js';
 import { InputMixin } from '~/form-core';
 
 export class SimbaInput extends InputMixin(LionInput) {

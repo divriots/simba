@@ -1,1 +1,1 @@
-export * from '@lion/overlays';
+export * from '@lion/ui/overlays.js';

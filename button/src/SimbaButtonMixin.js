@@ -1,4 +1,5 @@
-import { dedupeMixin, html } from '~/core';
+import { dedupeMixin } from '@open-wc/dedupe-mixin';
+import { html } from 'lit';
 import { ThemeMixin } from 'dark-theme-utils';
 import styles from './styles.css.js';
 

@@ -1,4 +1,4 @@
-import { LitElement, html, css } from '~/core';
+import { LitElement, html, css } from 'lit';
 import { coolGray400, blue300, blue500 } from '~/colors';
 import { sm, none, base } from '~/radii';
 import { ThemeMixin } from 'dark-theme-utils';

@@ -1,5 +1,5 @@
-import { LionTooltip } from '@lion/tooltip';
-import { css, html } from '~/core';
+import { LionTooltip } from '@lion/ui/tooltip.js';
+import { css, html } from 'lit';
 import { coolGray50 } from '~/colors';
 import { s1_5, s2 } from '~/spacing';
 import { base } from '~/radii';

@@ -1,4 +1,4 @@
-import { css } from '~/core';
+import { css } from 'lit';
 import {
   red400,
   red500,

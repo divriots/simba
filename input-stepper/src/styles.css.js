@@ -1,4 +1,4 @@
-import { css } from '~/core';
+import { css } from 'lit';
 import { base, none } from '~/radii';
 import { s1_5, s2_5 } from '~/spacing';
 import { coolGray100, coolGray300, coolGray600 } from '~/colors';

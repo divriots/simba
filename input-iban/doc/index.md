@@ -3,10 +3,10 @@
 IBAN input field Webcomponent.
 
 ```js script
-import { html } from '~/core';
+import { html } from 'lit';
 import { Required, Validator } from '~/form-core';
 import { localize } from '~/localize';
-import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
+import { loadDefaultFeedbackMessages } from '@lion/ui/validate-messages.js';
 import '@divriots/simba/input-iban/define';
 
 loadDefaultFeedbackMessages();
@@ -52,7 +52,7 @@ In the example below, we restrict IBANs to only BeNeLux IBANs.
 This validator also accepts a single string, for single country restriction.
 
 ```js preview-story
-import { IsCountryIBAN } from '@lion/input-iban';
+import { IsCountryIBAN } from '@lion/ui/input-iban.js';
 
 export const inputCountryRestrictions = () => html`
   <simba-input-iban

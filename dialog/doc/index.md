@@ -9,7 +9,7 @@ The frame acts as a visual container and allows adding an easy to use close butt
 > There, it will be listened to by the dialog component itself, triggering the close.
 
 ```js script
-import { html } from '~/core';
+import { html } from 'lit';
 import '@divriots/simba/button/define';
 import '@divriots/simba/dialog/define';
 import { emerald100, emerald500, coolGray500 } from '~/colors';

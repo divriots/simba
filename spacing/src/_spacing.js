@@ -1,9 +1,9 @@
 /**
  * Do not edit directly
- * Generated on Fri, 17 Dec 2021 12:28:28 GMT
+ * Generated on Mon, 17 Apr 2023 14:59:51 GMT
  */
 
-import { css } from '@lion/core';
+import { css } from 'lit';
 
 export const s0 = css`0px`;
 export const px = css`1px`;

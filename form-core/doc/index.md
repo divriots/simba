@@ -1,7 +1,7 @@
 # Form Core
 
 ```js script
-import { html } from '~/core';
+import { html } from 'lit';
 ```
 
 The form-core package is an umbrella package for form-related utilities, two examples:

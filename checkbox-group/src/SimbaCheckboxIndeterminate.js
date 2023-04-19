@@ -1,5 +1,5 @@
-import { html } from '~/core';
-import { LionCheckboxIndeterminate } from '@lion/checkbox-group';
+import { html } from 'lit';
+import { LionCheckboxIndeterminate } from '@lion/ui/checkbox-group.js';
 import { inputStyles, choiceBoxStyles } from '~/form-core';
 import { ThemeMixin } from 'dark-theme-utils';
 import styles from './styles.css.js';

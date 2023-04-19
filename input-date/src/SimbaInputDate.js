@@ -1,4 +1,4 @@
-import { LionInputDate } from '@lion/input-date';
+import { LionInputDate } from '@lion/ui/input-date.js';
 import { InputMixin } from '~/form-core';
 import styles from './styles.css.js';
 

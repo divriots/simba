@@ -1,4 +1,4 @@
-import { icons } from '@lion/icon';
+import { icons } from '@lion/ui/icon.js';
 
 function resolveSimbaIcons(iconset, name) {
   switch (iconset) {

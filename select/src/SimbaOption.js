@@ -1,4 +1,4 @@
-import { LionOption } from '@lion/listbox';
+import { LionOption } from '@lion/ui/listbox.js';
 import { ThemeMixin } from 'dark-theme-utils';
 import { optionStyles } from './styles.css.js';
 

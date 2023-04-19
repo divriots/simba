@@ -1,4 +1,4 @@
-import { LionInputEmail } from '@lion/input-email';
+import { LionInputEmail } from '@lion/ui/input-email.js';
 import { InputMixin } from '~/form-core';
 
 export class SimbaInputEmail extends InputMixin(LionInputEmail) {

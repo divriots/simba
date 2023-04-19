@@ -1,1 +1,1 @@
-export * from '@lion/localize';
+export * from '@lion/ui/localize.js';

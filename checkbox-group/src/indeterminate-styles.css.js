@@ -1,4 +1,4 @@
-import { css } from '~/core';
+import { css } from 'lit';
 import { s3_5 } from '~/spacing';
 
 export default css`

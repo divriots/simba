@@ -1,7 +1,8 @@
 import '@divriots/dockit-core/layout/dockit-layout.define.js';
 import { breakpoints, styles } from '@divriots/dockit-core/layout';
 import { setupSpeedyLinks } from '@divriots/dockit-core/speedy-links';
-import { html, unsafeHTML } from '~/core';
+import { html } from 'lit';
+import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 import './color-toggler';
 import logoSvg from './logo.svg?raw';
 

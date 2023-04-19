@@ -1,1 +1,1 @@
-export * from '@lion/core';
+export * from '@lion/ui/core.js';

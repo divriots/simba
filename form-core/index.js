@@ -1,4 +1,4 @@
-export * from '@lion/form-core';
+export * from '@lion/ui/form-core.js';
 export * from './src/FieldNameLowercaseMixin.js';
 export * from './src/ValidationFeedbackMixin.js';
 export * from './src/LocalizeLabelMixin.js';

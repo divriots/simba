@@ -1,9 +1,9 @@
 /**
  * Do not edit directly
- * Generated on Fri, 17 Dec 2021 12:28:28 GMT
+ * Generated on Mon, 17 Apr 2023 14:59:51 GMT
  */
 
-import { css } from '@lion/core';
+import { css } from 'lit';
 
 export const coolGray50 = css`#F9FAFB`;
 export const coolGray100 = css`#F3F4F6`;

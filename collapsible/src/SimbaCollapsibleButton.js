@@ -1,4 +1,4 @@
-import { html, css } from '~/core';
+import { html, css } from 'lit';
 import { SimbaButton } from '~/button';
 import {
   familyMono,

@@ -1,4 +1,4 @@
-import { LionRadioGroup } from '@lion/radio-group';
+import { LionRadioGroup } from '@lion/ui/radio-group.js';
 import { inputStyles } from '~/form-core';
 import { ThemeMixin } from 'dark-theme-utils';
 

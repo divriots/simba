@@ -3,7 +3,7 @@
 Collapsible component, folds out content.
 
 ```js script
-import { html } from '~/core';
+import { html } from 'lit';
 import '@divriots/simba/collapsible/define';
 import '@divriots/simba/button/define';
 ```

@@ -1,4 +1,4 @@
-import { LionTextarea } from '@lion/textarea';
+import { LionTextarea } from '@lion/ui/textarea.js';
 import { InputMixin } from '~/form-core';
 
 export class SimbaTextarea extends InputMixin(LionTextarea) {

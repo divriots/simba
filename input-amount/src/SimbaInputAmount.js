@@ -1,4 +1,4 @@
-import { LionInputAmount } from '@lion/input-amount';
+import { LionInputAmount } from '@lion/ui/input-amount.js';
 import { formatNumber } from '~/localize';
 import { InputMixin } from '~/form-core';
 import styles from './styles.css.js';

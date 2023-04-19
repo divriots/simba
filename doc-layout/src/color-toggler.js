@@ -1,4 +1,4 @@
-import { LitElement, html, css, unsafeCSS } from '~/core';
+import { LitElement, html, css, unsafeCSS } from 'lit';
 import { theme, setTheme, defaultThemes } from '~/themes';
 import { s5 } from '~/spacing';
 import * as colors from '~/colors';
